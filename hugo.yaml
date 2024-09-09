@@ -1,9 +1,9 @@
-baseURL: ''
-title: TailBliss
+baseURL: 'https://neodynamics.ai'
+title: NeoDynamics
 languageCode: en-us
 DefaultContentLanguage: en
 enableEmoji: true
-enableGitInfo: true
+enableGitInfo: false
 enableRobotsTXT: true
 canonifyURLs: true
 paginate: 9
@@ -51,7 +51,7 @@ params:
   og_image: /images/tailbliss-cover.png
   moto: "Super Fast, and Flexible"
   description: "A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format."
-  disable_theme_toggle: false
+  disable_theme_toggle: true
   disable_stay_uptodate: false
 
   p1:
@@ -98,36 +98,31 @@ params:
   social_media:
     github:
       enabled: true
-      url: 'https://github.com/nusserstudios'
-    facebook:
+      url: 'https://github.com/neodynamics'
+    linkedin:
       enabled: true
+      url: 'https://www.linkedin.com/company/neodynamics-ai/'
+    facebook:
+      enabled: false
       url: 'https://facebook.com/nusserstudios'
     instagram:
-      enabled: true
+      enabled: false
       url: 'https://instagram.com/nusserstudios'
     twitter:
-      enabled: true
+      enabled: false
       url: 'https://twitter.com/nusserstudios'
     
 
 menu:
   main:
-    - identifier: prose
-      name: Prose
-      url: /prose/
-      weight: 10
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: team
+      name: Team
+      url: /team/
       weight: 20
-    - identifier: categories
+    - identifier: applications
       pre: dropdown
-      name: Categories
+      name: Applications
       weight: 30
-    - identifier: dropdown
-      pre: complexdropdown
-      name: Dropdown
-      weight: 40
     - identifier: contact
       name: Contact
       url: /contact/
@@ -165,14 +160,6 @@ menu:
       name: About
       url: /about/
       weight: 10
-    - identifier: blog
-      name: Blog
-      url: /categories/blog/
-      weight: 20
-    - identifier: news
-      name: News
-      url: /categories/news/
-      weight: 30
     - identifier: prose
       name: Prose
       url: /prose/
