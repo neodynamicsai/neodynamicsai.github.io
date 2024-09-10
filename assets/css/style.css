@@ -1117,29 +1117,12 @@ video {
   inset: 0px;
 }
 
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
-
-.left-1\/2 {
-  left: 50%;
-}
-
 .right-0 {
   right: 0px;
 }
 
-.right-1\/2 {
-  right: 50%;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.top-8 {
-  top: 2rem;
 }
 
 .z-30 {
@@ -1160,6 +1143,10 @@ video {
 
 .col-span-6 {
   grid-column: span 6 / span 6;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .-mx-5 {
@@ -1190,10 +1177,6 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.-ml-3 {
-  margin-left: -0.75rem;
 }
 
 .mb-2 {
@@ -1260,10 +1243,6 @@ video {
   margin-top: 2rem;
 }
 
-.-mb-20 {
-  margin-bottom: -5rem;
-}
-
 .block {
   display: block;
 }
@@ -1320,34 +1299,6 @@ video {
   height: auto;
 }
 
-.max-h-9 {
-  max-height: 2.25rem;
-}
-
-.max-h-96 {
-  max-height: 24rem;
-}
-
-.max-h-4 {
-  max-height: 1rem;
-}
-
-.max-h-40 {
-  max-height: 10rem;
-}
-
-.max-h-20 {
-  max-height: 5rem;
-}
-
-.max-h-3 {
-  max-height: 0.75rem;
-}
-
-.max-h-32 {
-  max-height: 8rem;
-}
-
 .w-0 {
   width: 0px;
 }
@@ -1398,6 +1349,26 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.min-w-9 {
+  min-width: 2.25rem;
+}
+
+.min-w-96 {
+  min-width: 24rem;
+}
+
+.min-w-1 {
+  min-width: 0.25rem;
+}
+
+.min-w-12 {
+  min-width: 3rem;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-2xl {
@@ -1564,6 +1535,10 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.justify-self-end {
+  justify-self: end;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1582,11 +1557,6 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded-r-3xl {
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
 }
 
 .rounded-t-lg {
@@ -1703,14 +1673,6 @@ video {
   padding: 1.5rem;
 }
 
-.p-9 {
-  padding: 2.25rem;
-}
-
-.p-96 {
-  padding: 24rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1786,11 +1748,6 @@ video {
   padding-bottom: 24rem;
 }
 
-.px-96 {
-  padding-left: 24rem;
-  padding-right: 24rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1843,12 +1800,16 @@ video {
   text-align: center;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .align-middle {
   vertical-align: middle;
+}
+
+.font-dmsans {
+  font-family: DM Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-pp-neue-machina {
+  font-family: PP Neue Machina, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-2xl {
@@ -1929,6 +1890,10 @@ video {
   font-weight: 600;
 }
 
+.font-ultrabold {
+  font-weight: 800;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1947,14 +1912,6 @@ video {
 
 .leading-relaxed {
   line-height: 1.625;
-}
-
-.leading-extra-loose {
-  line-height: 2.5;
-}
-
-.leading-loose {
-  line-height: 2;
 }
 
 .tracking-tight {
@@ -2100,22 +2057,98 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* Font faces */
+
+@font-face {
+  font-family: 'DM Sans';
+
+  src: url('/fonts/DMSans.woff2') format('woff2');
+
+  font-weight: 100 700;
+
+  /* Variable font weight range */
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainLight.otf') format('opentype');
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainLightItalic.otf') format('opentype');
+
+  font-weight: 300;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainRegular.otf') format('opentype');
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainRegularItalic.otf') format('opentype');
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainUltrabold.otf') format('opentype');
+
+  font-weight: 800;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+
+  src: url('/fonts/PPNeueMachina-PlainUltraboldItalic.otf') format('opentype');
+
+  font-weight: 800;
+
+  font-style: italic;
+}
+
+/* Default Tailwind sans-serif stack */
+
 font-family: ui-sans-serif,
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-Apple Color Emoji,
-Segoe UI Emoji,
-NotoColorEmoji,
-Segoe UI Symbol,
-Android Emoji,
-EmojiSymbols;
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  "Noto Sans",
+  sans-serif,
+  Apple Color Emoji,
+  Segoe UI Emoji,
+  NotoColorEmoji,
+  Segoe UI Symbol,
+  Android Emoji,
+  EmojiSymbols;
 
 /* Custom CSS */
 
@@ -2253,10 +2286,6 @@ EmojiSymbols;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.dark\:bg-gray-900\/10:is(.dark *) {
-  background-color: rgb(17 24 39 / 0.1);
-}
-
 .dark\:bg-gray-900\/50:is(.dark *) {
   background-color: rgb(17 24 39 / 0.5);
 }
@@ -2279,10 +2308,6 @@ EmojiSymbols;
 .dark\:text-gray-50:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(249 250 251 / var(--tw-text-opacity));
-}
-
-.dark\:text-gray-900\/60:is(.dark *) {
-  color: rgb(17 24 39 / 0.6);
 }
 
 .dark\:text-white:is(.dark *) {
@@ -2340,10 +2365,6 @@ EmojiSymbols;
 
   .sm\:mb-6 {
     margin-bottom: 1.5rem;
-  }
-
-  .sm\:block {
-    display: block;
   }
 
   .sm\:h-2\/3 {
@@ -2522,35 +2543,6 @@ EmojiSymbols;
 }
 
 @media (min-width: 1024px) {
-  .lg\:absolute {
-    position: absolute;
-  }
-
-  .lg\:inset-y-0 {
-    top: 0px;
-    bottom: 0px;
-  }
-
-  .lg\:-right-8 {
-    right: -2rem;
-  }
-
-  .lg\:left-auto {
-    left: auto;
-  }
-
-  .lg\:right-0 {
-    right: 0px;
-  }
-
-  .lg\:right-72 {
-    right: 18rem;
-  }
-
-  .lg\:top-12 {
-    top: 3rem;
-  }
-
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2574,10 +2566,6 @@ EmojiSymbols;
 
   .lg\:grid {
     display: grid;
-  }
-
-  .lg\:w-screen {
-    width: 100vw;
   }
 
   .lg\:max-w-7xl {

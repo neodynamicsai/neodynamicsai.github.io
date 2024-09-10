@@ -31,6 +31,16 @@ module.exports = {
         'extra-loose': '2.5',
         '12': '3rem',
       },
+      fontFamily: {
+        'dmsans': ['DM Sans', ...defaultTheme.fontFamily.sans],
+        'pp-neue-machina': ['PP Neue Machina', ...defaultTheme.fontFamily.sans],
+      },
+      fontWeight: {
+        light: 300,
+        regular: 400,
+        bold: 700,
+        ultrabold: 800,
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
