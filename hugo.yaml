@@ -113,8 +113,8 @@ params:
 menu:
   main:
     - identifier: applications
-      pre: dropdown
       name: Applications
+      url: "#applications"
       weight: 30
     - identifier: contact
       name: Contact
