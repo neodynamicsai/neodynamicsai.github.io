@@ -1,4 +1,5 @@
 baseURL: 'https://neodynamics.ai'
+canonifyURLs: false
 title: NeoDynamics
 languageCode: en-us
 DefaultContentLanguage: en
