@@ -1260,6 +1260,10 @@ video {
   margin-top: 2rem;
 }
 
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+
 .block {
   display: block;
 }
@@ -1314,6 +1318,34 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.max-h-9 {
+  max-height: 2.25rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
+.max-h-4 {
+  max-height: 1rem;
+}
+
+.max-h-40 {
+  max-height: 10rem;
+}
+
+.max-h-20 {
+  max-height: 5rem;
+}
+
+.max-h-3 {
+  max-height: 0.75rem;
+}
+
+.max-h-32 {
+  max-height: 8rem;
 }
 
 .w-0 {
@@ -1480,6 +1512,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1667,6 +1703,14 @@ video {
   padding: 1.5rem;
 }
 
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-96 {
+  padding: 24rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1742,6 +1786,11 @@ video {
   padding-bottom: 24rem;
 }
 
+.px-96 {
+  padding-left: 24rem;
+  padding-right: 24rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1792,6 +1841,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .align-middle {
@@ -1890,6 +1943,18 @@ video {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-extra-loose {
+  line-height: 2.5;
+}
+
+.leading-loose {
+  line-height: 2;
 }
 
 .tracking-tight {
@@ -2316,6 +2381,11 @@ EmojiSymbols;
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
