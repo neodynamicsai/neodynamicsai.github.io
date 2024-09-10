@@ -1,14 +1,14 @@
 {{ define "main" }}
 <main>
   {{/* Hero */}}
-  <div class="bg-background-200 dark:bg-background">
+  <div class="bg-background-200 dark:bg-background px-24">
     <div class="max-w-screen-xl px-4 py-8 mx-auto">
       <div
-        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-2"
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-2 justify-between"
       >
         <div class="col-span-1 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
           <h1
-            class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-4xl dark:text-white"
+            class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
           >
             {{ .Site.Title }}
           </h1>
@@ -23,11 +23,13 @@
             {{ .Site.Params.Description}}
           </p>
 
-          <button
-            class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-          >
-            {{ .Site.Params.CTA }}
-          </button>
+          <a href="/contact">
+            <button
+                class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            >
+                Start Now
+            </button>
+          </a>
         </div>
         <div class="col-span-1">
           <div style="width:70%;height:auto;transform:rotate(0deg);overflow:hidden;">
@@ -63,62 +65,46 @@
   </div>
 
   <!-- What is Neo? -->
-  <div class="relative bg-neutral my-10 items-center">
+  <div class="p-28 py-16 relative bg-neutral items-center">
     <div
-      class="mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 align-middle lg:gap-24 lg:px-8"
+      class="mx-auto flex flex-row gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
     >
-      <div class="relative sm:py-8 lg:py-0">
-        <div
-          class="relative w-full px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20"
-        >
-          <div style="width:100%;height:100%;transform:rotate(0deg);overflow:hidden;">
-            <div class="animated" style="animation: 806ms ease 100ms 1 normal both running baseline-LEFT-b3e53180-ca08-4529-9f67-96679145dc09;">
-                <svg id="Npw08JvI3vBGS10H" viewBox="0 0 469.0 474.1" style="width:100%;height:10%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                    <g id="Such45Qym9r6eiHW" style="transform:scale(1, 1);">
-                        <div id="mLOnNhjj1C4ytGjS" style="clip-path:path('M54.5,474.1000061 L0,0 L414.5,0 L469,474.1000061 Z');">
-                            <div id="oZrfJkEyu8uDF0R7" style="transform: scale(1, 1); transform-origin: 234.5px 237.5px; animation: auto ease 0s 1 normal none running none;">
-                            {{ $p1image := resources.Get .Site.Params.P1.Image }}
-                            {{ with $p1image }}
-                            <img
-                                src="{{ .RelPermalink }}"
+        {{ $p1image := resources.Get .Site.Params.P1.Image }}
+        {{ with $p1image }}
+        <img
+            src="{{ .RelPermalink }}"
+            class="h-96"
+                                loading="lazy"
                                 loading="lazy"
                                 class="relative object-fill overflow-hidden"
                                 style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
-                                alt="P1 Image"
-                            />
-                            {{ end }}
-                            </div>
-                        </div>
-                    </g>
-                </svg>
-            </div>
-        </div>
-
-        </div>
-      </div>
+            loading="lazy"
+                                class="relative object-fill overflow-hidden"
+                                style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
+            alt="P1 Image"
+        />
+        {{ end }}
       <div
-        class="max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0"
+        class="max-w-md pt-16 px-4 sm:max-w-3xl sm:px-6 lg:px-0"
       >
-        <div class="md:pt-12 sm:pt-6 lg:pt-20">
           <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl"
+            class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50"
           >
-            {{ .Site.Params.P1.Heading }}
+            What is Neo?
           </h2>
           <div class="mt-6 text-gray-900 dark:text-white">
             <div class="mt-12 text-gray-900 dark:text-white">
               {{ range .Site.Params.P1.Content }}
-              <p class="text-2xl text-gray-900 dark:text-white leading-relaxed justify-end">{{ .text }}</p>
+              <p class="text-xl text-gray-900 dark:text-white leading-relaxed justify-end">{{ .text }}</p>
               {{ end }}
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 
   <!-- How it works section -->
-    <div class="relative bg-background px-2 mx-auto py-16">
+    <div class="bg-background px-2 py-12">
       <div class="text-center">
         <h2
           class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-3xl"
@@ -130,16 +116,15 @@
       <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
         <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
           <div
-            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3"
+            class="flex flex-row justify-between gap-4 mx-auto mt-12 mb-4 lg:max-w-none"
           >
             {{/*  Card  */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col rounded-lg shadow-lg bg-neutral items-center text-center"
             >
                 {{ $image := resources.GetMatch "images/pages/define_problem.jpg" }}
               <img
                 src="{{ $image.RelPermalink }}"
-                class="object-fill overflow-hidden rounded-t-lg"
                 loading="lazy"
                 alt="{{ .Title }}"
               />
@@ -149,51 +134,49 @@
                 >
                   Define your problem
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Use familiar tools to describe your problem.
                 </p>
               </div>
             </div>
             {{/*  Card  */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
             >
                 {{ $image := resources.GetMatch "images/pages/train_evaluate.jpg" }}
               <img
                 src="{{ $image.RelPermalink }}"
-                class="object-fill overflow-hidden rounded-t-lg w-full"
                 loading="lazy"
                 alt="{{ .Title }}"
               />
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Train and Evaluate
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Evaluate the performance of multiple agents.
                 </p>
               </div>
             </div>
             {{/*  Card  */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
             >
                 {{ $image := resources.GetMatch "images/pages/cloud_inference.jpg" }}
               <img
                 src="{{ $image.RelPermalink }}"
-                class="object-fill overflow-hidden rounded-t-lg"
                 loading="lazy"
                 alt="{{ .Title }}"
               />
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Managed Inference
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Scale your agent while keeping your data secure.
                 </p>
               </div>
@@ -206,9 +189,9 @@
 
   {{/* Phrase section */}}
   <div
-    class="flex px-1 pt-8 pb-4 bg-transparent mx-auto text-center items-center max-w-7xl"
+    class="flex bg-neutral-50 mx-auto text-center items-center p-32"
   >
-    <p class="text-gray-50 text-7xl leading-normal max-w-7xl">
+    <p class="text-gray-50 text-5xl leading-loose">
       Empowering innovators to solve the world's toughest challenges with
       intelligent automation—because we believe that technology should work for
       you, not the other way around.
@@ -217,28 +200,25 @@
 
   <!-- Applications -->
   <div
-    class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12" id="applications"
+    class="relative px-1 pt-8 pb-4 bg-background lg:px-8" id="applications"
   >
-    <div class="absolute inset-0">
-      <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
-    </div>
     <div class="relative px-2 mx-auto max-w-7xl">
       <div class="text-center">
         <h2
-          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-5xl"
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight"
         >
           Applications
         </h2>
       </div>
 
-      <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
+      <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5 text-center">
         <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
           <div
-            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-2"
+            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-3 items-center place-items-center"
           >
             {{/* Card */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center h-full"
             >
               {{ $cyber := resources.GetMatch "images/pages/cyber.jpg" }}
               <img
@@ -251,11 +231,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Cybersecurity
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Attackers are getting smarter every day. Our Agents learn and
                   evolve.
                 </p>
@@ -263,7 +243,7 @@
             </div>
             {{/* Card */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
             >
               {{ $cyber := resources.GetMatch "images/pages/defense.jpg" }}
               <img
@@ -276,23 +256,19 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Defense
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Autonomous mission planning, significantly improving response
                   times and reducing human risk.
                 </p>
               </div>
             </div>
-          </div>
-          <div
-            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3"
-          >
             {{/* Card */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center h-full"
             >
               {{ $cyber := resources.GetMatch "images/pages/space.jpg" }}
               <img
@@ -305,18 +281,22 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Space
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Collision avoidance and optimal manouvering.
                 </p>
               </div>
             </div>
+          </div>
+          <div
+            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-2 items-center place-items-center"
+          >
             {{/* Card */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="min-h-full max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
             >
               {{ $cyber := resources.GetMatch "images/pages/finance.jpg" }}
               <img
@@ -329,18 +309,18 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Finance
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
                   Objective-driven investing and trading strategies.
                 </p>
               </div>
             </div>
             {{/* Card */}}
             <div
-              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+              class="min-h-full max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
             >
               {{ $cyber := resources.GetMatch "images/pages/logistics.jpg" }}
               <img
@@ -353,12 +333,12 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
                   Logistics
                 </div>
-                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
-                  Optimize supply chain management, automate route planning, and
+                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                  Supply chain management, automate route planning, and
                   enhance resource allocation.
                 </p>
               </div>
@@ -371,22 +351,19 @@
 
   <!-- Why Neo? -->
   <div
-    class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 items-center mx-auto"
+    class="px-1 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 items-center mx-auto py-16"
   >
-    <div class="absolute inset-0">
-      <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
-    </div>
     <div class="relative px-2 mx-auto max-w-7xl">
       <div class="text-center">
         <h2
-          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-5xl"
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight"
         >
           Why Neo?
         </h2>
       </div>
 
       <div
-        class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5 items-center"
+        class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 mt-16 items-center"
       >
         <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
           <div
@@ -402,8 +379,8 @@
                   class="w-28 h-28 text-gray-50"
                 />
               </div>
-              <p class="text-gray-50 font-semibold text-2xl">Simple Pricing</p>
-              <p>You are only charged for ​the resources you use.</p>
+              <p class="text-gray-50 font-semibold text-xl">Simple<br/>Pricing</p>
+              <p class="text-gray-50">You are only charged for ​the resources you use.</p>
             </div>
             <div class="flex flex-col items-center gap-6 w-36 mx-auto">
               {{ $chat := resources.GetMatch "images/pages/chat.svg" }}
@@ -412,10 +389,10 @@
               >
                 <img src="{{ $chat.RelPermalink }}" class="w-28 h-28" />
               </div>
-              <p class="text-gray-50 font-semibold text-2xl">
+              <p class="text-gray-50 font-semibold text-xl">
                 Uncomplicated Interface
               </p>
-              <p>You can use industry-specific ​usecases templates.</p>
+              <p class="text-gray-50">You can use industry-specific ​usecases templates.</p>
             </div>
             <div class="flex flex-col items-center gap-6 w-36 mx-auto">
               {{ $computer := resources.GetMatch "images/pages/computer.svg" }}
@@ -424,8 +401,8 @@
               >
                 <img src="{{ $computer.RelPermalink }}" class="w-28 h-28" />
               </div>
-              <p class="text-gray-50 font-semibold text-2xl">Data Ownership</p>
-              <p>You have full control over ​where your data gets.</p>
+              <p class="text-gray-50 font-semibold text-xl">Data Ownership</p>
+              <p class="text-gray-50">You have full control over ​where your data gets.</p>
             </div>
           </div>
         </div>
@@ -433,9 +410,9 @@
     </div>
   </div>
 
-  <!-- Sponsors section -->
+  <!-- Client feedback -->
   <div
-    class="max-w-md mx-auto md:pt-10 md:pb-10 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 bg-neutral-50"
+    class="py-32 px-36 min-w-full mx-auto bg-neutral-50"
   >
     <div class="grid gap-12 lg:mt-0 grid-cols-4">
       <div class="col-span-1">
@@ -478,31 +455,32 @@
     </div>
   </div>
 
-  <div class="bg-background-200 dark:bg-background pt-24">
+  {{/*  Contact  */}}
+  <div class="bg-background-200 dark:bg-background py-20 px-24">
     <div class="max-w-screen-xl px-4 py-8 mx-auto">
       <div
-        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12"
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-2"
       >
-        <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+        <div class="px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
           <h1
-            class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white"
+            class="mb-2 text-4xl font-bold leading-none tracking-tight text-gray-900 dark:text-white"
           >
-            We'd like to chat.
+            Let's chat
           </h1>
           <h2
-            class="pb-2 text-xl font-light text-gray-800 dark:text-gray-300 md:text-xl"
+            class="pt-6 text-xl font-light text-gray-50"
           >
             Reach out for an exploratory conversation.
           </h2>
           <a href="/contact">
             <button
-              class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              class="mt-20 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             >
               Contact Us
             </button>
           </a>
         </div>
-        <div class="col-span-6">
+        <div>
           <div style="width:100%;height:auto;transform:rotate(0deg);overflow:hidden;">
             <svg id="L7VI4r2sxVRxIRCP" viewBox="0 0 399.8 499.8" style="width:100%;height:auto;">
                 <g id="boKojAEfdHSfsQIL" style="transform:scale(1, 1);">

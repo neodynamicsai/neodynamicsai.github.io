@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="188.0" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0.0 0.0 188.0 188.0" width="188.0" zoomAndPan="magnify"><g id="change1_1"><path d="M174,0H14A14,14,0,0,0,0,14V136a14,14,0,0,0,14,14H66v12.68H63.08a14,14,0,0,0-14,14V188h89.84V176.72a14,14,0,0,0-14-14H122V150h52a14,14,0,0,0,14-14V14A14,14,0,0,0,174,0ZM14,8H174a6,6,0,0,1,6,6V122.58H8V14A6,6,0,0,1,14,8ZM124.92,170.72a6,6,0,0,1,6,6V180H57.08v-3.28a6,6,0,0,1,6-6h61.84Zm-10.91-8H74V150h40ZM174,142H14a6,6,0,0,1-6-6v-5.46H180V136A6,6,0,0,1,174,142Z" fill="inherit"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="188.0"
+   preserveAspectRatio="xMidYMid meet"
+   version="1.0"
+   viewBox="0.0 0.0 188.0 188.0"
+   width="188.0"
+   zoomAndPan="magnify"
+   id="svg1"
+   sodipodi:docname="computer.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.6474084"
+     inkscape:cx="64.039981"
+     inkscape:cy="36.420842"
+     inkscape:window-width="1230"
+     inkscape:window-height="1036"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <g
+     id="change1_1"
+     style="fill:#cccccc">
+    <path
+       d="M174,0H14A14,14,0,0,0,0,14V136a14,14,0,0,0,14,14H66v12.68H63.08a14,14,0,0,0-14,14V188h89.84V176.72a14,14,0,0,0-14-14H122V150h52a14,14,0,0,0,14-14V14A14,14,0,0,0,174,0ZM14,8H174a6,6,0,0,1,6,6V122.58H8V14A6,6,0,0,1,14,8ZM124.92,170.72a6,6,0,0,1,6,6V180H57.08v-3.28a6,6,0,0,1,6-6h61.84Zm-10.91-8H74V150h40ZM174,142H14a6,6,0,0,1-6-6v-5.46H180V136A6,6,0,0,1,174,142Z"
+       fill="inherit"
+       id="path1"
+       style="fill:#cccccc" />
+  </g>
+</svg>
