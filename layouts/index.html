@@ -1,33 +1,28 @@
 {{ define "main" }}
 <main>
   {{/* Hero */}}
-  <div class="bg-background-200 dark:bg-background px-24">
+  <div class="bg-background-200 dark:bg-background px-24 animate-in slide-in-from-bottom duration-700">
     <div class="max-w-screen-xl px-4 py-8 mx-auto">
       <div
         class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-2 justify-between"
       >
         <div class="col-span-1 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
           <h1
-            class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+            class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white font-pp-neue-machina"
           >
             {{ .Site.Title }}
           </h1>
           <h2
-            class="pt-6 pb-10 text-xl font-light text-gray-800 dark:text-gray-300 md:text-xl"
+            class="pt-6 pb-10 text-xl font-light text-gray-800 dark:text-gray-300 md:text-xl font-dmsans"
           >
-            {{ .Site.Params.Moto }}
+            Optimal agents for dynamic environments
           </h2>
-          <p
-            class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50"
-          >
-            {{ .Site.Params.Description}}
-          </p>
 
           <a href="/contact">
             <button
-                class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
             >
-                Start Now
+                START NOW
             </button>
           </a>
         </div>
@@ -65,15 +60,15 @@
   </div>
 
   <!-- What is Neo? -->
-  <div class="p-28 py-16 relative bg-neutral items-center">
+  <div class="py-16 relative bg-neutral items-center">
     <div
-      class="mx-auto flex flex-row gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
+      class="px-6 mx-auto flex flex-row gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
     >
         {{ $p1image := resources.Get .Site.Params.P1.Image }}
         {{ with $p1image }}
         <img
             src="{{ .RelPermalink }}"
-            class="h-96"
+            class="h-96 animate-in slide-in-from-bottom duration-700"
                                 loading="lazy"
                                 loading="lazy"
                                 class="relative object-fill overflow-hidden"
@@ -85,17 +80,17 @@
         />
         {{ end }}
       <div
-        class="max-w-md pt-16 px-4 sm:max-w-3xl sm:px-6 lg:px-0"
+        class="max-w-md pt-16 px-4 sm:max-w-3xl sm:px-6 lg:px-0 animate-in slide-in-from-bottom duration-700"
       >
           <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50"
+            class="px-10 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 font-dmsans"
           >
             What is Neo?
           </h2>
-          <div class="mt-6 text-gray-900 dark:text-white">
+          <div class="px-10 mt-6 text-gray-900 dark:text-white">
             <div class="mt-12 text-gray-900 dark:text-white">
               {{ range .Site.Params.P1.Content }}
-              <p class="text-xl text-gray-900 dark:text-white leading-relaxed justify-end">{{ .text }}</p>
+              <p class="text-xl text-gray-900 dark:text-white leading-relaxed font-dmsans">{{ .text }}</p>
               {{ end }}
             </div>
           </div>
@@ -107,7 +102,7 @@
     <div class="bg-background px-2 py-12">
       <div class="text-center">
         <h2
-          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-3xl"
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-3xl font-dmsans"
         >
           How Neo works
         </h2>
@@ -130,11 +125,11 @@
               />
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Define your problem
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Use familiar tools to describe your problem.
                 </p>
               </div>
@@ -151,11 +146,11 @@
               />
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Train and Evaluate
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Evaluate the performance of multiple agents.
                 </p>
               </div>
@@ -172,11 +167,11 @@
               />
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Managed Inference
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Scale your agent while keeping your data secure.
                 </p>
               </div>
@@ -189,9 +184,9 @@
 
   {{/* Phrase section */}}
   <div
-    class="flex bg-neutral-50 mx-auto text-center items-center p-32"
+    class="flex bg-neutral-50 mx-auto text-center items-center p-60"
   >
-    <p class="text-gray-50 text-5xl leading-loose">
+    <p class="text-accent text-5xl leading-loose font-pp-neue-machina">
       Empowering innovators to solve the world's toughest challenges with
       intelligent automation—because we believe that technology should work for
       you, not the other way around.
@@ -205,7 +200,7 @@
     <div class="relative px-2 mx-auto max-w-7xl">
       <div class="text-center">
         <h2
-          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight"
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight font-dmsans"
         >
           Applications
         </h2>
@@ -231,11 +226,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Cybersecurity
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Attackers are getting smarter every day. Our Agents learn and
                   evolve.
                 </p>
@@ -256,11 +251,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Defense
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Autonomous mission planning, significantly improving response
                   times and reducing human risk.
                 </p>
@@ -281,11 +276,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Space
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Collision avoidance and optimal manouvering.
                 </p>
               </div>
@@ -309,11 +304,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Finance
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Objective-driven investing and trading strategies.
                 </p>
               </div>
@@ -333,11 +328,11 @@
 
               <div class="flex flex-col items-center p-6">
                 <div
-                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
                 >
                   Logistics
                 </div>
-                <p class="mt-5 text-gray-900 dark:text-gray-300">
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
                   Supply chain management, automate route planning, and
                   enhance resource allocation.
                 </p>
@@ -351,21 +346,18 @@
 
   <!-- Why Neo? -->
   <div
-    class="px-1 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 items-center mx-auto py-16"
+    class="px-1 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 items-center mx-auto py-8"
   >
-    <div class="relative px-2 mx-auto max-w-7xl">
+    <div class="relative p-16 mx-auto max-w-7xl">
       <div class="text-center">
         <h2
-          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight"
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight font-dmsans"
         >
           Why Neo?
         </h2>
       </div>
 
-      <div
-        class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 mt-16 items-center"
-      >
-        <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
+        <div class="px-4 mt-6 text-gray-900 not-prose dark:text-gray-200">
           <div
             class="grid gap-4 mt-12 mb-4 lg:max-w-none md:grid-cols-3 text-center"
           >
@@ -379,8 +371,8 @@
                   class="w-28 h-28 text-gray-50"
                 />
               </div>
-              <p class="text-gray-50 font-semibold text-xl">Simple<br/>Pricing</p>
-              <p class="text-gray-50">You are only charged for ​the resources you use.</p>
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">Simple<br/>Pricing</p>
+              <p class="text-gray-50 font-dmsans">You are only charged for ​the resources you use.</p>
             </div>
             <div class="flex flex-col items-center gap-6 w-36 mx-auto">
               {{ $chat := resources.GetMatch "images/pages/chat.svg" }}
@@ -389,10 +381,10 @@
               >
                 <img src="{{ $chat.RelPermalink }}" class="w-28 h-28" />
               </div>
-              <p class="text-gray-50 font-semibold text-xl">
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">
                 Uncomplicated Interface
               </p>
-              <p class="text-gray-50">You can use industry-specific ​usecases templates.</p>
+              <p class="text-gray-50 font-dmsans">You can use industry-specific ​usecases templates.</p>
             </div>
             <div class="flex flex-col items-center gap-6 w-36 mx-auto">
               {{ $computer := resources.GetMatch "images/pages/computer.svg" }}
@@ -401,51 +393,50 @@
               >
                 <img src="{{ $computer.RelPermalink }}" class="w-28 h-28" />
               </div>
-              <p class="text-gray-50 font-semibold text-xl">Data Ownership</p>
-              <p class="text-gray-50">You have full control over ​where your data gets.</p>
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">Data Ownership</p>
+              <p class="text-gray-50 font-dmsans">You have full control over ​where your data gets.</p>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 
   <!-- Client feedback -->
   <div
-    class="py-32 px-36 min-w-full mx-auto bg-neutral-50"
+    class="py-16 px-36 min-w-full mx-auto bg-neutral-50"
   >
     <div class="grid gap-12 lg:mt-0 grid-cols-4">
       <div class="col-span-1">
-        <h1 class="mt-0 text-4xl font-bold text-gray-900 dark:text-gray-50">
+        <h1 class="mt-0 text-4xl font-bold text-gray-900 dark:text-gray-50 font-dmsans">
           Client Feedback
         </h1>
       </div>
       <div class="col-span-3 flex flex-col mt-20 gap-16 text-gray-50 text-xl">
-        <div class="flex flex-row gap-8">
-          <h2 class="font-semibold whitespace-nowrap w-40">
+        <div class="flex flex-row gap-12">
+          <h2 class="font-semibold whitespace-nowrap w-40 font-pp-neue-machina">
             Helen Parkhurst<br />CISO
           </h2>
-          <p class="italic">
+          <p class="italic font-dmsans">
             "Our threat detection became much more effective after implementing
             the platform. NeoDynamics has helped us stay ahead of emerging
             cybersecurity challenges with its adaptive capabilities."
           </p>
         </div>
-        <div class="flex flex-row gap-8">
-          <h2 class="font-semibold whitespace-nowrap w-40">
+        <div class="flex flex-row gap-12">
+          <h2 class="font-semibold whitespace-nowrap w-40 font-pp-neue-machina">
             Anthony Grayson<br />Defense
           </h2>
-          <p class="italic">
+          <p class="italic font-dmsans">
             "Mission planning has never been smoother. By reducing risks and
             improving response times, this platform has been a crucial addition
             to our defense operations. NeoDynamics is behind it all."
           </p>
         </div>
-        <div class="flex flex-row gap-8">
+        <div class="flex flex-row gap-12 font-pp-neue-machina">
           <h2 class="font-semibold whitespace-nowrap w-40">
             Laura Martinez<br />Logistics
           </h2>
-          <p class="italic">
+          <p class="italic font-dmsans">
             "Efficiency across our supply chain improved instantly. From route
             optimization to resource management, everything runs smoother thanks
             to the automation NeoDynamics provides."
@@ -474,9 +465,9 @@
           </h2>
           <a href="/contact">
             <button
-              class="mt-20 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              class="mt-20 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
             >
-              Contact Us
+              CONTACT US
             </button>
           </a>
         </div>
