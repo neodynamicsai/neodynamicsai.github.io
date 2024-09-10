@@ -24,7 +24,7 @@
           </p>
 
           <button
-            class="mt-10 px-6 py-3 text-lg font-bold w-96 text-neutral-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
           >
             {{ .Site.Params.CTA }}
           </button>
@@ -174,34 +174,78 @@
           <div
             class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3"
           >
-            {{ range (.Paginator 3).Pages }}
+            {{/*  Card  */}}
             <div
               class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
             >
-              {{ with .Params.featured_image }} {{ with resources.Get . }} {{
-              $postimage := (.Resize "500x webp q90").RelPermalink }}
+                {{ $image := resources.GetMatch "images/pages/define_problem.jpg" }}
               <img
-                src="{{ $postimage }}"
+                src="{{ $image.RelPermalink }}"
                 class="object-fill overflow-hidden rounded-t-lg"
                 width="100%"
                 height=""
                 loading="lazy"
                 alt="{{ .Title }}"
               />
-
-              {{ end }} {{ end }}
               <div class="flex flex-col items-center p-6">
                 <div
                   class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
                 >
-                  {{ .Title }}
+                  Define your problem
                 </div>
                 <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
-                  {{ .Params.summary }}
+                  Use familiar tools to describe your problem.
                 </p>
               </div>
             </div>
-            {{ end }}
+            {{/*  Card  */}}
+            <div
+              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+            >
+                {{ $image := resources.GetMatch "images/pages/train_evaluate.jpg" }}
+              <img
+                src="{{ $image.RelPermalink }}"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+                alt="{{ .Title }}"
+              />
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                >
+                  Train and Evaluate
+                </div>
+                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                  Evaluate the performance of multiple agents.
+                </p>
+              </div>
+            </div>
+            {{/*  Card  */}}
+            <div
+              class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900 items-center text-center"
+            >
+                {{ $image := resources.GetMatch "images/pages/cloud_inference.jpg" }}
+              <img
+                src="{{ $image.RelPermalink }}"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+                alt="{{ .Title }}"
+              />
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-2xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500"
+                >
+                  Managed Inference
+                </div>
+                <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
+                  Scale your agent while keeping your data secure.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -500,7 +544,7 @@
           </h2>
           <a href="/contact">
             <button
-              class="mt-10 px-6 py-3 text-lg font-bold w-96 text-neutral-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             >
               Contact Us
             </button>
