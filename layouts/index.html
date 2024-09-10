@@ -99,7 +99,31 @@
         <div
           class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20"
         >
-          <div class="overflow-hidden shadow-xl rounded-2xl">
+          <div style="width:100%;height:100%;transform:rotate(0deg);overflow:hidden;">
+            <div class="animated" style="width: 100%; height: 100%; animation: 806ms ease 100ms 1 normal both running baseline-LEFT-b3e53180-ca08-4529-9f67-96679145dc09;">
+                <svg id="Npw08JvI3vBGS10H" viewBox="0 0 469.0 474.1" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
+                    <g id="Such45Qym9r6eiHW" style="transform:scale(1, 1);">
+                        <div id="mLOnNhjj1C4ytGjS" style="clip-path:path('M54.5,474.1000061 L0,0 L414.5,0 L469,474.1000061 Z');">
+                            <div id="oZrfJkEyu8uDF0R7" style="transform: scale(1, 1); transform-origin: 234.5px 237.5px; animation: auto ease 0s 1 normal none running none;">
+                            {{ $p1image := resources.Get .Site.Params.P1.Image }}
+                            {{ with $p1image }}
+                            <img
+                                src="{{ .RelPermalink }}"
+                                loading="lazy"
+                                width="469px"
+                                height="686.08px"
+                                style="transform:translate(0px, -105.99px) rotate(0deg); transform-origin:234.5px 343.04px;width:469px;height:686.08px;display:block;opacity:1.0;object-fit:fill;"
+                                alt="P1 Image"
+                            />
+                            {{ end }}
+                            </div>
+                        </div>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+          {{/*  <div class="overflow-hidden shadow-xl rounded-2xl">
             {{ $p1image := resources.Get .Site.Params.P1.Image }} {{ with
             $p1image }} {{ with .Resize (printf "%dx%d webp q90" .Width .Height)
             }}
@@ -113,7 +137,7 @@
               loading="lazy"
             />
             {{ end }} {{ end }}
-          </div>
+          </div>  */}}
         </div>
       </div>
       <div
@@ -138,13 +162,7 @@
   </div>
 
   <!-- How it works section -->
-  <div
-    class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12"
-  >
-    <div class="absolute inset-0">
-      <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
-    </div>
-    <div class="relative px-2 mx-auto max-w-7xl">
+    <div class="relative bg-neutral px-2 mx-auto py-16">
       <div class="text-center">
         <h2
           class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-5xl"
@@ -346,7 +364,8 @@
                   Logistics
                 </div>
                 <p class="mt-5 text-xl text-gray-900 dark:text-gray-300">
-                    Optimize supply chain management, automate route planning, and enhance resource allocation.
+                  Optimize supply chain management, automate route planning, and
+                  enhance resource allocation.
                 </p>
               </div>
             </div>
@@ -422,57 +441,89 @@
 
   <!-- Sponsors section -->
   <div
-    class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 bg-neutral-50"
+    class="max-w-md mx-auto md:pt-10 md:pb-10 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 bg-neutral-50"
   >
-    <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-      <div
-        class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2"
-      >
-        {{ range .Site.Params.P3.Logos }}
-        <div
-          class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10"
-        >
-          {{ if .image }} {{ $sponsor := resources.Get .image }}
-          <img
-            src="{{ $sponsor.RelPermalink }}"
-            class="max-h-12 dark:invert"
-            alt="{{ .alt }}"
-            loading="lazy"
-          />
-          {{ else }} {{ $sponsor := resources.Get
-          "images/global/sample-logo.svg" }}
-          <img
-            src="{{ $sponsor.RelPermalink }}"
-            class="max-h-12 dark:invert"
-            alt="{{ .alt }}"
-            loading="lazy"
-          />
-          {{ end }}
-        </div>
-        {{ end }}
+    <div class="grid gap-12 lg:mt-0 grid-cols-4">
+      <div class="col-span-1">
+        <h1 class="mt-0 text-4xl font-bold text-gray-900 dark:text-gray-50">
+          Client Feedback
+        </h1>
       </div>
-      <div>
-        <h2
-          class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl"
-        >
-          {{ .Site.Params.P3.Heading }}
-        </h2>
-        {{ range .Site.Params.P3.Content }}
-        <p
-          class="max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white"
-        >
-          {{ .text }}
-        </p>
-        {{ end }} {{ range .Site.Params.P3.Links }}
-        <div class="my-6">
-          <a
-            href="{{ .url }}"
-            class="text-base font-medium text-primary-400 dark:text-primary-100"
+      <div class="col-span-3 flex flex-col mt-20 gap-16 text-gray-50 text-xl">
+        <div class="flex flex-row gap-8">
+          <h2 class="font-semibold whitespace-nowrap w-40">
+            Helen Parkhurst<br />CISO
+          </h2>
+          <p class="italic">
+            "Our threat detection became much more effective after implementing
+            the platform. NeoDynamics has helped us stay ahead of emerging
+            cybersecurity challenges with its adaptive capabilities."
+          </p>
+        </div>
+        <div class="flex flex-row gap-8">
+          <h2 class="font-semibold whitespace-nowrap w-40">
+            Anthony Grayson<br />Defense
+          </h2>
+          <p class="italic">
+            "Mission planning has never been smoother. By reducing risks and
+            improving response times, this platform has been a crucial addition
+            to our defense operations. NeoDynamics is behind it all."
+          </p>
+        </div>
+        <div class="flex flex-row gap-8">
+          <h2 class="font-semibold whitespace-nowrap w-40">
+            Laura Martinez<br />Logistics
+          </h2>
+          <p class="italic">
+            "Efficiency across our supply chain improved instantly. From route
+            optimization to resource management, everything runs smoother thanks
+            to the automation NeoDynamics provides."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-background-200 dark:bg-background pt-24">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto">
+      <div
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12"
+      >
+        <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+          <h1
+            class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white"
           >
-            {{ .text }}&nbsp&rarr;
+            We'd like to chat.
+          </h1>
+          <h2
+            class="pb-2 text-xl font-light text-gray-800 dark:text-gray-300 md:text-xl"
+          >
+            Reach out for an exploratory conversation.
+          </h2>
+          <a href="/contact">
+            <button
+              class="mt-10 px-6 py-3 text-lg font-bold w-96 text-neutral-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            >
+              Contact Us
+            </button>
           </a>
         </div>
-        {{ end }}
+        <div class="col-span-6">
+          {{ $hero := resources.GetMatch "images/pages/network_topology.jpg" }}
+          {{ $thumb := ($hero.Fill "400x400 webp q90") }} {{ $large :=
+          ($hero.Fill "576x576 webp q90") }}
+
+          <img
+            srcset="
+                        {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}"
+            src="{{ $hero.RelPermalink }}"
+            width="100%"
+            height=""
+            alt="TailBliss Hero"
+            class="w-full max-w-xl mx-auto rounded-lg"
+          />
+        </div>
       </div>
     </div>
   </div>

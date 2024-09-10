@@ -53,13 +53,13 @@ params:
   description: ""
   cta: "START NOW"
   disable_theme_toggle: true
-  disable_stay_uptodate: false
+  disable_stay_uptodate: true
 
   p1:
     heading: "What is Neo?"
     image: "images/pages/dynamic_environment.jpg"
     content:
-      - text: "Dynamic environments require unparalleled flexibility. Our platform is designed to simplify and streamline the creation of intelligent automation agents. Leveraging state-of-the- art deep learning and reinforcement learning techniques, we empower experts to solve complex problems across multiple industries."
+      - text: "Dynamic environments require unparalleled flexibility. Our platform is designed to simplify and streamline the creation of intelligent automation agents. Leveraging state-of-the-art deep learning and reinforcement learning techniques, we empower experts to solve complex problems across multiple industries."
   p2:
     heading: "How Neo works"
     image: "images/pages/hacktoberfest.jpg"
