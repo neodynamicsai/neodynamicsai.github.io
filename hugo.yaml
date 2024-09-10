@@ -95,10 +95,10 @@ params:
   social_media:
     github:
       enabled: true
-      url: 'https://github.com/neodynamics'
+      url: 'https://github.com/neodynamicsai'
     linkedin:
       enabled: true
-      url: 'https://www.linkedin.com/company/neodynamics-ai/'
+      url: 'https://www.linkedin.com/company/neodynamicsai/'
     facebook:
       enabled: false
       url: 'https://facebook.com/nusserstudios'
@@ -112,10 +112,6 @@ params:
 
 menu:
   main:
-    - identifier: team
-      name: Team
-      url: /team/
-      weight: 20
     - identifier: applications
       pre: dropdown
       name: Applications
