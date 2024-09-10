@@ -1,5 +1,5 @@
 <div
-  class="top-0 z-50 w-full text-gray-200 bg-gray-900 border-2 border-gray-900 md:sticky border-b-stone-200/10"
+  class="top-0 z-50 w-full bg-background text-gray-200 border-gray-900 md:sticky border-b-stone-200/10"
 >
   <div
     x-data="{ open: false }"
@@ -8,18 +8,13 @@
     <div class="flex flex-row items-center justify-between p-4">
       <a
         href="/"
-        class="flex text-gray-100 transition duration-1000 ease-in-out group"
+        class="flex text-gray-100 transition duration-1000 ease-in-out"
       >
         <img
-          src="/images/site-logo.svg"
-          class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70"
+          src="/images/neod_logo.svg"
+          class="transition-opacity w-44 hover:opacity-50 focus:opacity-70"
           alt="{{ .Site.Title }} Logo"
         />
-        <div
-          class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 uppercase transition-colors group-hover:text-gray-400/60"
-        >
-          {{ .Site.Title }}
-        </div>
       </a>
       <button
         class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
