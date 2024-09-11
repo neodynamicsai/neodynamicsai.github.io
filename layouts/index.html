@@ -1,33 +1,33 @@
 {{ define "main" }}
 <main>
   {{/* Hero */}}
-  <div class="bg-background-200 dark:bg-background px-24 animate-in slide-in-from-bottom duration-700">
+  <div class="bg-background-200 dark:bg-background md:px-24 animate-in slide-in-from-bottom duration-700">
     <div class="max-w-screen-xl px-4 py-8 mx-auto">
       <div
-        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-2 justify-between"
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 md:grid-cols-2 justify-between"
       >
-        <div class="col-span-1 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+        <div class="px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
           <h1
             class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white font-pp-neue-machina"
           >
             {{ .Site.Title }}
           </h1>
           <h2
-            class="pt-6 pb-10 text-xl font-light text-gray-800 dark:text-gray-300 md:text-xl font-dmsans"
+            class="pt-6 pb-10 text-xl font-light text-gray-800 dark:text-gray-300 lg:text-xl font-dmsans"
           >
             Optimal agents for dynamic environments
           </h2>
 
           <a href="/contact">
             <button
-                class="mt-10 px-6 py-3 text-lg font-bold w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
+                class="mt-10 px-6 py-3 text-lg font-bold w-64 md:w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
             >
                 START NOW
             </button>
           </a>
         </div>
-        <div class="col-span-1">
-          <div style="width:70%;height:auto;transform:rotate(0deg);overflow:hidden;">
+        <div>
+          <div class="hidden md:block" style="width:70%;height:auto;transform:rotate(0deg);overflow:hidden;">
             <svg id="L7VI4r2sxVRxIRCP" viewBox="0 0 399.8 499.8" style="width:100%;height:auto;">
                 <g id="boKojAEfdHSfsQIL" style="transform:scale(1, 1);">
                 <foreignObject id="myxwLmW0Y4TX9Mwq" style="width:399.8px;height:499.8px;">
