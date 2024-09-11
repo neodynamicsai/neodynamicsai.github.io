@@ -2564,6 +2564,18 @@ font-family: ui-sans-serif,
     padding: 8rem;
   }
 
+  .md\:p-56 {
+    padding: 14rem;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .md\:p-64 {
+    padding: 16rem;
+  }
+
   .md\:px-1\.5 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
