@@ -1162,6 +1162,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1748,6 +1753,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-10 {
@@ -2445,6 +2455,11 @@ font-family: ui-sans-serif,
     grid-column: span 3 / span 3;
   }
 
+  .md\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .md\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -2471,6 +2486,10 @@ font-family: ui-sans-serif,
 
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
   }
 
   .md\:block {
@@ -2571,6 +2590,11 @@ font-family: ui-sans-serif,
   .md\:px-36 {
     padding-left: 9rem;
     padding-right: 9rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pb-0 {
