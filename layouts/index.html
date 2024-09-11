@@ -62,7 +62,7 @@
   <!-- What is Neo? -->
   <div class="py-16 relative bg-neutral items-center">
     <div
-      class="px-6 mx-auto flex flex-row gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
+      class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
     >
         {{ $p1image := resources.Get .Site.Params.P1.Image }}
         {{ with $p1image }}
@@ -111,7 +111,7 @@
       <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
         <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
           <div
-            class="flex flex-row justify-between gap-4 mx-auto mt-12 mb-4 lg:max-w-none"
+            class="flex flex-col md:flex-row justify-between items-center gap-8 mx-auto mt-12 mb-4 lg:max-w-none"
           >
             {{/*  Card  */}}
             <div
@@ -184,9 +184,9 @@
 
   {{/* Phrase section */}}
   <div
-    class="flex bg-neutral-50 mx-auto text-center items-center p-60"
+    class="flex bg-neutral-50 mx-auto text-center items-center p-10 md:p-32"
   >
-    <p class="text-accent text-5xl leading-loose font-pp-neue-machina">
+    <p class="text-accent text-xl leading-loose md:text-5xl md:leading-loose font-pp-neue-machina">
       Empowering innovators to solve the world's toughest challenges with
       intelligent automation—because we believe that technology should work for
       you, not the other way around.
@@ -209,7 +209,7 @@
       <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5 text-center">
         <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
           <div
-            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-3 items-center place-items-center"
+            class="grid gap-8 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-3 items-center place-items-center"
           >
             {{/* Card */}}
             <div
@@ -287,7 +287,7 @@
             </div>
           </div>
           <div
-            class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-2 items-center place-items-center"
+            class="grid gap-8 mx-auto mt-8 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-2 items-center place-items-center"
           >
             {{/* Card */}}
             <div
@@ -359,7 +359,7 @@
 
         <div class="px-4 mt-6 text-gray-900 not-prose dark:text-gray-200">
           <div
-            class="grid gap-4 mt-12 mb-4 lg:max-w-none md:grid-cols-3 text-center"
+            class="grid gap-16 mt-12 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-3 text-center"
           >
             <div class="flex flex-col items-center gap-6 w-36 mx-auto">
               {{ $pricing := resources.GetMatch "images/pages/pricing.svg" }}
