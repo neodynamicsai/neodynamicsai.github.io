@@ -1,0 +1,468 @@
+---
+title: CyberSecurity
+date: 2021-12-18T03:10:36.000Z
+draft: false
+language: en
+description: A test with @tailwindcss/typography & Prose
+---
+
+<!-- @format -->
+
+<main>
+  {{/* Hero */}}
+  <div class="bg-background-200 dark:bg-background md:px-24 animate-in slide-in-from-bottom duration-700">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto">
+      <div
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 md:grid-cols-2 justify-between"
+      >
+        <div class="px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+          <h1
+            class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white font-pp-neue-machina"
+          >
+            {{ .Site.Title }}
+          </h1>
+          <h2
+            class="pt-6 pb-10 text-xl font-light text-gray-800 dark:text-gray-300 lg:text-xl font-dmsans"
+          >
+            Optimal agents for dynamic environments
+          </h2>
+
+          <a href="/contact">
+            <button
+                class="mt-10 px-6 py-3 text-lg font-bold w-64 md:w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
+            >
+                START NOW
+            </button>
+          </a>
+        </div>
+        <div>
+          <div class="hidden md:block" style="width:70%;height:auto;transform:rotate(0deg);overflow:hidden;">
+            <svg id="L7VI4r2sxVRxIRCP" viewBox="0 0 399.8 499.8" style="width:100%;height:auto;">
+                <g id="boKojAEfdHSfsQIL" style="transform:scale(1, 1);">
+                <foreignObject id="myxwLmW0Y4TX9Mwq" style="width:399.8px;height:499.8px;">
+                    <div id="o75qhW5vsYSDY6vb" style="clip-path:path('M13.10000038,0 L0,189.3999939 L39.5,268.29998779 L44.70000076,386.70001221 L328.79998779,499.79998779 L399.79998779,69.69999695 L136.80000305,78.90000153 Z');">
+                    <div id="WswtE0BMJMnwEt4r" style="transform: scale(1, 1); transform-origin: 200px 250px;">
+                        {{ $hero := resources.GetMatch "images/pages/autonomous_agents.jpg" }}
+                        {{ $thumb := ($hero.Fill "400x400 webp q90") }}
+                        {{ $large := ($hero.Fill "576x576 webp q90") }}
+
+                        <img
+                        srcset="
+                            {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                            {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}"
+                        src="{{ $hero.RelPermalink }}"
+                        loading="lazy"
+                        width="399.8px"
+                        height="584.85028571px"
+                        style="transform:translate(0px, -42.52514286px) rotate(0deg);transform-origin:199.9px 292.42514286px;width:399.8px;height:584.85028571px;display:block;opacity:1.0;object-fit:fill;"
+                        alt="TailBliss Hero"
+                        />
+                    </div>
+                    </div>
+                </foreignObject>
+                </g>
+            </svg>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- What is Neo? -->
+  <div class="py-16 relative bg-neutral items-center">
+    <div
+      class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
+    >
+        {{ $p1image := resources.Get .Site.Params.P1.Image }}
+        {{ with $p1image }}
+        <img
+            src="{{ .RelPermalink }}"
+            class="h-96 animate-in slide-in-from-bottom duration-700"
+                                loading="lazy"
+                                loading="lazy"
+                                class="relative object-fill overflow-hidden"
+                                style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
+            loading="lazy"
+                                class="relative object-fill overflow-hidden"
+                                style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
+            alt="P1 Image"
+        />
+        {{ end }}
+      <div
+        class="max-w-md pt-16 px-4 sm:max-w-3xl sm:px-6 lg:px-0 animate-in slide-in-from-bottom duration-700"
+      >
+          <h2
+            class="px-2 text-center md:text-start text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 font-dmsans"
+          >
+            What is Neo?
+          </h2>
+          <div class="px-2 mt-6 text-gray-900 dark:text-white">
+            <div class="mt-12 text-gray-900 dark:text-white">
+              {{ range .Site.Params.P1.Content }}
+              <p class="text-center md:text-start text-xl text-gray-900 dark:text-white leading-relaxed font-dmsans">{{ .text }}</p>
+              {{ end }}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works section -->
+
+    <div class="bg-background px-2 py-12">
+      <div class="text-center">
+        <h2
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight sm:text-3xl font-dmsans"
+        >
+          How Neo works
+        </h2>
+      </div>
+
+      <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
+        <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8 mx-auto mt-12 mb-4 lg:max-w-none"
+          >
+            {{/*  Card  */}}
+            <div
+              class="max-w-72 flex flex-col rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/define_problem.jpg"
+                loading="lazy"
+                alt="{{ .Title }}"
+              />
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Define your problem
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Use familiar tools to describe your problem.
+                </p>
+              </div>
+            </div>
+            {{/*  Card  */}}
+            <div
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/train_evaluate.jpg"
+                loading="lazy"
+                alt="{{ .Title }}"
+              />
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Train and Evaluate
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Evaluate the performance of multiple agents.
+                </p>
+              </div>
+            </div>
+            {{/*  Card  */}}
+            <div
+              class="max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/cloud_inference.jpg"
+                loading="lazy"
+                alt="{{ .Title }}"
+              />
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-medium text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Managed Inference
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Scale your agent while keeping your data secure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{{/* Phrase section */}}
+
+  <div
+    class="flex bg-neutral-50 mx-auto text-center items-center p-10 md:p-64"
+  >
+    <p class="text-accent text-xl leading-loose md:text-5xl md:leading-loose font-pp-neue-machina">
+      Empowering innovators to solve the world's toughest challenges with
+      intelligent automation—because we believe that technology should work for
+      you, not the other way around.
+    </p>
+  </div>
+
+  <!-- Applications -->
+  <div
+    class="relative px-1 pt-8 pb-4 bg-background lg:px-8" id="applications"
+  >
+    <div class="relative px-2 mx-auto max-w-7xl">
+      <div class="text-center">
+        <h2
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight font-dmsans"
+        >
+          Applications
+        </h2>
+      </div>
+
+      <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5 text-center">
+        <div class="px-4 text-gray-900 not-prose dark:text-gray-200">
+          <div
+            class="grid gap-8 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-3 items-center place-items-center"
+          >
+            {{/* Card */}}
+            <div
+              class="transition-transform duration-300 ease-out scale-100 hover:scale-105 max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center h-full"
+            >
+              <img
+                src="/images/cyber.jpg"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+              />
+
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Cybersecurity
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Attackers are getting smarter every day. Our Agents learn and
+                  evolve.
+                </p>
+              </div>
+            </div>
+            {{/* Card */}}
+            <div
+              class="transition-transform duration-300 ease-out scale-100 hover:scale-105 max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/defense.jpg"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+              />
+
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Defense
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Autonomous mission planning, significantly improving response
+                  times and reducing human risk.
+                </p>
+              </div>
+            </div>
+            {{/* Card */}}
+            <div
+              class="transition-transform duration-300 ease-out scale-100 hover:scale-105 max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center h-full"
+            >
+              <img
+                src="/images/space.jpg"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+              />
+
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Space
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Collision avoidance and optimal manouvering.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid gap-8 mx-auto mt-8 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-2 items-center place-items-center"
+          >
+            {{/* Card */}}
+            <div
+              class="transition-transform duration-300 ease-out scale-100 hover:scale-105 min-h-full max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/finance.jpg"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+              />
+
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Finance
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Objective-driven investing and trading strategies.
+                </p>
+              </div>
+            </div>
+            {{/* Card */}}
+            <div
+              class="transition-transform duration-300 ease-out scale-100 hover:scale-105 min-h-full max-w-72 flex flex-col overflow-hidden rounded-lg shadow-lg bg-neutral items-center text-center"
+            >
+              <img
+                src="/images/logistics.jpg"
+                class="object-fill overflow-hidden rounded-t-lg"
+                width="100%"
+                height=""
+                loading="lazy"
+              />
+
+              <div class="flex flex-col items-center p-6">
+                <div
+                  class="w-52 mt-2 text-xl font-semibold text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 font-pp-neue-machina"
+                >
+                  Logistics
+                </div>
+                <p class="mt-5 text-gray-900 dark:text-gray-300 font-dmsans">
+                  Supply chain management, automate route planning, and
+                  enhance resource allocation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Why Neo? -->
+  <div
+    class="px-1 bg-neutral-50 lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 items-center mx-auto py-8"
+  >
+    <div class="relative p-16 mx-auto max-w-7xl">
+      <div class="text-center">
+        <h2
+          class="text-3xl text-primary-500 dark:text-gray-50 font-bold tracking-tight font-dmsans"
+        >
+          Why Neo?
+        </h2>
+      </div>
+
+        <div class="px-4 mt-6 text-gray-900 not-prose dark:text-gray-200">
+          <div
+            class="grid gap-16 mt-12 mb-4 lg:max-w-none grid-cols-1 md:grid-cols-3 text-center"
+          >
+            <div class="flex flex-col items-center gap-6 w-36 mx-auto">
+              <div
+                class="w-48 h-48 border-4 border-accent rounded-full flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/images/pricing.svg"
+                  class="w-28 h-28 text-gray-50"
+                />
+              </div>
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">Simple<br/>Pricing</p>
+              <p class="text-gray-50 font-dmsans">You are only charged for ​the resources you use.</p>
+            </div>
+            <div class="flex flex-col items-center gap-6 w-36 mx-auto">
+              <div
+                class="w-48 h-48 border-4 border-accent rounded-full flex items-center justify-center overflow-hidden"
+              >
+                <img src="/images/chat.svg" class="w-28 h-28" />
+              </div>
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">
+                Uncomplicated Interface
+              </p>
+              <p class="text-gray-50 font-dmsans">You can use industry-specific ​usecases templates.</p>
+            </div>
+            <div class="flex flex-col items-center gap-6 w-36 mx-auto">
+              <div
+                class="w-48 h-48 border-4 border-accent range-500 rounded-full flex items-center justify-center overflow-hidden"
+              >
+                <img src="/images/computer.svg" class="w-28 h-28" />
+              </div>
+              <p class="text-gray-50 font-semibold text-xl font-pp-neue-machina">Data Ownership</p>
+              <p class="text-gray-50 font-dmsans">You have full control over ​where your data gets.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+{{/*  Contact  */}}
+
+  <div class="bg-background-200 dark:bg-background py-6 md:py-20 px-8 md:px-24">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto">
+      <div
+        class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 grid-cols-1 md:grid-cols-2"
+      >
+        <div class="px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+          <h1
+            class="mb-2 text-4xl font-bold leading-none tracking-tight text-gray-900 dark:text-white font-pp-neue-machina"
+          >
+            Let's chat
+          </h1>
+          <h2
+            class="pt-6 text-xl font-light text-gray-50 font-dmsans"
+          >
+            Reach out for an exploratory conversation.
+          </h2>
+          <a href="/contact">
+            <button
+              class="mt-20 px-6 py-3 text-lg font-bold w-64 md:w-96 text-gray-50 bg-accent rounded-full shadow-sm hover:animate-pulse focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-pp-neue-machina"
+            >
+              CONTACT US
+            </button>
+          </a>
+        </div>
+        <div class="mt-10 md:mt-0">
+          <div style="width:100%;height:auto;transform:rotate(0deg);overflow:hidden;">
+            <svg id="L7VI4r2sxVRxIRCP" viewBox="0 0 399.8 499.8" style="width:100%;height:auto;">
+                <g id="boKojAEfdHSfsQIL" style="transform:scale(1, 1);">
+                <foreignObject id="myxwLmW0Y4TX9Mwq" style="width:399.8px;height:499.8px;">
+                    <div id="o75qhW5vsYSDY6vb" style="clip-path:path('M13.10000038,0 L0,189.3999939 L39.5,268.29998779 L44.70000076,386.70001221 L328.79998779,499.79998779 L399.79998779,69.69999695 L136.80000305,78.90000153 Z');">
+                    <div id="WswtE0BMJMnwEt4r" style="transform: scale(1, 1); transform-origin: 200px 250px;">
+                        {{ $hero := resources.GetMatch "images/pages/network_topology.jpg" }}
+                        {{ $thumb := ($hero.Fill "400x400 webp q90") }}
+                        {{ $large := ($hero.Fill "576x576 webp q90") }}
+
+                        <img
+                        srcset="
+                            {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                            {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}"
+                        src="{{ $hero.RelPermalink }}"
+                        loading="lazy"
+                        width="399.8px"
+                        height="584.85028571px"
+                        style="transform:translate(0px, -42.52514286px) rotate(0deg);transform-origin:199.9px 292.42514286px;width:399.8px;height:584.85028571px;display:block;opacity:1.0;object-fit:fill;"
+                        alt="TailBliss Hero"
+                        />
+                    </div>
+                    </div>
+                </foreignObject>
+                </g>
+            </svg>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
