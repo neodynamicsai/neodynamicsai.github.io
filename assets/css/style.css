@@ -1449,14 +1449,6 @@ video {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -1607,6 +1599,11 @@ video {
   background-color: rgb(244 244 245 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
 .bg-center {
   background-position: center;
 }
@@ -1647,11 +1644,6 @@ video {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .px-2 {
@@ -1775,10 +1767,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .align-bottom {
@@ -2433,21 +2421,6 @@ font-family: ui-sans-serif,
     margin-bottom: 5rem;
   }
 
-  .md\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .md\:my-52 {
-    margin-top: 13rem;
-    margin-bottom: 13rem;
-  }
-
-  .md\:mx-72 {
-    margin-left: 18rem;
-    margin-right: 18rem;
-  }
-
   .md\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -2466,18 +2439,6 @@ font-family: ui-sans-serif,
 
   .md\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .md\:mt-20 {
-    margin-top: 5rem;
-  }
-
-  .md\:mt-3 {
-    margin-top: 0.75rem;
-  }
-
-  .md\:mt-36 {
-    margin-top: 9rem;
   }
 
   .md\:block {
@@ -2536,10 +2497,6 @@ font-family: ui-sans-serif,
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2564,26 +2521,6 @@ font-family: ui-sans-serif,
     gap: 2rem;
   }
 
-  .md\:gap-16 {
-    gap: 4rem;
-  }
-
-  .md\:gap-32 {
-    gap: 8rem;
-  }
-
-  .md\:p-32 {
-    padding: 8rem;
-  }
-
-  .md\:p-56 {
-    padding: 14rem;
-  }
-
-  .md\:p-6 {
-    padding: 1.5rem;
-  }
-
   .md\:p-64 {
     padding: 16rem;
   }
@@ -2598,9 +2535,9 @@ font-family: ui-sans-serif,
     padding-right: 6rem;
   }
 
-  .md\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
+  .md\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .md\:px-6 {
@@ -2611,56 +2548,6 @@ font-family: ui-sans-serif,
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .md\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .md\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .md\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
-  .md\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
-  }
-
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .md\:px-80 {
-    padding-left: 20rem;
-    padding-right: 20rem;
   }
 
   .md\:pb-0 {
