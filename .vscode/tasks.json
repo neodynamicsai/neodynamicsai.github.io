@@ -2,15 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "npm install",
+            "type": "shell",
+            "command": "npm install",
+            "problemMatcher": [],
+            "detail": "Runs npm install"
+        },
+        {
             "label": "npm start",
             "type": "shell",
             "command": "npm run start",
+            "dependsOn": "npm install",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": [],
-            "detail": "Runs npm start"
+            "detail": "Runs npm start after npm install"
         }
     ]
 }
