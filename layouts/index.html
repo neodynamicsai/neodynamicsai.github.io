@@ -33,15 +33,8 @@
                 <foreignObject id="myxwLmW0Y4TX9Mwq" style="width:399.8px;height:499.8px;">
                     <div id="o75qhW5vsYSDY6vb" style="clip-path:path('M13.10000038,0 L0,189.3999939 L39.5,268.29998779 L44.70000076,386.70001221 L328.79998779,499.79998779 L399.79998779,69.69999695 L136.80000305,78.90000153 Z');">
                     <div id="WswtE0BMJMnwEt4r" style="transform: scale(1, 1); transform-origin: 200px 250px;">
-                        {{ $hero := resources.GetMatch "images/pages/autonomous_agents.jpg" }}
-                        {{ $thumb := ($hero.Fill "400x400 webp q90") }}
-                        {{ $large := ($hero.Fill "576x576 webp q90") }}
-
                         <img
-                        srcset="
-                            {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                            {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}"
-                        src="{{ $hero.RelPermalink }}"
+                        src="/images/network_topology.jpg"
                         loading="lazy"
                         width="399.8px"
                         height="584.85028571px"
@@ -430,7 +423,7 @@
                     <div id="o75qhW5vsYSDY6vb" style="clip-path:path('M13.10000038,0 L0,189.3999939 L39.5,268.29998779 L44.70000076,386.70001221 L328.79998779,499.79998779 L399.79998779,69.69999695 L136.80000305,78.90000153 Z');">
                     <div id="WswtE0BMJMnwEt4r" style="transform: scale(1, 1); transform-origin: 200px 250px;">
                         <img
-                        src="/images/network_topology.jpg"
+                        src="/images/autonomous_agents.jpg"
                         loading="lazy"
                         width="399.8px"
                         height="584.85028571px"
