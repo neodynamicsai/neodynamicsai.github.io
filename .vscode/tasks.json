@@ -2,14 +2,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "npm install",
+            "label": "Compile Website",
             "type": "shell",
             "command": "npm install",
             "problemMatcher": [],
             "detail": "Runs npm install"
         },
         {
-            "label": "npm start",
+            "label": "Run Live Server",
             "type": "shell",
             "command": "npm run start",
             "dependsOn": "npm install",
