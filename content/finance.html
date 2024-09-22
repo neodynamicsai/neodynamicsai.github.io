@@ -9,19 +9,32 @@ description: A test with @tailwindcss/typography & Prose
 <!-- @format -->
 
 <main>
-  <!-- Phrase -->
-  <div class="flex items-center bg-neutral-50 p-10 text-center md:p-64">
-    <p
-      class="mx-auto font-pp-neue-machina text-xl leading-loose text-accent md:text-5xl md:leading-loose"
+    <!-- Phrase -->
+    <!--
+    <div class="flex items-center bg-neutral-50 p-10 text-center md:p-64">
+      <p
+        class="mx-auto font-pp-neue-machina text-xl leading-loose text-accent md:text-5xl md:leading-loose"
+      >
+        Attack-Defense redefined
+      </p>
+    </div>
+    -->
+
+    
+    <div class="flex flex-col items-center bg-neutral-50 p-10 text-center md:p-64 ">
+      <p class="text-center text-xl text-gray-900 dark:text-white leading-relaxed md:text-3xl font-dmsans mx-auto max-w-7xl">
+        In the financial sector, achieving optimal investment outcomes amidst market volatility requires advanced decision-making capabilities and real-time adaptability. Traditional investment strategies often fall short when it comes to dynamically responding to market changes and aligning with personal or institutional goals.  
+      </p>
+      </br>
+      <p class="text-center text-xl text-gray-900 dark:text-white leading-relaxed md:text-3xl font-dmsans mx-auto max-w-7xl">
+        NeoDynamics' Reinforcement Learning platform transforms retail investment management by providing a sophisticated approach to portfolio optimization. Our platform enables financial professionals and retail investors to design, test, and deploy investment strategies that are both agile and highly effective, enhancing returns and achieving financial goals with greater precision.  
+      </p>
+    </div>
+  <!-- Benefits -->
+  <div class="relative items-center bg-background py-16">
+    <div
+      class="mx-auto flex max-w-7xl flex-col justify-between px-6 align-bottom md:flex-row md:gap-24"
     >
-      Attack-Defense redefined
-    </p>
-  </div>
-<!-- Benefits -->
-<div class="relative items-center bg-background py-16">
-  <div
-    class="mx-auto flex max-w-7xl flex-col justify-between px-6 align-bottom md:flex-row md:gap-24"
-  >
     <img
       src="/images/dynamic_environment.jpg"
       class="h-96 duration-700 animate-in slide-in-from-bottom"
@@ -34,26 +47,36 @@ description: A test with @tailwindcss/typography & Prose
       style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
       alt="P1 Image"
     />
-    <div
-      class="max-w-md px-4 pt-16 duration-700 animate-in slide-in-from-bottom sm:max-w-3xl sm:px-6 lg:px-0"
-    >
-      <h2
-        class="px-2 text-center font-dmsans text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 md:text-start"
+      <div
+        class="max-w-md px-4 pt-16 duration-700 animate-in slide-in-from-bottom sm:max-w-3xl sm:px-6 lg:px-0"
       >
+        <h2
+          class="px-2 text-center font-dmsans text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 md:text-start"
+        >
         Goal-Driven Retail Investment Optimization
-      </h2>
-      <div class="mt-6 px-2 text-gray-900 dark:text-white">
-        <div class="mt-12 text-gray-900 dark:text-white">
-          <p
-            class="text-center font-dmsans text-xl leading-relaxed text-gray-900 dark:text-white md:text-start"
-          >
-            Description of use-case benefit #1.
+        </h2>
+        <div class="mt-6 px-2 text-gray-900 dark:text-white">
+          <!-- Bold headline -->
+          <p class="text-center md:text-start font-dmsans text-xl leading-relaxed text-gray-900 dark:text-white font-bold">
+            Maximizing Investment Plan Success Through Intelligent Optimization
           </p>
+  
+          <!-- Normal paragraph text -->
+          <p class="mt-4 text-center md:text-start font-dmsans text-xl leading-relaxed text-gray-900 dark:text-white">
+            Investors are increasingly seeking personalized and adaptive strategies to meet their financial goals. Our platform empowers you to create AI-driven investment systems that:
+          </p>
+  
+          <!-- Bullet points -->
+          <ul class="mt-6 list-disc pl-4 text-center md:text-start font-dmsans text-xl leading-relaxed text-gray-900 dark:text-white" style="list-style-type: disc;padding-left: 1.5rem;">
+            <li>Automatically adjust portfolios based on evolving market conditions and personal objectives</li>
+            <li>Optimize asset allocation to maximize plan success while managing risk</li>
+            <li>Learn and adapt investment strategies over time to improve decision-making accuracy</li>
+            <li>Provide actionable insights and recommendations tailored to specific financial goals and risk tolerances</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 <!-- Applications -->
@@ -96,7 +119,9 @@ description: A test with @tailwindcss/typography & Prose
           Let's Chat
         </h1>
         <h2 class="pt-6 font-dmsans text-xl font-light text-gray-50">
-          Reach out for an exploratory conversation.
+          Ready to transform your investment strategy with cutting-edge technology? 
+        </br>
+          Contact us to explore how NeoDynamics can help you achieve your financial goals through advanced AI-based investment optimization.
         </h2>
         <a href="/contact">
           <button
