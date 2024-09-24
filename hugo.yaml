@@ -51,7 +51,7 @@ params:
   authorimage: ../assets/images/global/author.webp
   og_image: /images/tailbliss-cover.png
   moto: "Make automation work for you."
-  description: ""
+  description: "Home"
   cta: "Start Now"
   disable_theme_toggle: true
   disable_stay_uptodate: true
