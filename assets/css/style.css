@@ -1326,10 +1326,6 @@ video {
   width: 16rem;
 }
 
-.w-\[35\%\] {
-  width: 35%;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1759,20 +1755,12 @@ video {
   padding-top: 2rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .text-left {
   text-align: left;
 }
 
 .text-center {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .text-start {
@@ -2440,10 +2428,6 @@ font-family: ui-sans-serif,
 @media (min-width: 768px) {
   .md\:sticky {
     position: sticky;
-  }
-
-  .md\:m-10 {
-    margin: 2.5rem;
   }
 
   .md\:-mt-1 {
