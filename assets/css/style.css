@@ -1759,6 +1759,10 @@ video {
   padding-top: 2rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2436,6 +2440,10 @@ font-family: ui-sans-serif,
 @media (min-width: 768px) {
   .md\:sticky {
     position: sticky;
+  }
+
+  .md\:m-10 {
+    margin: 2.5rem;
   }
 
   .md\:-mt-1 {
