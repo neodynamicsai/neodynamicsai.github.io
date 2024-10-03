@@ -47,7 +47,7 @@ markup:
 params:
   author: Nusser Studios
   authorimage: ../assets/images/global/author.webp
-  og_image: /images/neod_logo.png
+  og_image: /images/neod_logo_scaled_with_color.png
   moto: "Make automation work for you."
   description: "Home"
   cta: "Start Now"
