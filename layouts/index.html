@@ -53,41 +53,37 @@
   </div>
 
   <!-- What is Neo? -->
-  <div class="py-16 relative bg-neutral-50 items-center">
-    <div
-      class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl justify-items-stretch justify-between align-bottom"
-    >
-        <img
-            src="/images/rl.jpg"
-            class="h-96 animate-in slide-in-from-bottom duration-700"
-                                loading="lazy"
-                                loading="lazy"
-                                class="relative object-fill overflow-hidden"
-                                style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
-            loading="lazy"
-                                class="relative object-fill overflow-hidden"
-                                style="transform:translate(0px, 0px) rotate(0deg); transform-origin:234.5px 43.04px;display:flex;opacity:1.0;"
-            alt="P1 Image"
-        />
-      <div
-        class="max-w-md pt-8 px-4 sm:max-w-3xl sm:px-6 lg:px-0 animate-in slide-in-from-bottom duration-700"
-      >
-          <h2
-            class="px-2 text-center md:text-start text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 font-dmsans"
-          >
-            What is Neo?
-          </h2>
-          <div class="px-2 mt-6 text-gray-900 dark:text-white">
-            <div class="mt-12 text-gray-900 dark:text-white">
-              <p class="text-center md:text-start text-xl text-gray-900 dark:text-white leading-relaxed font-dmsans">
-                A platform to design, build, test and deploy superior control systems. 
-              </p>
-            </br>
-              <p class="text-center md:text-start text-xl text-gray-900 dark:text-white leading-relaxed font-dmsans">
-                Current solutions for control and automation often waste large amounts of money due to their rigidity and limited decision-making capabilities. Our product enables users to develop solutions for any control problem, allowing systems to learn and evolve through the integration of simulations with AI.  
-              </p>
-            </div>
+  <div class="py-16 relative bg-neutral-50">
+    <div class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl items-center">
+      <div class="relative w-full md:w-2/3 animate-in slide-in-from-bottom duration-700 shadow-2xl">
+        <!-- Carousel container -->
+        <div class="overflow-hidden relative rounded-lg shadow-2xl">
+          <!-- Carousel track -->
+          <div class="flex transition-transform duration-1000 ease-in-out" id="carousel-track">
+            <img src="/images/demo1.png" class="w-full flex-none" loading="lazy" alt="Neo Demo 1"/>
+            <img src="/images/demo2.png" class="w-full flex-none" loading="lazy" alt="Neo Demo 2"/>
+            <img src="/images/demo3.png" class="w-full flex-none" loading="lazy" alt="Neo Demo 3"/>
+            <img src="/images/demo4.png" class="w-full flex-none" loading="lazy" alt="Neo Demo 4"/>
           </div>
+          
+          <!-- Navigation buttons -->
+          <button class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 text-white" onclick="moveCarousel(-1)">←</button>
+          <button class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 text-white" onclick="moveCarousel(1)">→</button>
+          
+          <!-- Dots indicator -->
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="goToSlide(0)"></button>
+            <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="goToSlide(1)"></button>
+            <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="goToSlide(2)"></button>
+            <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="goToSlide(3)"></button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="max-w-md pt-8 px-4 sm:max-w-3xl sm:px-6 lg:px-0 animate-in slide-in-from-bottom duration-700 flex flex-col justify-center h-full md:w-1/3">
+        <h2 class="px-2 text-center md:text-start text-3xl font-bold tracking-normal leading-relaxed text-accent font-dmsans">
+          A comprehensive platform to design, build, test and deploy superior control systems.
+        </h2>
       </div>
     </div>
   </div>
