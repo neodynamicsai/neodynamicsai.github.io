@@ -74,10 +74,10 @@ params:
 
 menu:
   main:
-    - identifier: applications
-      name: Applications
-      url: "#applications"
-      weight: 30
+    # - identifier: applications
+    #   name: Applications
+    #   url: "#applications"
+    #   weight: 30
     - identifier: contact
       name: Contact
       url: /contact/
