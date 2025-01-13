@@ -5,7 +5,7 @@
 ></script>
 <footer class="bg-gray-900">
   <div
-    class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
+    class="max-w-md px-4 py-6 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
   >
     {{/*  <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
       {{ range site.Menus.footer }}
@@ -18,11 +18,11 @@
       </div>
       {{ end }}
     </nav>  */}}
-    <div class="flex justify-center mt-8 space-x-6">
+    <div class="flex justify-center mt-2 space-x-4">
       {{ if .Site.Params.Social_media.Facebook.Enabled }}
       <a
         href="{{ $.Site.Params.Social_media.Facebook.Url }}"
-        target="_blank" 
+        target="_blank"
         class="text-gray-400 hover:text-gray-300"
       >
         <span class="sr-only">Facebook</span>
@@ -42,7 +42,7 @@
       {{ end }} {{ if .Site.Params.Social_media.Instagram.Enabled }}
       <a
         href="{{ $.Site.Params.Social_media.Instagram.Url }}"
-        target="_blank" 
+        target="_blank"
         class="text-gray-400 hover:text-gray-300"
       >
         <span class="sr-only">Instagram</span>
@@ -62,7 +62,7 @@
       {{ end }} {{ if .Site.Params.Social_media.Twitter.Enabled }}
       <a
         href="{{ $.Site.Params.Social_media.Twitter.Url }}"
-        target="_blank" 
+        target="_blank"
         class="text-gray-400 hover:text-gray-300"
       >
         <span class="sr-only">Twitter</span>
@@ -80,7 +80,7 @@
       {{ end }} {{ if .Site.Params.Social_media.Github.Enabled }}
       <a
         href="{{ $.Site.Params.Social_media.Github.Url }}"
-        target="_blank" 
+        target="_blank"
         class="text-gray-400 hover:text-gray-300"
       >
         <span class="sr-only">GitHub</span>
@@ -100,7 +100,7 @@
       {{ end }} {{ if .Site.Params.Social_media.Linkedin.Enabled }}
       <a
         href="{{ $.Site.Params.Social_media.LinkedIn.Url }}"
-        target="_blank" 
+        target="_blank"
         class="text-gray-400 hover:text-gray-300"
       >
         <span class="sr-only">LinkedIn</span>
@@ -117,7 +117,7 @@
       </a>
       {{ end }}
     </div>
-    <p class="mt-8 text-base text-center text-gray-400">
+    <p class="mt-4 text-base text-center text-gray-400">
       &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
     </p>
   </div>
