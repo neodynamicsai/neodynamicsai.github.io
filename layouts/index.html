@@ -71,7 +71,7 @@
         </button>
         <button onclick="showFeature(4)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">One-Click Integration</h3>
-          <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Managed API end-point and model export optimized for desktop and embedded devices</p>
+          <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Managed API end-point and optmized export for desktop and embedded devices</p>
         </button>
       </div>
 
@@ -114,7 +114,12 @@
   </style>
 
   <script>
+    let featureInterval;
+    let currentFeatureIndex = 0;
+    const totalFeatures = 5;
+
     function showFeature(index) {
+      currentFeatureIndex = index;
       // Update selectors
       document.querySelectorAll('.feature-selector').forEach((selector, i) => {
         if (i === index) {
@@ -146,6 +151,32 @@
 
       document.querySelector('.feature-description').textContent = descriptions[index];
     }
+
+    function startFeatureInterval() {
+      featureInterval = setInterval(() => {
+        currentFeatureIndex = (currentFeatureIndex + 1) % totalFeatures;
+        showFeature(currentFeatureIndex);
+      }, 4000);
+    }
+
+    function stopFeatureInterval() {
+      clearInterval(featureInterval);
+    }
+
+    // Add event listeners for hover
+    document.querySelector('.feature-images').addEventListener('mouseenter', stopFeatureInterval);
+    document.querySelector('.feature-images').addEventListener('mouseleave', startFeatureInterval);
+
+    // Add event listeners for buttons to stop interval on click
+    document.querySelectorAll('.feature-selector').forEach(button => {
+      button.addEventListener('click', () => {
+        stopFeatureInterval();
+        setTimeout(startFeatureInterval, 8000); // Restart after 8 seconds of inactivity
+      });
+    });
+
+    // Start the interval initially
+    startFeatureInterval();
   </script>
 
   <!-- How it works section -->
