@@ -15,3 +15,11 @@
 ## Production build with NPM
 
 `npm run build`
+
+
+## Open problems
+
+- Timing for cycles in all the cycling sections
+- Overing not working on industries and applications
+- Check the responsiveness of the website
+- Buttons of the carousel in ROI section are worngly positioned
