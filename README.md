@@ -23,3 +23,4 @@
 - Overing not working on industries and applications
 - Check the responsiveness of the website
 - Buttons of the carousel in ROI section are worngly positioned
+- equally distribute space between image and text in the industry and application section
