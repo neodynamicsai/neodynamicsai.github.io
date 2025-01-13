@@ -26,3 +26,4 @@
 - Equally distribute space between image and text in the "industry and application" section
 - Make width constant for the cards in the carousel of the "ROI" section, allow text to be displayed in multiple lines, use a width that is maybe 1/4 of the carousel width
 - Feel free to add ROI cards to the carousel as examples
+- Page height to properly show footer in contact page
