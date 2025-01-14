@@ -153,6 +153,7 @@
     }
 
     function startFeatureInterval() {
+      stopFeatureInterval();
       featureInterval = setInterval(() => {
         currentFeatureIndex = (currentFeatureIndex + 1) % totalFeatures;
         showFeature(currentFeatureIndex);
@@ -324,6 +325,7 @@
           </div>
 
           <script>
+            let roiCarouselInterval;
             let currentROISlide = 0;
             const totalROISlides = 5;
             const roiCarousel = document.getElementById('roi-carousel');
@@ -348,10 +350,20 @@
             function goToROISlide(index) {
               currentROISlide = index;
               updateROICarousel();
+              startROICarouselInterval();
             }
 
-            // Auto-advance every 5 seconds
-            setInterval(() => moveROICarousel(1), 5000);
+            function startROICarouselInterval() {
+              stopROICarouselInterval();
+              // Auto-advance every 5 seconds
+              roiCarouselInterval = setInterval(() => moveROICarousel(1), 5000);
+            }
+
+            function stopROICarouselInterval() {
+              clearInterval(roiCarouselInterval);
+            }
+
+            startROICarouselInterval();
           </script>
         </div>
     </div>
@@ -516,6 +528,7 @@
     }
 
     function startIndustryFeatureInterval() {
+      stopIndustryFeatureInterval();
       industryFeatureInterval = setInterval(() => {
         currentIndustryFeature = (currentIndustryFeature + 1) % totalIndustryFeatures;
         showIndustryFeature(currentIndustryFeature);
