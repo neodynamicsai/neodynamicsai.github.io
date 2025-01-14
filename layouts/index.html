@@ -559,35 +559,4 @@
   </div>
 
 </main>
-
-<script>
-  let currentSlide = 0;
-  const track = document.getElementById('carousel-track');
-  const slides = track.children;
-  const totalSlides = slides.length;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    // Update dots
-    document.querySelectorAll('.absolute.bottom-4 button').forEach((dot, index) => {
-      dot.style.backgroundColor = index === currentSlide ? 'rgb(255, 255, 255)' : 'rgb(255, 255, 255, 0.5)';
-    });
-  }
-
-  updateCarousel();
-
-  function moveCarousel(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    updateCarousel();
-  }
-
-  function goToSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-  }
-
-  // Auto-advance every 8 seconds
-  setInterval(() => moveCarousel(1), 8000);
-</script>
-
 {{ end }}
