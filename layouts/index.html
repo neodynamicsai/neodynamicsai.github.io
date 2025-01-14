@@ -53,23 +53,23 @@
     <div class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl items-start">
       <!-- Left side selectors -->
       <div class="w-full md:w-1/3 flex flex-col gap-2">
-        <button onclick="showFeature(0)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector active">
+        <button onclick="showFeature(0)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector active transition-colors duration-300">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">End-to-End Workflows</h3>
           <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Problem import, AI agent design, training and deployment all in the same platform</p>
         </button>
-        <button onclick="showFeature(1)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector">
+        <button onclick="showFeature(1)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">On-Cloud and On-Premises</h3>
           <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Deploy and manage AI agents flexibly, either in the cloud or on private infrastructure</p>
         </button>
-        <button onclick="showFeature(2)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector">
+        <button onclick="showFeature(2)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">State of the Art Algorithms</h3>
           <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Support for Online, Offline and Multi-Agent Reinforcement Learning</p>
         </button>
-        <button onclick="showFeature(3)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector">
+        <button onclick="showFeature(3)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">Automated Training and Evaluation</h3>
           <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Scalable grid search and evaluation across different agents, environments and hardware</p>
         </button>
-        <button onclick="showFeature(4)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white hover:border-l-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors feature-selector">
+        <button onclick="showFeature(4)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 font-dmsans">One-Click Integration</h3>
           <p class="text-gray-800 dark:text-gray-300 mt-2 font-dmsans">Managed API end-point and optmized export for desktop and embedded devices</p>
         </button>
@@ -150,6 +150,7 @@
       ];
 
       document.querySelector('.feature-description').textContent = descriptions[index];
+      startFeatureInterval();
     }
 
     function startFeatureInterval() {
@@ -383,19 +384,19 @@
 
       <!-- Top selectors -->
       <div class="flex flex-wrap justify-center gap-4 mb-12 max-w-7xl mx-auto">
-        <button onclick="showIndustryFeature(0)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white hover:border-b-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors industry-selector active">
+        <button onclick="showIndustryFeature(0)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector active">
           <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Robotics</h3>
         </button>
-        <button onclick="showIndustryFeature(1)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white hover:border-b-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors industry-selector">
+        <button onclick="showIndustryFeature(1)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
           <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Cybersecurity</h3>
         </button>
-        <button onclick="showIndustryFeature(2)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white hover:border-b-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors industry-selector">
+        <button onclick="showIndustryFeature(2)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
           <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Space</h3>
         </button>
-        <button onclick="showIndustryFeature(3)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white hover:border-b-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors industry-selector">
+        <button onclick="showIndustryFeature(3)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
           <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Fintech</h3>
         </button>
-        <button onclick="showIndustryFeature(4)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white hover:border-b-4 hover:border-[#ff4c29]/50 rounded-lg transition-colors industry-selector">
+        <button onclick="showIndustryFeature(4)" class="w-1/3 text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
           <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Defense</h3>
         </button>
       </div>
@@ -484,9 +485,9 @@
   </style>
 
   <script>
+    let industryFeatureInterval;
     let currentIndustryFeature = 0;
     const totalIndustryFeatures = 5;
-    let industryFeatureInterval;
 
     function showIndustryFeature(index) {
       currentIndustryFeature = index;
@@ -525,6 +526,8 @@
         dot.classList.toggle('bg-accent', i === index);
         dot.classList.toggle('bg-accent/50', i !== index);
       });
+
+      startIndustryFeatureInterval();
     }
 
     function startIndustryFeatureInterval() {
