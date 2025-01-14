@@ -301,28 +301,27 @@
                   <p class="text-lg text-gray-800 dark:text-gray-300 font-dmsans">Saved per year in outsourcing costs</p>
                 </div>
               </div>
-
             </div>
             <!-- Navigation buttons -->
-              <button onclick="moveROICarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-r transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
-              <button onclick="moveROICarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-l transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
+            <button onclick="moveROICarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-r transition-colors duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button onclick="moveROICarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-l transition-colors duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
 
-            <!-- Dots navigation -->
-            <div class="roi-carousel-dots flex justify-center mt-4 gap-2">
-              <button onclick="goToROISlide(0)" class="w-3 h-3 rounded-full bg-accent"></button>
-              <button onclick="goToROISlide(1)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-              <button onclick="goToROISlide(2)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-              <button onclick="goToROISlide(3)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-              <button onclick="goToROISlide(4)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-            </div>
+          <!-- Dots navigation -->
+          <div class="roi-carousel-dots flex justify-center mt-4 gap-2">
+            <button onclick="goToROISlide(0)" class="w-3 h-3 rounded-full bg-accent"></button>
+            <button onclick="goToROISlide(1)" class="w-3 h-3 rounded-full bg-accent/50"></button>
+            <button onclick="goToROISlide(2)" class="w-3 h-3 rounded-full bg-accent/50"></button>
+            <button onclick="goToROISlide(3)" class="w-3 h-3 rounded-full bg-accent/50"></button>
+            <button onclick="goToROISlide(4)" class="w-3 h-3 rounded-full bg-accent/50"></button>
           </div>
 
           <script>
