@@ -328,6 +328,7 @@
           <!-- Carousel -->
           <div class="mt-16 relative overflow-hidden">
             <div id="roi-carousel" class="flex transition-transform duration-500 ease-in-out h-[150px]">
+              <!-- Original Cards -->
               <!-- Card 1 -->
               <div class="w-full flex-none md:w-1/3 px-4 h-full flex">
                 <div class="bg-background p-6 rounded-lg shadow-lg flex-1 flex flex-col">
@@ -361,6 +362,28 @@
                 <div class="bg-background p-6 rounded-lg shadow-lg flex-1 flex flex-col">
                   <p class="text-4xl font-bold mb-4 font-pp-neue-machina" style="color: #ff4c29;">$80k</p>
                   <p class="text-lg text-gray-800 dark:text-gray-300 font-dmsans">Saved per year in outsourcing costs</p>
+                </div>
+              </div>
+              <!-- Duplicated Cards for Infinite Loop -->
+              <!-- Card 1 (duplicate) -->
+              <div class="w-full flex-none md:w-1/3 px-4 h-full flex">
+                <div class="bg-background p-6 rounded-lg shadow-lg flex-1 flex flex-col">
+                  <p class="text-4xl font-bold mb-4 font-pp-neue-machina" style="color: #ff4c29;">90%</p>
+                  <p class="text-lg text-gray-800 dark:text-gray-300 font-dmsans">Reduction in agents development time</p>
+                </div>
+              </div>
+              <!-- Card 2 (duplicate) -->
+              <div class="w-full flex-none md:w-1/3 px-4 h-full flex">
+                <div class="bg-background p-6 rounded-lg shadow-lg flex-1 flex flex-col">
+                  <p class="text-4xl font-bold mb-4 font-pp-neue-machina" style="color: #ff4c29;">50%</p>
+                  <p class="text-lg text-gray-800 dark:text-gray-300 font-dmsans">Less damage caused by explosive drones</p>
+                </div>
+              </div>
+              <!-- Card 3 (duplicate) -->
+              <div class="w-full flex-none md:w-1/3 px-4 h-full flex">
+                <div class="bg-background p-6 rounded-lg shadow-lg flex-1 flex flex-col">
+                  <p class="text-4xl font-bold mb-4 font-pp-neue-machina" style="color: #ff4c29;">3x</p>
+                  <p class="text-lg text-gray-800 dark:text-gray-300 font-dmsans">Increase in financial product offerings</p>
                 </div>
               </div>
             </div>
@@ -401,15 +424,37 @@
               const offset = currentROISlide * -cardWidth;
               roiCarousel.style.transform = `translateX(${offset}%)`;
 
+              // If we've reached the end of the original slides
+              if (currentROISlide >= totalROISlides) {
+                // Wait for the transition to complete, then instantly jump back to the start
+                setTimeout(() => {
+                  roiCarousel.style.transition = 'none';
+                  currentROISlide = 0;
+                  roiCarousel.style.transform = `translateX(0%)`;
+                  // Re-enable the transition after the jump
+                  setTimeout(() => {
+                    roiCarousel.style.transition = 'transform 500ms ease-in-out';
+                  }, 50);
+                }, 500);
+              }
+
               // Update dots
               document.querySelectorAll('.roi-carousel-dots button').forEach((dot, index) => {
-                dot.classList.toggle('bg-accent', index === currentROISlide);
-                dot.classList.toggle('bg-accent/50', index !== currentROISlide);
+                dot.classList.toggle('bg-accent', index === currentROISlide % totalROISlides);
+                dot.classList.toggle('bg-accent/50', index !== currentROISlide % totalROISlides);
               });
             }
 
             function moveROICarousel(direction) {
-              currentROISlide = (currentROISlide + direction + totalROISlides) % totalROISlides;
+              currentROISlide = (currentROISlide + direction);
+              if (currentROISlide < 0) {
+                roiCarousel.style.transition = 'none';
+                currentROISlide = totalROISlides - 1;
+                roiCarousel.style.transform = `translateX(-${(totalROISlides - 1) * (100 / (window.innerWidth < 768 ? 1 : 3))}%)`;
+                setTimeout(() => {
+                  roiCarousel.style.transition = 'transform 500ms ease-in-out';
+                }, 50);
+              }
               updateROICarousel();
               startROICarouselInterval();
             }
@@ -433,6 +478,8 @@
             // Add resize handler to update carousel when screen size changes
             window.addEventListener('resize', updateROICarousel);
 
+            // Initialize the carousel
+            roiCarousel.style.transition = 'transform 500ms ease-in-out';
             startROICarouselInterval();
           </script>
         </div>
