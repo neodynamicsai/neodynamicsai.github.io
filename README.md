@@ -1,15 +1,21 @@
-## Install with NPM
+# Quickstart
 
-`npm install`
+## Prerequisites
 
-**To start developing:**
+- Install NPM dependencies: `npm install`
+- Install Hugo (version at least 0.120.0):
+  - `sudo snap install hugo` (restart terminal after installation)
+  - `hugo version` (check version)
 
-## Develop with NPM
+## Development mode
 
-`npm run start`
+- Run the development server and deploy locally: `npm run start`
+- Open the browser at `http://localhost:1313`
 
-**To generate the site HTML:**
-
-## Build with NPM
+## Production build with NPM
 
 `npm run build`
+
+## Open problems
+
+- Feel free to add ROI cards to the carousel as examples
