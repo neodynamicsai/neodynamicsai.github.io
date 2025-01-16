@@ -50,7 +50,7 @@ params:
   og_image: /images/neod_logo_scaled_with_color.png
   moto: "Make automation work for you."
   description: "Home"
-  cta: "Start Now"
+  cta: "Sign Up Now"
   disable_theme_toggle: true
   disable_stay_uptodate: true
 
@@ -70,14 +70,14 @@ params:
     twitter:
       enabled: false
       url: 'https://twitter.com/nusserstudios'
-    
+
 
 menu:
   main:
-    - identifier: applications
-      name: Applications
-      url: "#applications"
-      weight: 30
+    # - identifier: applications
+    #   name: Applications
+    #   url: "#applications"
+    #   weight: 30
     - identifier: contact
       name: Contact
       url: /contact/
