@@ -10,19 +10,19 @@ description: A test with @tailwindcss/typography & Prose
 
 <div class="max-w-screen-md px-4 mx-auto">
     <form name="contact" action="https://formsubmit.co/60ec9bd9fb0268d167b5386306793f42" method="POST" class="space-y-8">
-        <p class="mb-8 text-lg text-gray-900 dark:text-gray-300 font-dmsans">
+        <p class="mb-8 text-lg text-gray-300 font-dmsans">
             Share your email via the form below and we'll get back to you shortly to help you begin your journey with our AI agents development platform.
         </p>
         <div class="my-4">
-            <label for="email" class="block mb-2 font-medium text-gray-900 text-md dark:text-gray-300 font-dmsans"><strong>Your Email*:</strong></label>
-            <input type="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500 dark:shadow-sm-light" placeholder="name@example.com" required>
+            <label for="email" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Your Email*:</strong></label>
+            <input type="email" name="email" class="shadow-sm border text-md rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm-light" placeholder="name@example.com" required>
         </div>
         <div class="my-4">
             <input type="hidden" name="subject" value="Get Started Request">
         </div>
         <div class="my-4 sm:col-span-2">
-            <label for="message" class="block mb-2 font-medium text-gray-900 text-md dark:text-gray-400 font-dmsans"><strong>Your Message (Optional):</strong></label>
-            <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500" placeholder="Leave a comment..."></textarea>
+            <label for="message" class="block mb-2 font-medium text-md text-gray-400 font-dmsans"><strong>Your Message (Optional):</strong></label>
+            <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-md rounded-lg shadow-sm border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500" placeholder="Leave a comment..."></textarea>
         </div>
         <div class="mt-6 lg:pb-16 flex justify-end">
             <button type="submit" class="px-5 py-3 font-bold text-center text-gray-50 bg-accent rounded-full font-pp-neue-machina">SEND</button>
