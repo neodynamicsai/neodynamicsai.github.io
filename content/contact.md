@@ -15,6 +15,14 @@ description: A test with @tailwindcss/typography & Prose
             <input type="email" name="email" class="shadow-sm border  text-md rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm-light" placeholder="name@example.com" required>
         </div>
         <div class="my-4">
+            <label for="name" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Your Name*:</strong></label>
+            <input type="text" name="name" class="shadow-sm border text-md rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm-light" placeholder="John Doe" required>
+        </div>
+        <div class="my-4">
+            <label for="company" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Company*:</strong></label>
+            <input type="text" name="company" class="shadow-sm border text-md rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm-light" placeholder="Acme Inc." required>
+        </div>
+        <div class="my-4">
             <label for="subject" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Subject*:</strong></label>
             <input type="text" name="subject" class="block w-full p-3 border rounded-lg shadow-sm text-md focus:border-indigo-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 shadow-sm-light" placeholder="Let us know how we can help you" required>
         </div>
