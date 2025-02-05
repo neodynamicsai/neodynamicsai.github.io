@@ -1319,10 +1319,6 @@ video {
   margin-top: 2rem;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .block {
   display: block;
 }
@@ -1856,20 +1852,6 @@ video {
 .py-96 {
   padding-top: 24rem;
   padding-bottom: 24rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .pb-4 {
