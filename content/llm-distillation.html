@@ -5,96 +5,208 @@ draft: false
 ---
 
 <div class="w-full">
-
-
   <!-- Why NeoDynamics -->
-  <div class="pt-16 pb-8 relative bg-neutral-50 animate-in slide-in-from-bottom duration-700">
-    <div class="text-center mb-12">
-      <p class="text-xl text-primary-500 text-white tracking-[.15em] font-dmsans">
+  <div
+    class="relative bg-neutral-50 pb-8 pt-16 duration-700 animate-in slide-in-from-bottom"
+  >
+    <div class="mb-12 text-center">
+      <p
+        class="text-primary-500 font-dmsans text-xl tracking-[.15em] text-white"
+      >
         HOW IT WORKS
       </p>
-      <p class="mt-8 mb-16 text-4xl  text-gray-300 font-dmsans max-w-5xl mx-auto px-2">
-        Create efficient assistants specialized for your use-case in three simple steps and 95% cheaper.
+      <p
+        class="mx-auto mb-16 mt-8 max-w-5xl px-2 font-dmsans text-4xl text-gray-300"
+      >
+        Create efficient assistants specialized for your use-case:<br />in three
+        simple steps, at <strong><u>5% of the cost</u></strong>
       </p>
     </div>
-    <div class="px-6 mx-auto flex flex-col md:flex-row md:gap-24 max-w-7xl items-center">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center px-6 md:flex-row md:gap-24"
+    >
       <!-- Feature image for mobile -->
-      <div class="w-full md:hidden mb-8">
-        <div class="relative rounded-lg shadow-2xl overflow-hidden">
+      <div class="mb-8 w-full md:hidden">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl">
           <div class="feature-images">
-            <img src="/images/llm-distillation/step1.jpg" class="w-full feature-image active" alt="Cloud-native development"/>
-            <img src="/images/llm-distillation/step2.jpg" class="w-full feature-image hidden" alt="Physics simulation"/>
-            <img src="/images/llm-distillation/step3.jpg" class="w-full feature-image hidden" alt="AI capabilities"/>
+            <img
+              src="/images/llm-distillation/step1.jpg"
+              class="feature-image active w-full"
+              alt="Cloud-native development"
+            />
+            <img
+              src="/images/llm-distillation/step2.jpg"
+              class="feature-image hidden w-full"
+              alt="Physics simulation"
+            />
+            <img
+              src="/images/llm-distillation/step3.jpg"
+              class="feature-image hidden w-full"
+              alt="AI capabilities"
+            />
           </div>
         </div>
         <div class="mt-6 px-4">
-          <p class="text-gray-300 text-lg font-dmsans feature-description active">
-          </p>
+          <p
+            class="feature-description active font-dmsans text-lg text-gray-300"
+          ></p>
         </div>
       </div>
 
       <!-- Left side selectors -->
       <div class="relative w-full md:w-1/3">
         <!-- Mobile carousel -->
-        <div class="md:hidden relative mb-8">
+        <div class="relative mb-8 md:hidden">
           <!-- Navigation buttons -->
-          <button onclick="moveFeatureCarousel(-1)" class="absolute -left-7 top-[calc(50%-24px)] bg-accent/50 hover:bg-accent text-white p-2 rounded-r transition-colors duration-300 z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          <button
+            onclick="moveFeatureCarousel(-1)"
+            class="absolute -left-7 top-[calc(50%-24px)] z-10 rounded-r bg-accent/50 p-2 text-white transition-colors duration-300 hover:bg-accent"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
             </svg>
           </button>
-          <button onclick="moveFeatureCarousel(1)" class="absolute -right-7 top-[calc(50%-24px)] bg-accent/50 hover:bg-accent text-white p-2 rounded-l transition-colors duration-300 z-10">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          <button
+            onclick="moveFeatureCarousel(1)"
+            class="absolute -right-7 top-[calc(50%-24px)] z-10 rounded-l bg-accent/50 p-2 text-white transition-colors duration-300 hover:bg-accent"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
             </svg>
           </button>
-          <div class="px-4 overflow-hidden">
-            <div id="feature-selector-carousel" class="flex transition-transform duration-500 ease-in-out">
-              <button onclick="showFeature(0)" class="flex-none w-full text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector active">
-                <h3 class="text-xl font-bold text-gray-200 font-dmsans">1. Define Your Context</h3>
-                <p class="text-gray-300 mt-2 font-dmsans">Problem import, AI agent design, training and deployment all in the same platform</p>
+          <div class="overflow-hidden px-4">
+            <div
+              id="feature-selector-carousel"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              <button
+                onclick="showFeature(0)"
+                class="feature-selector active w-full flex-none rounded-lg border-l-4 border-transparent p-4 text-left hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-xl font-bold text-gray-200">
+                  1. Define Your Context
+                </h3>
+                <p class="mt-2 font-dmsans text-gray-300">
+                  Problem import, AI agent design, training and deployment all
+                  in the same platform
+                </p>
               </button>
-              <button onclick="showFeature(1)" class="flex-none w-full text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector">
-                <h3 class="text-xl font-bold text-gray-200 font-dmsans">2. Run the Distillation</h3>
-                <p class="text-gray-300 mt-2 font-dmsans">Select the target model with the desired size from a wide range of options, and run the automated RL-driven training on the cloud</p>
+              <button
+                onclick="showFeature(1)"
+                class="feature-selector w-full flex-none rounded-lg border-l-4 border-transparent p-4 text-left hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-xl font-bold text-gray-200">
+                  2. Run the Distillation
+                </h3>
+                <p class="mt-2 font-dmsans text-gray-300">
+                  Select the target model with the desired size from a wide
+                  range of options, and run the automated RL-driven training on
+                  the cloud
+                </p>
               </button>
-              <button onclick="showFeature(2)" class="flex-none w-full text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector">
-                <h3 class="text-xl font-bold text-gray-200 font-dmsans">3. Deploy Your Customized LLM</h3>
-                <p class="text-gray-300 mt-2 font-dmsans">Choose between instant cloud deployment with managed API access or export your model for on-premises use with full control</p>
+              <button
+                onclick="showFeature(2)"
+                class="feature-selector w-full flex-none rounded-lg border-l-4 border-transparent p-4 text-left hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-xl font-bold text-gray-200">
+                  3. Deploy Your Customized LLM
+                </h3>
+                <p class="mt-2 font-dmsans text-gray-300">
+                  Choose between instant cloud deployment with managed API
+                  access or export your model for on-premises use with full
+                  control
+                </p>
               </button>
             </div>
           </div>
         </div>
 
         <!-- Desktop layout -->
-        <div class="hidden md:flex flex-col gap-2">
-          <button onclick="showFeature(0)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector active transition-colors duration-300">
-            <h3 class="text-xl font-bold text-gray-200 font-dmsans">1. Define Your Context</h3>
-            <p class="text-gray-300 mt-2 font-dmsans">Import the dataset for your application or generate one for your use-case using the most powerful LLMs available in the market</p>
+        <div class="hidden flex-col gap-2 md:flex">
+          <button
+            onclick="showFeature(0)"
+            class="feature-selector active rounded-lg border-l-4 border-transparent p-4 text-left transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+          >
+            <h3 class="font-dmsans text-xl font-bold text-gray-200">
+              1. Define Your Context
+            </h3>
+            <p class="mt-2 font-dmsans text-gray-300">
+              Import the dataset for your application or generate one for your
+              use-case using the most powerful LLMs available in the market
+            </p>
           </button>
-          <button onclick="showFeature(1)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
-            <h3 class="text-xl font-bold text-gray-200 font-dmsans">2. Run the Distillation</h3>
-            <p class="text-gray-300 mt-2 font-dmsans">Select the target model with the desired size from a wide range of options, and run the automated RL-driven training on the cloud</p>
+          <button
+            onclick="showFeature(1)"
+            class="feature-selector rounded-lg border-l-4 border-transparent p-4 text-left transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+          >
+            <h3 class="font-dmsans text-xl font-bold text-gray-200">
+              2. Run the Distillation
+            </h3>
+            <p class="mt-2 font-dmsans text-gray-300">
+              Select the target model with the desired size from a wide range of
+              options, and run the automated RL-driven training on the cloud
+            </p>
           </button>
-          <button onclick="showFeature(2)" class="text-left p-4 hover:bg-[#082032]/10 hover:text-white border-l-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg feature-selector transition-colors duration-300">
-            <h3 class="text-xl font-bold text-gray-200 font-dmsans">3. Deploy Your Customized LLM</h3>
-            <p class="text-gray-300 mt-2 font-dmsans">Choose between instant cloud deployment with managed API access or export your model for on-premises use with full control</p>
+          <button
+            onclick="showFeature(2)"
+            class="feature-selector rounded-lg border-l-4 border-transparent p-4 text-left transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+          >
+            <h3 class="font-dmsans text-xl font-bold text-gray-200">
+              3. Deploy Your Customized LLM
+            </h3>
+            <p class="mt-2 font-dmsans text-gray-300">
+              Choose between instant cloud deployment with managed API access or
+              export your model for on-premises use with full control
+            </p>
           </button>
         </div>
       </div>
 
       <!-- Right side image and description (hidden on mobile) -->
-      <div class="hidden md:block w-full md:w-2/3 mt-8 md:mt-0">
-        <div class="relative rounded-lg shadow-2xl overflow-hidden">
+      <div class="mt-8 hidden w-full md:mt-0 md:block md:w-2/3">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl">
           <div class="feature-images">
-            <img src="/images/llm-distillation/step1.jpg" class="w-full feature-image active" alt="Cloud-native development"/>
-            <img src="/images/llm-distillation/step2.jpg" class="w-full feature-image hidden" alt="Physics simulation"/>
-            <img src="/images/llm-distillation/step3.jpg" class="w-full feature-image hidden" alt="AI capabilities"/>
+            <img
+              src="/images/llm-distillation/step1.jpg"
+              class="feature-image active w-full"
+              alt="Cloud-native development"
+            />
+            <img
+              src="/images/llm-distillation/step2.jpg"
+              class="feature-image hidden w-full"
+              alt="Physics simulation"
+            />
+            <img
+              src="/images/llm-distillation/step3.jpg"
+              class="feature-image hidden w-full"
+              alt="AI capabilities"
+            />
           </div>
         </div>
         <div class="mt-6 px-4">
-          <p class="text-gray-300 text-lg font-dmsans feature-description active">
-          </p>
+          <p
+            class="feature-description active font-dmsans text-lg text-gray-300"
+          ></p>
         </div>
       </div>
     </div>
@@ -123,30 +235,32 @@ draft: false
     let featureInterval;
     let currentFeatureIndex = 0;
     const totalFeatures = 3;
-    const featureCarousel = document.getElementById('feature-selector-carousel');
+    const featureCarousel = document.getElementById(
+      "feature-selector-carousel",
+    );
     let currentFeatureSlide = 0;
 
     function showFeature(index) {
       currentFeatureIndex = index;
       // Update selectors
-      document.querySelectorAll('.feature-selector').forEach((selector, i) => {
+      document.querySelectorAll(".feature-selector").forEach((selector, i) => {
         i = i % totalFeatures; // Because we have two sets of selectors: one for mobile and one for desktop
         if (i === index) {
-          selector.classList.add('active');
+          selector.classList.add("active");
         } else {
-          selector.classList.remove('active');
+          selector.classList.remove("active");
         }
       });
 
       // Update images
-      document.querySelectorAll('.feature-image').forEach((image, i) => {
+      document.querySelectorAll(".feature-image").forEach((image, i) => {
         i = i % totalFeatures; // Because we have two sets of images: one for mobile and one for desktop
         if (i === index) {
-          image.classList.remove('hidden');
-          image.classList.add('active');
+          image.classList.remove("hidden");
+          image.classList.add("active");
         } else {
-          image.classList.add('hidden');
-          image.classList.remove('active');
+          image.classList.add("hidden");
+          image.classList.remove("active");
         }
       });
 
@@ -164,7 +278,8 @@ draft: false
     }
 
     function moveFeatureCarousel(direction) {
-      currentFeatureSlide = (currentFeatureSlide + direction + totalFeatures) % totalFeatures;
+      currentFeatureSlide =
+        (currentFeatureSlide + direction + totalFeatures) % totalFeatures;
       updateFeatureCarousel();
       showFeature(currentFeatureSlide);
     }
@@ -181,8 +296,8 @@ draft: false
     }
 
     // Add event listeners for buttons to stop interval on click
-    document.querySelectorAll('.feature-selector').forEach(button => {
-      button.addEventListener('click', () => {
+    document.querySelectorAll(".feature-selector").forEach((button) => {
+      button.addEventListener("click", () => {
         stopFeatureInterval();
         setTimeout(startFeatureInterval, 8000); // Restart after 8 seconds of inactivity
       });
@@ -192,123 +307,247 @@ draft: false
     startFeatureInterval();
   </script>
 
-
   <!-- Industries and applications -->
-  <div class="px-1 bg-background lg:px-8 lg:pt-12 lg:mb-4 md:mt-8 items-center mx-auto py-8 animate-in slide-in-from-bottom duration-700">
-    <div class="relative p-4 mx-auto max-w-7xl">
+  <div
+    class="mx-auto items-center bg-background px-1 py-8 duration-700 animate-in slide-in-from-bottom md:mt-8 lg:mb-4 lg:px-8 lg:pt-12"
+  >
+    <div class="relative mx-auto max-w-7xl p-4">
       <div class="text-center">
-        <p class="text-xl text-primary-500 text-white tracking-[.15em] font-dmsans">
+        <p
+          class="text-primary-500 font-dmsans text-xl tracking-[.15em] text-white"
+        >
           APPLICATIONS
         </p>
-        <p class="mt-8 mb-12 text-4xl text-gray-300 font-dmsans max-w-6xl mx-auto">
-          Our customers are already leveraging specialized LLMs to power their custom applications: lightweight models tailored to their specific needs.
+        <p
+          class="mx-auto mb-12 mt-8 max-w-6xl font-dmsans text-4xl text-gray-300"
+        >
+          Our customers are already leveraging specialized LLMs to power their
+          custom applications: lightweight models tailored to their specific
+          needs.
         </p>
       </div>
 
       <!-- Top selectors -->
       <div class="relative">
         <!-- Mobile carousel -->
-        <div class="md:hidden relative">
-          <div class="overflow-hidden mb-8">
-            <div id="industry-selector-carousel" class="flex transition-transform duration-500 ease-in-out">
-              <button onclick="showIndustryFeature(0)" class="flex-none w-full text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector active">
-                <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Entity Retrieval</h3>
+        <div class="relative md:hidden">
+          <div class="mb-8 overflow-hidden">
+            <div
+              id="industry-selector-carousel"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              <button
+                onclick="showIndustryFeature(0)"
+                class="industry-selector active w-full flex-none rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+                  Entity Retrieval
+                </h3>
               </button>
-              <button onclick="showIndustryFeature(1)" class="flex-none w-full text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-                <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Customer Support</h3>
+              <button
+                onclick="showIndustryFeature(1)"
+                class="industry-selector w-full flex-none rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+                  Customer Support
+                </h3>
               </button>
-              <button onclick="showIndustryFeature(2)" class="flex-none w-full text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-                <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Legal Analysis</h3>
+              <button
+                onclick="showIndustryFeature(2)"
+                class="industry-selector w-full flex-none rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+                  Legal Analysis
+                </h3>
               </button>
-              <button onclick="showIndustryFeature(3)" class="flex-none w-full text-center p-4 hover:bg-[#082032]/10 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-                <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Healthcare</h3>
+              <button
+                onclick="showIndustryFeature(3)"
+                class="industry-selector w-full flex-none rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#082032]/10 hover:text-white"
+              >
+                <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+                  Healthcare
+                </h3>
               </button>
             </div>
           </div>
           <!-- Navigation buttons -->
-          <button onclick="moveIndustrySelectorCarousel(-1)" class="absolute -left-5 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-r transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          <button
+            onclick="moveIndustrySelectorCarousel(-1)"
+            class="absolute -left-5 top-1/2 -translate-y-1/2 rounded-r bg-accent/50 p-2 text-white transition-colors duration-300 hover:bg-accent"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
             </svg>
           </button>
-          <button onclick="moveIndustrySelectorCarousel(1)" class="absolute -right-6 top-1/2 -translate-y-1/2 bg-accent/50 hover:bg-accent text-white p-2 rounded-l transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          <button
+            onclick="moveIndustrySelectorCarousel(1)"
+            class="absolute -right-6 top-1/2 -translate-y-1/2 rounded-l bg-accent/50 p-2 text-white transition-colors duration-300 hover:bg-accent"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
             </svg>
           </button>
         </div>
 
         <!-- Desktop layout -->
-        <div class="hidden md:flex flex-row justify-center gap-4 mb-12 mx-auto px-4">
-          <button onclick="showIndustryFeature(0)" class="w-1/3 text-center p-4 hover:bg-[#2c394b]/20 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector active">
-            <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Entity Retrieval</h3>
+        <div
+          class="mx-auto mb-12 hidden flex-row justify-center gap-4 px-4 md:flex"
+        >
+          <button
+            onclick="showIndustryFeature(0)"
+            class="industry-selector active w-1/3 rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#2c394b]/20 hover:text-white"
+          >
+            <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+              Entity Retrieval
+            </h3>
           </button>
-          <button onclick="showIndustryFeature(1)" class="w-1/3 text-center p-4 hover:bg-[#2c394b]/20 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-            <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Customer Support</h3>
+          <button
+            onclick="showIndustryFeature(1)"
+            class="industry-selector w-1/3 rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#2c394b]/20 hover:text-white"
+          >
+            <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+              Customer Support
+            </h3>
           </button>
-          <button onclick="showIndustryFeature(2)" class="w-1/3 text-center p-4 hover:bg-[#2c394b]/20 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-            <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Legal Analysis</h3>
+          <button
+            onclick="showIndustryFeature(2)"
+            class="industry-selector w-1/3 rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#2c394b]/20 hover:text-white"
+          >
+            <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+              Legal Analysis
+            </h3>
           </button>
-          <button onclick="showIndustryFeature(3)" class="w-1/3 text-center p-4 hover:bg-[#2c394b]/20 hover:text-white border-b-4 border-transparent hover:border-[#ff4c29]/50 rounded-lg transition-colors duration-300 industry-selector">
-            <h3 class="text-2xl font-medium text-gray-50 font-dmsans">Healthcare</h3>
+          <button
+            onclick="showIndustryFeature(3)"
+            class="industry-selector w-1/3 rounded-lg border-b-4 border-transparent p-4 text-center transition-colors duration-300 hover:border-[#ff4c29]/50 hover:bg-[#2c394b]/20 hover:text-white"
+          >
+            <h3 class="font-dmsans text-2xl font-medium text-gray-50">
+              Healthcare
+            </h3>
           </button>
         </div>
       </div>
 
-      <script>
-      </script>
+      <script></script>
 
       <!-- Image and text display area -->
-      <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row gap-0 md:gap-12">
+      <div
+        class="relative mx-auto flex max-w-5xl flex-col gap-0 md:flex-row md:gap-12"
+      >
         <!-- Left side - Images -->
         <div class="w-full md:w-1/2">
-          <div class="industry-images bg-[#082032] h-[300px] rounded-lg overflow-hidden">
+          <div
+            class="industry-images h-[300px] overflow-hidden rounded-lg bg-[#082032]"
+          >
             <div class="industry-image active flex items-center justify-center">
-              <img src="/images/llm-distillation/entity.jpg" class="w-full h-full object-fill" alt="Aerospace & Defense"/>
+              <img
+                src="/images/llm-distillation/entity.jpg"
+                class="h-full w-full object-fill"
+                alt="Aerospace & Defense"
+              />
             </div>
-            <div class="industry-image hidden flex items-center justify-center">
-              <img src="/images/llm-distillation/customer.jpg" class="w-full h-full object-fill" alt="Cybersecurity"/>
+            <div class="industry-image flex hidden items-center justify-center">
+              <img
+                src="/images/llm-distillation/customer.jpg"
+                class="h-full w-full object-fill"
+                alt="Cybersecurity"
+              />
             </div>
-            <div class="industry-image hidden flex items-center justify-center">
-              <img src="/images/llm-distillation/legal.jpg" class="w-full h-full object-fill" alt="Finance"/>
+            <div class="industry-image flex hidden items-center justify-center">
+              <img
+                src="/images/llm-distillation/legal.jpg"
+                class="h-full w-full object-fill"
+                alt="Finance"
+              />
             </div>
-            <div class="industry-image hidden flex items-center justify-center">
-              <img src="/images/llm-distillation/healthcare.jpg" class="w-full h-full object-fill" alt="Robotics"/>
+            <div class="industry-image flex hidden items-center justify-center">
+              <img
+                src="/images/llm-distillation/healthcare.jpg"
+                class="h-full w-full object-fill"
+                alt="Robotics"
+              />
             </div>
           </div>
         </div>
 
         <!-- Right side - Text descriptions -->
-        <div class="w-full md:w-1/2 flex items-center px-4 md:px-0">
+        <div class="flex w-full items-center px-4 md:w-1/2 md:px-0">
           <div class="industry-description active">
-            <p class="text-xl text-gray-300 font-dmsans">
-              Extract and organize key information from documents with context-aware AI that understands your specific domain. Deploy specialized models that accurately identify entities, relationships, and critical data points while maintaining the semantic context of your documents.
+            <p class="font-dmsans text-xl text-gray-300">
+              Extract and organize key information from documents with
+              context-aware AI that understands your specific domain. Deploy
+              specialized models that accurately identify entities,
+              relationships, and critical data points while maintaining the
+              semantic context of your documents.
             </p>
           </div>
           <div class="industry-description hidden">
-            <p class="text-xl text-gray-300 font-dmsans">
-              Enhance customer service with context-aware AI that understands company policies, product details, and customer history. Deploy personalized support agents that maintain consistent knowledge of past interactions and specific customer needs.
+            <p class="font-dmsans text-xl text-gray-300">
+              Enhance customer service with context-aware AI that understands
+              company policies, product details, and customer history. Deploy
+              personalized support agents that maintain consistent knowledge of
+              past interactions and specific customer needs.
             </p>
           </div>
           <div class="industry-description hidden">
-            <p class="text-xl text-gray-300 font-dmsans">
-              Process and analyze legal documents with AI that understands jurisdictional context, precedent cases, and specific legal frameworks. Create specialized models for contract review, compliance checking, and legal research with domain-specific knowledge.
+            <p class="font-dmsans text-xl text-gray-300">
+              Process and analyze legal documents with AI that understands
+              jurisdictional context, precedent cases, and specific legal
+              frameworks. Create specialized models for contract review,
+              compliance checking, and legal research with domain-specific
+              knowledge.
             </p>
           </div>
           <div class="industry-description hidden">
-            <p class="text-xl text-gray-300 font-dmsans">
-              Support healthcare professionals with AI assistants that understand medical terminology, patient histories, and treatment protocols. Deploy specialized models that maintain patient context while ensuring compliance with healthcare regulations and privacy requirements.
+            <p class="font-dmsans text-xl text-gray-300">
+              Support healthcare professionals with AI assistants that
+              understand medical terminology, patient histories, and treatment
+              protocols. Deploy specialized models that maintain patient context
+              while ensuring compliance with healthcare regulations and privacy
+              requirements.
             </p>
           </div>
         </div>
       </div>
 
       <!-- Dots navigation -->
-      <div class="industry-carousel-dots flex justify-center mt-8 gap-2">
-        <button onclick="showIndustryFeature(0)" class="w-3 h-3 rounded-full bg-accent"></button>
-        <button onclick="showIndustryFeature(1)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-        <button onclick="showIndustryFeature(2)" class="w-3 h-3 rounded-full bg-accent/50"></button>
-        <button onclick="showIndustryFeature(3)" class="w-3 h-3 rounded-full bg-accent/50"></button>
+      <div class="industry-carousel-dots mt-8 flex justify-center gap-2">
+        <button
+          onclick="showIndustryFeature(0)"
+          class="h-3 w-3 rounded-full bg-accent"
+        ></button>
+        <button
+          onclick="showIndustryFeature(1)"
+          class="h-3 w-3 rounded-full bg-accent/50"
+        ></button>
+        <button
+          onclick="showIndustryFeature(2)"
+          class="h-3 w-3 rounded-full bg-accent/50"
+        ></button>
+        <button
+          onclick="showIndustryFeature(3)"
+          class="h-3 w-3 rounded-full bg-accent/50"
+        ></button>
       </div>
     </div>
   </div>
@@ -340,41 +579,43 @@ draft: false
     function showIndustryFeature(index) {
       currentIndustryFeature = index;
       // Update selectors
-      document.querySelectorAll('.industry-selector').forEach((selector, i) => {
+      document.querySelectorAll(".industry-selector").forEach((selector, i) => {
         i = i % totalIndustryFeatures; // Because we have two sets of selectors: one for mobile and one for desktop
         if (i === index) {
-          selector.classList.add('active');
+          selector.classList.add("active");
         } else {
-          selector.classList.remove('active');
+          selector.classList.remove("active");
         }
       });
 
       // Update images and descriptions
-      document.querySelectorAll('.industry-image').forEach((image, i) => {
+      document.querySelectorAll(".industry-image").forEach((image, i) => {
         if (i === index) {
-          image.classList.remove('hidden');
-          image.classList.add('active');
+          image.classList.remove("hidden");
+          image.classList.add("active");
         } else {
-          image.classList.add('hidden');
-          image.classList.remove('active');
+          image.classList.add("hidden");
+          image.classList.remove("active");
         }
       });
 
-      document.querySelectorAll('.industry-description').forEach((desc, i) => {
+      document.querySelectorAll(".industry-description").forEach((desc, i) => {
         if (i === index) {
-          desc.classList.remove('hidden');
-          desc.classList.add('active');
+          desc.classList.remove("hidden");
+          desc.classList.add("active");
         } else {
-          desc.classList.add('hidden');
-          desc.classList.remove('active');
+          desc.classList.add("hidden");
+          desc.classList.remove("active");
         }
       });
 
       // Update dots
-      document.querySelectorAll('.industry-carousel-dots button').forEach((dot, i) => {
-        dot.classList.toggle('bg-accent', i === index);
-        dot.classList.toggle('bg-accent/50', i !== index);
-      });
+      document
+        .querySelectorAll(".industry-carousel-dots button")
+        .forEach((dot, i) => {
+          dot.classList.toggle("bg-accent", i === index);
+          dot.classList.toggle("bg-accent/50", i !== index);
+        });
 
       startIndustryFeatureInterval();
 
@@ -387,7 +628,8 @@ draft: false
     function startIndustryFeatureInterval() {
       stopIndustryFeatureInterval();
       industryFeatureInterval = setInterval(() => {
-        currentIndustryFeature = (currentIndustryFeature + 1) % totalIndustryFeatures;
+        currentIndustryFeature =
+          (currentIndustryFeature + 1) % totalIndustryFeatures;
         // showIndustryFeature(currentIndustryFeature);
         moveIndustrySelectorCarousel(1);
       }, 5000);
@@ -398,12 +640,14 @@ draft: false
     }
 
     // Add event listeners for buttons to stop interval on click
-    document.querySelectorAll('.industry-selector, .industry-images + .flex button').forEach(button => {
-      button.addEventListener('click', () => {
-        stopIndustryFeatureInterval();
-        setTimeout(startIndustryFeatureInterval, 8000); // Restart after 8 seconds of inactivity
+    document
+      .querySelectorAll(".industry-selector, .industry-images + .flex button")
+      .forEach((button) => {
+        button.addEventListener("click", () => {
+          stopIndustryFeatureInterval();
+          setTimeout(startIndustryFeatureInterval, 8000); // Restart after 8 seconds of inactivity
+        });
       });
-    });
 
     // Start the interval initially
     startIndustryFeatureInterval();
@@ -411,7 +655,9 @@ draft: false
     // Mobile carousel
     let currentIndustrySelectorSlide = 0;
     const totalIndustrySelectorSlides = 4;
-    const industrySelectorCarousel = document.getElementById('industry-selector-carousel');
+    const industrySelectorCarousel = document.getElementById(
+      "industry-selector-carousel",
+    );
 
     function updateIndustrySelectorCarousel() {
       const offset = currentIndustrySelectorSlide * -100;
@@ -419,7 +665,11 @@ draft: false
     }
 
     function moveIndustrySelectorCarousel(direction) {
-      currentIndustrySelectorSlide = (currentIndustrySelectorSlide + direction + totalIndustrySelectorSlides) % totalIndustrySelectorSlides;
+      currentIndustrySelectorSlide =
+        (currentIndustrySelectorSlide +
+          direction +
+          totalIndustrySelectorSlides) %
+        totalIndustrySelectorSlides;
       updateIndustrySelectorCarousel();
       showIndustryFeature(currentIndustrySelectorSlide);
     }
@@ -430,7 +680,9 @@ draft: false
     class="bg-neutral-50 px-2 py-16 duration-700 animate-in slide-in-from-bottom"
   >
     <div class="flex flex-col items-center text-center">
-      <p class="text-xl text-primary-500 text-white tracking-[.15em] font-dmsans mb-8">
+      <p
+        class="text-primary-500 mb-8 font-dmsans text-xl tracking-[.15em] text-white"
+      >
         GET STARTED
       </p>
       <p class="mx-auto mb-8 max-w-2xl font-dmsans text-xl text-gray-300">
