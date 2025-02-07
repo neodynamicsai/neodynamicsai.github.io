@@ -1423,6 +1423,18 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1614,6 +1626,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded-full {
@@ -2606,6 +2622,10 @@ font-family: ui-sans-serif,
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-end {
