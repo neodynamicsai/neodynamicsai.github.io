@@ -307,9 +307,42 @@ draft: false
     startFeatureInterval();
   </script>
 
+  <!-- See it in Action -->
+  <div
+    class="bg-background px-2 py-16 duration-700 animate-in slide-in-from-bottom"
+  >
+    <div class="text-center">
+      <p
+        class="text-primary-500 font-dmsans text-xl tracking-[.15em] text-white"
+      >
+        SEE IT IN ACTION
+      </p>
+      <p
+        class="mx-auto mb-16 mt-8 max-w-4xl px-2 font-dmsans text-4xl text-gray-300"
+      >
+        Watch how easy it is to create and deploy your specialized LLM in
+        minutes.
+      </p>
+      <!-- YouTube Video Container -->
+      <div class="mx-auto max-w-4xl">
+        <div class="relative h-0 w-full pb-[62.5%]">
+          <iframe
+            class="absolute left-0 top-0 h-full w-full rounded-lg shadow-2xl"
+            src="https://www.youtube.com/embed/OYOz0CD1q1I"
+            title="LLM Distillation Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Industries and applications -->
   <div
-    class="mx-auto items-center bg-background px-1 py-8 duration-700 animate-in slide-in-from-bottom md:mt-8 lg:mb-4 lg:px-8 lg:pt-12"
+    class="mx-auto items-center bg-neutral-50 px-1 py-8 duration-700 animate-in slide-in-from-bottom md:mt-8"
   >
     <div class="relative mx-auto max-w-7xl p-4">
       <div class="text-center">
@@ -457,34 +490,34 @@ draft: false
         <!-- Left side - Images -->
         <div class="w-full md:w-1/2">
           <div
-            class="industry-images h-[300px] overflow-hidden rounded-lg bg-[#082032]"
+            class="industry-images h-[300px] overflow-hidden rounded-lg bg-[#082032] shadow-2xl"
           >
             <div class="industry-image active flex items-center justify-center">
               <img
                 src="/images/llm-distillation/entity.jpg"
                 class="h-full w-full object-fill"
-                alt="Aerospace & Defense"
+                alt="Entity Retrieval"
               />
             </div>
             <div class="industry-image flex hidden items-center justify-center">
               <img
                 src="/images/llm-distillation/customer.jpg"
                 class="h-full w-full object-fill"
-                alt="Cybersecurity"
+                alt="Customer Support"
               />
             </div>
             <div class="industry-image flex hidden items-center justify-center">
               <img
                 src="/images/llm-distillation/legal.jpg"
                 class="h-full w-full object-fill"
-                alt="Finance"
+                alt="Legal Analysis"
               />
             </div>
             <div class="industry-image flex hidden items-center justify-center">
               <img
                 src="/images/llm-distillation/healthcare.jpg"
                 class="h-full w-full object-fill"
-                alt="Robotics"
+                alt="Healthcare"
               />
             </div>
           </div>
@@ -698,4 +731,101 @@ draft: false
       </a>
     </div>
   </div>
+
+  <!-- Lightbox Modal -->
+  <div
+    id="imageModal"
+    class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/0"
+  >
+    <div class="lightbox-container">
+      <img
+        id="modalImage"
+        class="scale-95 object-contain opacity-0"
+        src=""
+        alt="Zoomed Image"
+      />
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --lightbox-max-width: 1200px; /* Adjust this value to change maximum width */
+      --lightbox-max-height: 800px; /* Adjust this value to change maximum height */
+    }
+
+    /* Lightbox styles */
+    #imageModal {
+      transition: background-color 0.3s ease-out;
+    }
+    #imageModal.active {
+      background-color: rgba(0, 0, 0, 0.7);
+      pointer-events: auto;
+    }
+    .lightbox-container {
+      width: min(var(--lightbox-max-width), 90vw);
+      height: min(var(--lightbox-max-height), 90vh);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #modalImage {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      transition: all 0.3s ease-out;
+    }
+    #modalImage.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Make feature images clickable */
+    .feature-image {
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    // Lightbox functionality
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    // Add click handlers to all feature images in the HOW IT WORKS section
+    document
+      .querySelectorAll(".feature-images .feature-image")
+      .forEach((img) => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function () {
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+          // Show modal first
+          modal.classList.add("active");
+          // Add small delay before showing image to ensure transition works
+          setTimeout(() => {
+            modalImg.classList.add("active");
+          }, 50);
+        });
+      });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modalImg.classList.remove("active");
+        setTimeout(() => {
+          modal.classList.remove("active");
+        }, 50);
+      }
+    });
+
+    // Add keyboard support for closing modal
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        modalImg.classList.remove("active");
+        setTimeout(() => {
+          modal.classList.remove("active");
+        }, 50);
+      }
+    });
+  </script>
 </div>
