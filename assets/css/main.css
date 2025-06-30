@@ -77,4 +77,8 @@ font-family: ui-sans-serif,
     color: white !important;
 }
 
+.bg-accent {
+  background-color: #ff4c29;
+}
+
 /* Custom CSS end */

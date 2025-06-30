@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="{{ .Language.Lang }}" class="h-full">
+<html lang="{{ .Language.Lang }}" class="h-full bg-black">
   <head>
     {{ partial "head.html" . }}
   </head>
 
-  <body class="flex min-h-full flex-col bg-background">
+  <body class="h-full flex flex-col">
     {{ partial "nav.html" . }}
-    <main class="flex-grow">
+    <main class="flex-grow flex">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer" . }}

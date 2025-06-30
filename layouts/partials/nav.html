@@ -1,5 +1,5 @@
 <div
-  class="top-0 z-50 w-full border-gray-900 border-b-stone-200/10 bg-gray-900 text-gray-200 md:sticky"
+  class="top-0 z-50 w-full bg-black text-white md:sticky"
 >
   <div
     x-data="{ open: false }"
@@ -44,13 +44,7 @@
       :class="{'flex': open, 'hidden': !open}"
       class="hidden flex-grow flex-col pb-4 md:flex md:flex-row md:justify-end md:pb-0"
     >
-    <a
-    class="bg-[#ff4c29] hover:bg-[#e64424] focus:bg-[#cc3d20] focus:shadow-outline mt-2 rounded-full px-6 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-white focus:text-white focus:outline-none md:ml-4 md:mt-0"
-    href="/requesttrial"
-    title="Test"
-  >
-    Request Trial
-  </a>
+    
       {{ range site.Menus.main }}
         {{ if (eq "complexdropdown" .Pre) }}
           <div

@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
+    "hugo-bin": "^0.144.9",
     "posthog-js": "^1.215.3"
   }
 }
