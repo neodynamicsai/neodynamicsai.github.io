@@ -11,7 +11,7 @@ description: A test with @tailwindcss/typography & Prose
 <div class="max-w-screen-md px-4 mx-auto">
     <form name="contact" action="https://formsubmit.co/60ec9bd9fb0268d167b5386306793f42" method="POST" class="space-y-8">
         <p class="mb-8 text-lg text-gray-300 font-dmsans">
-            Share your email via the form below and we'll get back to you shortly to help you begin your journey with our Reinforcement Learning development platform.
+            Share your email via the form below and we'll get back to you shortly to help you begin your journey with our cutting-edge cybersecurity platform.
         </p>
         <div class="my-4">
             <label for="email" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Your Email*:</strong></label>

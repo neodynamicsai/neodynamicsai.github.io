@@ -8,8 +8,7 @@ description: A test with @tailwindcss/typography & Prose
 
 <!-- @format -->
 
-<div class="max-w-screen-md px-4 mx-auto">
-    <form name="contact" action="https://formsubmit.co/60ec9bd9fb0268d167b5386306793f42" method="POST" class="space-y-8">
+<form name="contact" action="https://formsubmit.co/60ec9bd9fb0268d167b5386306793f42" method="POST" class="space-y-8 max-w-2xl mx-auto">
         <div class="my-4">
             <label for="email" class="block mb-2 font-medium text-md text-gray-300 font-dmsans"><strong>Your Email*:</strong></label>
             <input type="email" name="email" class="shadow-sm border  text-md rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm-light" placeholder="name@example.com" required>
@@ -34,4 +33,3 @@ description: A test with @tailwindcss/typography & Prose
             <button type="submit" class="px-5 py-3 font-bold text-center text-gray-50 bg-accent rounded-full font-pp-neue-machina">SEND</button>
         </div>
     </form>
-</div>
