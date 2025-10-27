@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Shield } from "lucide-react";
 
 export const Navigation = () => {
   return (
@@ -8,10 +7,15 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-orange flex items-center justify-center">
-              <Shield className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <span className="text-2xl font-bold">NeoDynamics</span>
+                  <a
+        href="/"
+        className="flex text-gray-100 transition duration-1000 ease-in-out"
+      >
+        <img
+          src="/neod_logo.svg"
+          className="w-52 transition-opacity hover:opacity-50 focus:opacity-70"
+        />
+      </a>
           </div>
 
           {/* Navigation Links */}
