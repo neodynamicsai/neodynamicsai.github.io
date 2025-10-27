@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-const FORM_ENDPOINT = "https://formsubmit.co/60ec9bd9fb0268d167b5386306793f42";
+const FORM_ENDPOINT = "https://formspree.io/f/xpwoqrzz";
 
 export const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -43,7 +43,7 @@ export const ContactSection = () => {
     } catch (error) {
       toast({
         title: "Something went wrong",
-        description: "Please retry or email us at hello@neodynamics.ai.",
+        description: "Please retry or email us at info@neodynamics.ai.",
         variant: "destructive",
       });
     } finally {
@@ -70,7 +70,6 @@ export const ContactSection = () => {
 
           <div className="rounded-2xl border border-border bg-card p-8 shadow-card">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="_captcha" value="false" />
               <div className="space-y-2">
                 <Label htmlFor="email">Work Email</Label>
                 <Input id="email" name="email" type="email" placeholder="you@company.com" required autoComplete="email" />
