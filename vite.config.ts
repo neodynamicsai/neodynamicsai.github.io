@@ -4,11 +4,10 @@ import path from "path";
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => ({
-  // Use relative paths only for the build so `file://` works without breaking dev assets
+export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 8080,
+    port: 3000,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
