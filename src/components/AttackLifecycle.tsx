@@ -18,8 +18,7 @@ const stepCaptions = [
   { step: 0, caption: "Human error compounds over time." },
   { step: 1, caption: "New helpdesk user created" },
   { step: 2, caption: "Cross-team access granted for compliance reasons" },
-  { step: 3, caption: "Organizational change creates a shortcut" },
-  { step: 4, caption: "One admin click can open a route to crown jewels" },
+  { step: 3, caption: "One admin click can open a route to crown jewels" },
 ];
 
 const timelineEntries = [
@@ -30,18 +29,13 @@ const timelineEntries = [
   },
   {
     step: 2,
-    title: "Compliance access layered on",
-    description: "Cross-team membership grants Joel admin rights to PCI-SERVER-01 in the name of reporting.",
+    title: "Compliance needs access privileged SERVER-01",
+    description: "Compliance now shares access to SERVER-01, where Domain Admin has a session.",
   },
   {
     step: 3,
     title: "Re-org connects the dots",
-    description: "A single change links helpdesk and compliance workflows, extending reach toward Domain Admin.",
-  },
-  {
-    step: 4,
-    title: "Full attack path formed",
-    description: "Joel now has a continuous path to Domain Admin and the crown jewels—no attacker required.",
+    description: "A single change links Joel's helpdesk and compliance workflows, extending reach toward Domain Admin.",
   },
 ];
 
@@ -80,8 +74,8 @@ const diagramNodes: DiagramNode[] = [
 
 const connectors: Connector[] = [
   { id: "helpdesk-joel", label: "Joins Helpdesk", visibleFrom: 1 },
-  { id: "joel-compliance", label: "Added to compliance", visibleFrom: 2 },
-  { id: "compliance-pci", label: "Has admin on PCI", visibleFrom: 3 },
+  { id: "joel-compliance", label: "Added to Compliance", visibleFrom: 3 },
+  { id: "compliance-pci", label: "Is admin", visibleFrom: 2 },
   { id: "pci-domain", label: "Has session", visibleFrom: 0 },
 ];
 
@@ -114,7 +108,7 @@ const AttackPathAnimation = ({ step }: AttackPathAnimationProps) => {
                 </div>
 
                 {connector && (
-                  <div key={connector.id} className="flex shrink-0 flex-col items-center justify-center gap-2">
+                  <div key={connector.id} className="flex w-10 shrink-0 flex-col items-center justify-center gap-2">
                     <div className={`flex h-12 w-full items-center justify-center transition-opacity duration-300 ${step >= connector.visibleFrom ? "opacity-100" : "opacity-0"}`}>
                       <ArrowRight className={`h-6 w-6 ${step >= connector.visibleFrom ? "text-primary" : "text-muted-foreground"}`} />
                     </div>
