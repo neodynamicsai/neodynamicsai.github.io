@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroNetwork from "@/assets/hero-network.jpg";
 
 export const Hero = () => {
@@ -18,47 +18,29 @@ export const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-6 py-20 mx-auto">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-primary/20 backdrop-blur-sm animate-glow-pulse">
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Enterprise Identity Threat Detection & Response</span>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Always Watching.
-            <br />
-            <span className="text-gradient">Always Defending.</span>
+            Enterprise Identity Management for the <span className="text-gradient">New Perimeter</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            NeoDynamics continuously detects, explains, and fixes identity misconfigurations 
-            before attackers can exploit them. One admin click today can open a route to your crown jewels. 
-            <span className="text-foreground font-semibold"> We close it before anyone else can find it.</span>
+            NeoDynamics exposes and resolves identity risk across humans, service accounts, and AI agents,
+            keeping critical access paths sealed before attackers can move. The perimeter is every identity—
+            we make it defensible.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="hero" size="xl" className="group">
-              Request Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="hero" size="xl" className="group" asChild>
+              <a href="#contact" className="inline-flex items-center gap-2">
+                Talk to an Expert
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button variant="outline" size="xl">
-              See How It Works
+            <Button variant="outline" size="xl" asChild>
+              <a href="#enterprise">Explore the Platform</a>
             </Button>
-          </div>
-
-          {/* Trust Badge */}
-          <div className="pt-8 space-y-2">
-            <p className="text-sm text-muted-foreground">Trusted by Fortune 500 companies and critical infrastructure</p>
-            <div className="flex items-center justify-center gap-8 flex-wrap opacity-60">
-              <div className="text-xl font-bold tracking-wider">ENTERPRISE</div>
-              <div className="w-1 h-1 rounded-full bg-muted-foreground" />
-              <div className="text-xl font-bold tracking-wider">SECURE</div>
-              <div className="w-1 h-1 rounded-full bg-muted-foreground" />
-              <div className="text-xl font-bold tracking-wider">CONTINUOUS</div>
-            </div>
           </div>
         </div>
       </div>

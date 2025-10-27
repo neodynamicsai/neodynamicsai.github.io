@@ -16,8 +16,8 @@ export const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#platform" className="text-sm font-medium hover:text-primary transition-colors">
-              Platform
+            <a href="#enterprise" className="text-sm font-medium hover:text-primary transition-colors">
+              Enterprise
             </a>
             <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
               Features
@@ -25,14 +25,14 @@ export const Navigation = () => {
             <a href="#integrations" className="text-sm font-medium hover:text-primary transition-colors">
               Integrations
             </a>
-            <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
-              Pricing
+            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+              Contact
             </a>
           </div>
 
           {/* CTA Button */}
-          <Button variant="hero">
-            Request Demo
+          <Button variant="hero" asChild>
+            <a href="#contact">Request a Demo</a>
           </Button>
         </div>
       </div>

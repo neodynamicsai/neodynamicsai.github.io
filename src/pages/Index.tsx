@@ -7,6 +7,8 @@ import { MarketContext } from "@/components/MarketContext";
 import { Integrations } from "@/components/Integrations";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { EnterprisePerimeter } from "@/components/EnterprisePerimeter";
+import { ContactSection } from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -14,12 +16,14 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
+        <EnterprisePerimeter />
         <AttackLifecycle />
         <HowItWorks />
         <Features />
         <MarketContext />
         <Integrations />
         <FinalCTA />
+        <ContactSection />
       </main>
       <Footer />
     </div>

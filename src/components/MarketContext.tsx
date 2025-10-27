@@ -20,7 +20,7 @@ export const MarketContext = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-secondary/20 to-background">
+    <section id="market" className="py-24 px-6 bg-gradient-to-b from-secondary/20 to-background">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
@@ -28,8 +28,8 @@ export const MarketContext = () => {
             Identity Is the <span className="text-gradient">New Perimeter</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The cybersecurity landscape has fundamentally changed. 
-            Identity has become the primary attack vector—and the fastest growing security investment.
+            Identity is now the primary attack vector. Cloud sprawl, automation, and AI services have dissolved the
+            traditional network edge.
           </p>
         </div>
 
@@ -54,18 +54,16 @@ export const MarketContext = () => {
           <div className="p-8 rounded-lg bg-gradient-card border border-border space-y-4">
             <h3 className="text-2xl font-bold">The Challenge</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Traditional IAM solutions can't keep pace with modern identity complexity. 
-              AI-driven accounts, hybrid cloud environments, and automation identities create 
-              exponentially more attack surfaces than security teams can manually monitor.
+              Traditional IAM tooling wasn&apos;t built for machine and AI identities moving at cloud speed. Teams can&apos;t
+              manually keep every relationship and entitlement in check.
             </p>
           </div>
 
           <div className="p-8 rounded-lg bg-gradient-card border border-primary/30 space-y-4">
             <h3 className="text-2xl font-bold">The NeoDynamics Advantage</h3>
             <p className="text-muted-foreground leading-relaxed">
-              We turn inevitable human mistakes into automated resilience. 
-              By continuously simulating attacks and surfacing exploitable paths, 
-              NeoDynamics helps you stay ahead of threats—without adding headcount.
+              NeoDynamics automatically simulates attack paths and remediates exposed access so your posture hardens in
+              real time—without adding headcount.
             </p>
           </div>
         </div>

@@ -15,26 +15,23 @@ export const FinalCTA = () => {
               Secure Identity. <span className="text-gradient">Secure Everything.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See how NeoDynamics can transform your identity security posture. 
-              Schedule a personalized demo with our security experts.
+              See how NeoDynamics closes identity gaps across users, workloads, and autonomous agents. Our team will
+              map findings directly to your environment.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button variant="hero" size="xl" className="group">
-                <Calendar className="w-5 h-5" />
-                Schedule a Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="xl" className="group" asChild>
+                <a href="#contact" className="inline-flex items-center gap-2">
+                  <Calendar className="w-5 h-5" />
+                  Schedule a Conversation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="outline" size="xl">
-                Contact Sales
+              <Button variant="outline" size="xl" asChild>
+                <a href="#contact">Send a Message</a>
               </Button>
             </div>
-
-            {/* Trust Message */}
-            <p className="text-sm text-muted-foreground pt-4">
-              Join Fortune 500 companies protecting their most critical assets with NeoDynamics
-            </p>
           </div>
         </div>
       </div>

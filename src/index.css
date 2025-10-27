@@ -19,9 +19,9 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 100%;
 
     /* Orange Accent - Primary Brand Color */
-    --primary: 24 100% 50%;
+    --primary: 10 100% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 24 100% 60%;
+    --primary-glow: 10 100% 65%;
 
     /* Neutral Grays */
     --secondary: 0 0% 18%;
@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 24 100% 50%;
+    --accent: 10 100% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -38,19 +38,19 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 24 100% 50%;
+    --ring: 10 100% 58%;
 
     --radius: 0.5rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5.5%) 0%, hsl(0 0% 8%) 50%, hsl(24 100% 10%) 100%);
-    --gradient-orange: linear-gradient(135deg, hsl(24 100% 50%) 0%, hsl(24 100% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5.5%) 0%, hsl(0 0% 8%) 50%, hsl(10 100% 14%) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(10 100% 58%) 0%, hsl(10 100% 65%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 11.8%) 0%, hsl(0 0% 8%) 100%);
 
     /* Shadows & Effects */
-    --shadow-glow: 0 0 40px hsl(24 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(10 100% 58% / 0.3);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    --shadow-orange: 0 0 30px hsl(24 100% 50% / 0.4);
+    --shadow-orange: 0 0 30px hsl(10 100% 58% / 0.4);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
