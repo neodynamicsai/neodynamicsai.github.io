@@ -52,7 +52,7 @@ jobs:
             npm install
           fi
       - name: Build with Vite
-        run: npm run build -- --base="${{ steps.pages.outputs.base_path }}"
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

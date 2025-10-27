@@ -4,9 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  // Use relative paths in the build so opening dist/index.html over file:// works
-  base: "./",
+export default defineConfig(({ command, mode }) => ({
+  // Use relative paths only for the build so `file://` works without breaking dev assets
+  base: command === "build" ? "./" : "/",
   server: {
     host: "::",
     port: 8080,
