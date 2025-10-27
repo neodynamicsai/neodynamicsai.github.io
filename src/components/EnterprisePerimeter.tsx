@@ -1,4 +1,4 @@
-import { Users, Server, Bot, Cpu, ShieldCheck, Globe } from "lucide-react";
+import { Users, Server, Bot, Cpu, ShieldCheck, Globe, Handshake } from "lucide-react";
 
 const nodes = [
   { icon: Users, label: "Employees" },
@@ -6,6 +6,7 @@ const nodes = [
   { icon: Bot, label: "RPA & Bots" },
   { icon: Cpu, label: "AI Agents" },
   { icon: Globe, label: "Partners" },
+  { icon: Handshake, label: "External Suppliers" },
 ];
 
 export const EnterprisePerimeter = () => {
@@ -14,11 +15,11 @@ export const EnterprisePerimeter = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center max-w-3xl mx-auto space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Identity Surfaces Multiply. Our Coverage Grows With Them.
+            Identity Surfaces Multiply. <span className="text-gradient">Our Coverage Grows With Them.</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Users, machines, service accounts, and autonomous agents now share the same access fabric. NeoDynamics
-            keeps every identity mapped, monitored, and enforced so the enterprise perimeter follows wherever work happens.
+            Users, machines, service accounts, and autonomous agents now share the same access fabric. NeoDynamics keeps every
+            identity mapped, monitored, and enforced so the enterprise perimeter follows wherever work happens.
           </p>
         </div>
 
@@ -31,12 +32,16 @@ export const EnterprisePerimeter = () => {
                 <span className="text-sm font-semibold tracking-wide">Unified Identity Intelligence</span>
               </div>
               <h3 className="text-3xl font-semibold">
-                One operating picture for every human and non-human identity touching your estate.
+                One operating picture for every employee, workload, automation identity, and supplier that touches your estate.
               </h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
                   Continuous relationship graph linking users, workloads, and privileged paths.
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                  Visibility that spans employees, servers, RPA bots, AI agents, partners, and external suppliers in one map.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
@@ -79,4 +84,3 @@ export const EnterprisePerimeter = () => {
     </section>
   );
 };
-
