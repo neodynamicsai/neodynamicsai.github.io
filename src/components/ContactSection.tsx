@@ -85,10 +85,6 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject">Topic</Label>
-                <Input id="subject" name="subject" placeholder="Enterprise identity assessment" required />
-              </div>
-              <div className="space-y-2">
                 <Label htmlFor="message">How can we help?</Label>
                 <Textarea id="message" name="message" rows={5} placeholder="Describe your environment and goals." required />
               </div>
