@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { ScheduleDemoButton } from "@/components/ScheduleDemoButton";
+import { ArrowRight } from "lucide-react";
 
 export const Navigation = () => {
   return (
@@ -29,15 +30,12 @@ export const Navigation = () => {
             <a href="#integrations" className="text-sm font-medium hover:text-primary transition-colors">
               Integrations
             </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </a>
           </div>
 
           {/* CTA Button */}
-          <Button variant="hero" asChild>
-            <a href="#contact">Request a Demo</a>
-          </Button>
+          <ScheduleDemoButton variant="hero">Schedule Demo
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </ScheduleDemoButton>
         </div>
       </div>
     </nav>

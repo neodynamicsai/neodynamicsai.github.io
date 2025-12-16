@@ -1,32 +1,32 @@
-import { Shield, Search, AlertCircle, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { AlertCircle, CheckCircle, Search, Shield } from "lucide-react";
 
 export const HowItWorks = () => {
   const steps = [
     {
       icon: Search,
-      title: "Continuous Analysis",
-      description: "Automatically scans your entire identity environment—Active Directory, Entra ID, and AI-driven accounts—24/7.",
+      title: "Continuous Red Teaming",
+      description: "Automatically scans your entire environment, Active Directory, Entra ID, and AI-driven accounts, 24/7.",
     },
     {
       icon: AlertCircle,
-      title: "Attack Path Discovery",
+      title: "Automated Exploitation Simulation",
       description: "Simulates real attack scenarios to identify exploitable relationships and privilege escalation paths.",
     },
     {
       icon: Shield,
-      title: "Guided Remediation",
+      title: "Instant Remediation",
       description: "Provides clear, actionable steps to close security gaps before they can be exploited.",
     },
     {
       icon: CheckCircle,
-      title: "Automated Resilience",
+      title: "Compliance & Board Reporting",
       description: "Transforms inevitable human mistakes into continuous, automated security improvements.",
     },
   ];
 
   return (
-    <section id="platform" className="py-24 px-6 bg-gradient-to-b from-background to-secondary/20">
+    <section id="platform" className="py-20 px-6 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
@@ -35,7 +35,7 @@ export const HowItWorks = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             No manual analysis required. NeoDynamics continuously monitors, simulates attacks, 
-            and guides your team to secure configurations—automatically.
+            and guides your team to secure configurations, automatically.
           </p>
         </div>
 

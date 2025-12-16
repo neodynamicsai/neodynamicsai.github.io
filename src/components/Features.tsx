@@ -1,11 +1,11 @@
-import { Network, Users, Bot, TrendingUp, Lock, Zap } from "lucide-react";
+import { Bot, Lock, Network, TrendingUp, Users, Zap } from "lucide-react";
 
 export const Features = () => {
   const features = [
     {
       icon: Network,
-      title: "Identity Relationship Mapping",
-      description: "Visualize complex relationships across users, groups, and systems in real-time.",
+      title: "Automated Red Teaming",
+      description: "Continuous, automated red teaming that finds attack paths before they can be exploited.",
     },
     {
       icon: Users,
@@ -14,7 +14,7 @@ export const Features = () => {
     },
     {
       icon: Bot,
-      title: "AI Identity Management",
+      title: "AI & Bot Security",
       description: "Track and secure AI-driven accounts and automation identities.",
     },
     {
@@ -29,13 +29,13 @@ export const Features = () => {
     },
     {
       icon: Zap,
-      title: "Instant Alerts",
-      description: "Get real-time notifications of critical misconfigurations.",
+      title: "Cost Reduction",
+      description: "Achieve better coverage than a manual red team for a fraction of the cost.",
     },
   ];
 
   return (
-    <section id="features" className="py-24 px-6">
+    <section id="features" className="py-20 px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">

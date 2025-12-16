@@ -90,8 +90,8 @@ const CookiePolicy = () => {
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Updates to This Policy</h2>
           <p className="text-muted-foreground">
-            We review this Cookie Policy at least annually. If we make material changes—such as introducing a new category of
-            cookies or revising our consent mechanism—we will notify you via the banner, update the effective date, and seek new
+            We review this Cookie Policy at least annually. If we make material changes, such as introducing a new category of
+            cookies or revising our consent mechanism, we will notify you via the banner, update the effective date, and seek new
             consent where required.
           </p>
         </section>

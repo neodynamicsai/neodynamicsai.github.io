@@ -1,4 +1,4 @@
-import { TrendingUp, DollarSign, Shield } from "lucide-react";
+import { DollarSign, Shield, TrendingUp } from "lucide-react";
 
 export const MarketContext = () => {
   const stats = [
@@ -9,27 +9,27 @@ export const MarketContext = () => {
     },
     {
       icon: DollarSign,
-      value: "$200B",
-      label: "IAM + ITDR market by 2035",
+      value: "1/100th",
+      label: "The Cost of a Manual Red Team",
     },
     {
       icon: TrendingUp,
-      value: "3x",
-      label: "growth in identity threats",
+      value: "24/7",
+      label: "Continuous Coverage",
     },
   ];
 
   return (
-    <section id="market" className="py-24 px-6 bg-gradient-to-b from-secondary/20 to-background">
+    <section id="market" className="py-20 px-6 bg-gradient-to-b from-secondary/20 to-background">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Identity Is the <span className="text-gradient">New Perimeter</span>
+            The Perimeter Is <span className="text-gradient">Dead</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Identity is now the primary attack vector. Cloud sprawl, automation, and AI services have dissolved the
-            traditional network edge.
+            The old network edge is gone. Cloud sprawl, automation, and AI services have dissolved it.
+            Attackers don't break in anymore; they log in.
           </p>
         </div>
 
@@ -52,18 +52,16 @@ export const MarketContext = () => {
         {/* Context Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-8 rounded-lg bg-gradient-card border border-border space-y-4">
-            <h3 className="text-2xl font-bold">The Challenge</h3>
+            <h3 className="text-2xl font-bold">The Problem: Manual Red Teams Are Too Slow & Expensive</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Traditional IAM tooling wasn&apos;t built for machine and AI identities moving at cloud speed. Teams can&apos;t
-              manually keep every relationship and entitlement in check.
+              They provide a snapshot in time, cover a fraction of your estate, and cost a fortune. By the time you get the report, it's outdated.
             </p>
           </div>
 
           <div className="p-8 rounded-lg bg-gradient-card border border-primary/30 space-y-4">
-            <h3 className="text-2xl font-bold">The NeoDynamics Advantage</h3>
+            <h3 className="text-2xl font-bold">The Solution: Automated, Continuous Red Teaming</h3>
             <p className="text-muted-foreground leading-relaxed">
-              NeoDynamics automatically simulates attack paths and remediates exposed access so your posture hardens in
-              real time—without adding headcount.
+              NeoDynamics gives you the full power of a red team, running 24/7 across your entire organization, for a fraction of the price.
             </p>
           </div>
         </div>
