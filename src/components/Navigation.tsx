@@ -21,14 +21,17 @@ export const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#enterprise" className="text-sm font-medium hover:text-primary transition-colors">
-              Enterprise
+            <a href="#deliverables" className="text-sm font-medium hover:text-primary transition-colors">
+              Deliverables
             </a>
-            <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
-              Features
+            <a href="#comparison" className="text-sm font-medium hover:text-primary transition-colors">
+              Comparison
             </a>
-            <a href="#integrations" className="text-sm font-medium hover:text-primary transition-colors">
-              Integrations
+            <a href="#platform" className="text-sm font-medium hover:text-primary transition-colors">
+              Workflow
+            </a>
+            <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
+              Pricing
             </a>
           </div>
 

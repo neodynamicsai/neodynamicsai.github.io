@@ -12,10 +12,11 @@ export const FinalCTA = () => {
           {/* Content */}
           <div className="relative z-10 space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Secure Your Future. <br className="hidden md:block" /> <span className="text-gradient">Secure Everything.</span>
+              Deliver Better AD/Entra Audits. <br className="hidden md:block" />{" "}
+              <span className="text-gradient">With Less Manual Work.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See how NeoDynamics closes security gaps across users, workloads, and autonomous agents.
+              See how NeoDynamics turns identity data into prioritized findings, clear explanations, and actionable remediation guidance built for consulting teams.
             </p>
 
             <div className="pt-4">

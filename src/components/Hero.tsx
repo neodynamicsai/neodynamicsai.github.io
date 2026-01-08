@@ -21,36 +21,37 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Your Red Team is <span className="text-gradient">Obsolete</span>
+            Ship AD & Entra Audits{" "}
+            <span className="text-gradient">Faster</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Manual red teams are expensive, slow, and only cover 5% of your estate. NeoDynamics automates the entire process, continuously finding and fixing attack paths across your entire digital estate for a fraction of the cost.
+            NeoDynamics is built for cybersecurity consultants and auditors who assess Active Directory and Entra ID on repeat. Automate posture analysis, attack paths, and remediation prioritization so your team delivers clearer findings with less manual work.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-muted-foreground pt-2">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Stop paying for snapshots
+              Consultant-ready findings & report packs
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Eliminate coverage gaps
+              PingCastle-style misconfiguration coverage
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              No more waiting for reports
+              Attack path management, explained for clients
             </span>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <ScheduleDemoButton variant="hero" size="xl" className="group">
-              Automate Your Red Team
+              See It For Your Next Engagement
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </ScheduleDemoButton>
             <Button variant="outline" size="xl" asChild>
-              <a href="#enterprise">See Your Attack Surface</a>
+              <a href="#deliverables">See What You Get</a>
             </Button>
           </div>
         </div>

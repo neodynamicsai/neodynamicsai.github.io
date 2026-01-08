@@ -27,10 +27,10 @@ type Connector = {
 };
 
 const stepCaptions = [
-  { step: 0, caption: "Human error compounds over time." },
+  { step: 0, caption: "Everyday changes compound into risk." },
   { step: 1, caption: "New helpdesk user created" },
   { step: 2, caption: "Cross-team access granted for compliance reasons" },
-  { step: 3, caption: "One admin click can open a route to crown jewels" },
+  { step: 3, caption: "One small change opens a route to crown jewels" },
 ];
 
 const MAX_STEP = Math.max(...stepCaptions.map((entry) => entry.step));
@@ -127,12 +127,12 @@ const AttackPathAnimation = ({ step }: AttackPathAnimationProps) => {
                     className={`flex h-14 w-14 items-center justify-center rounded-2xl border-2 transition-all duration-300 ${
                       isActive
                         ? showCompromised
-                          ? "border-destructive bg-destructive/30 text-destructive shadow-[0_0_35px_rgba(225,29,72,0.65)] animate-pulsre [animation-duration:2s]"
+                          ? "border-destructive bg-destructive/30 text-destructive shadow-[0_0_35px_rgba(225,29,72,0.65)] animate-pulse [animation-duration:2s]"
                           : "border-primary bg-primary/10 text-primary"
                         : "border-border bg-card text-muted-foreground/70"
                     }`}
                   >
-                    <Icon className={`h-7 w-7 ${showCompromised} ""}`} />
+                    <Icon className="h-7 w-7" />
                   </div>
                   <p
                     className={`text-sm font-semibold ${
@@ -150,7 +150,7 @@ const AttackPathAnimation = ({ step }: AttackPathAnimationProps) => {
                 {connector && (
                   <div
                     key={connector.id}
-                    className="grid pt-12 in-h-[170px] min-w-[4.5rem] max-w-[5rem] grid-rows-[auto,1fr] justify-items-center gap-2"
+                    className="grid pt-12 min-h-[170px] min-w-[4.5rem] max-w-[5rem] grid-rows-[auto,1fr] justify-items-center gap-2"
                   >
                     <div
                       className={`flex h-12 w-12 items-center justify-center rounded-full border-2 transition-all duration-300 ${
@@ -292,13 +292,14 @@ export const AttackLifecycle = () => {
           <div className="mb-16 space-y-4 text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/10 px-4 py-2">
               <AlertTriangle className="h-4 w-4 text-destructive" />
-              <span className="text-sm font-medium text-destructive">The Attack Lifecycle</span>
+              <span className="text-sm font-medium text-destructive">Attack Path Example</span>
             </div>
             <h2 className="text-4xl font-bold md:text-5xl">
-              This is What a Red Team Finds.<br className="hidden md:block" />  <span className="text-gradient">Fix It Before They&nbsp;Do.</span>
+              This is What Your AD/Entra Audit Needs to Explain.<br className="hidden md:block" />{" "}
+              <span className="text-gradient">Generate It Automatically.</span>
             </h2>
             <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-              Don't pay a red team to find this path once a year. Fix it today, automatically.
+              NeoDynamics maps the path, attaches evidence, and turns it into a clear finding with remediation guidance your client can act on.
             </p>
           </div>
 
@@ -331,9 +332,9 @@ export const AttackLifecycle = () => {
                 <div
                   className={`w-full max-w-2xl rounded-3xl border p-8 text-left transition-all duration-300 ${carouselCardClasses}`}
                 >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`mt-1 h-2.5 w-2.5 rounded-full ${
+                    <div className="flex items-start gap-4">
+                      <div
+                      className={`mt-1 h-2.5 w-2.5 shrink-0 rounded-full ${
                         isBaselineCard
                           ? "bg-muted"
                           : "bg-primary"
@@ -366,7 +367,7 @@ export const AttackLifecycle = () => {
 
               <div className="rounded-2xl border-2 border-primary/40 bg-primary/5 p-6">
                 <p className="font-semibold text-foreground text-center ">
-                  NeoDynamics continuously simulates these permutations, closing risky relationships before attackers, or expensive consultants, can exploit them.
+                  NeoDynamics continuously maps these permutations and packages them into audit-ready findings with prioritized fixes.
                 </p>
               </div>
           </div>

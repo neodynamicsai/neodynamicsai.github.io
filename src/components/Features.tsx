@@ -1,36 +1,36 @@
-import { Bot, Lock, Network, TrendingUp, Users, Zap } from "lucide-react";
+import { FileText, Network, ShieldCheck, SlidersHorizontal, Sparkles, Zap } from "lucide-react";
 
 export const Features = () => {
   const features = [
     {
+      icon: FileText,
+      title: "Report-Ready Findings",
+      description: "Generate structured findings with evidence, impact, and customer-friendly explanations, ready for delivery.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Misconfiguration Coverage",
+      description: "Surface common AD/Entra posture issues (inactive users, over-privilege, stale credentials, and more) at scale.",
+    },
+    {
       icon: Network,
-      title: "Automated Red Teaming",
-      description: "Continuous, automated red teaming that finds attack paths before they can be exploited.",
+      title: "Attack Path Management",
+      description: "Map and explain privilege escalation paths so your team can prove risk, not just list settings.",
     },
     {
-      icon: Users,
-      title: "AD & Entra ID Integration",
-      description: "Seamlessly integrates with Active Directory and Entra ID environments.",
+      icon: SlidersHorizontal,
+      title: "Fix Prioritization",
+      description: "Prioritize remediation by risk and blast radius, with concrete fix suggestions to reduce back-and-forth.",
     },
     {
-      icon: Bot,
-      title: "AI & Bot Security",
-      description: "Track and secure AI-driven accounts and automation identities.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Attack Path Simulation",
-      description: "Simulate real-world attack scenarios to expose exploitable paths.",
-    },
-    {
-      icon: Lock,
-      title: "Continuous Compliance",
-      description: "Maintain compliance with automated monitoring and reporting.",
+      icon: Sparkles,
+      title: "Explainability On Demand",
+      description: "Go from “what’s wrong” to “why it matters” with deeper explanations for technical and non-technical stakeholders.",
     },
     {
       icon: Zap,
-      title: "Cost Reduction",
-      description: "Achieve better coverage than a manual red team for a fraction of the cost.",
+      title: "More Audits Per Team",
+      description: "Reduce manual effort so small teams can deliver more engagements with consistent quality.",
     },
   ];
 
@@ -40,10 +40,10 @@ export const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Enterprise-Grade <span className="text-gradient">Features</span>
+            Built for <span className="text-gradient">Consultants & Auditors</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the complexity of modern enterprise identity ecosystems.
+            Everything you need to deliver repeatable AD and Entra assessments without drowning in manual analysis.
           </p>
         </div>
 

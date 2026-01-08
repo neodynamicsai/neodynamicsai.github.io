@@ -1,27 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, CheckCircle, Search, Shield } from "lucide-react";
+import { CheckCircle, ClipboardList, Gauge, Link2 } from "lucide-react";
 
 export const HowItWorks = () => {
   const steps = [
     {
-      icon: Search,
-      title: "Continuous Red Teaming",
-      description: "Automatically scans your entire environment, Active Directory, Entra ID, and AI-driven accounts, 24/7.",
+      icon: Link2,
+      title: "Connect Once",
+      description: "Ingest identity data from Active Directory and Entra ID to establish a baseline for the engagement.",
     },
     {
-      icon: AlertCircle,
-      title: "Automated Exploitation Simulation",
-      description: "Simulates real attack scenarios to identify exploitable relationships and privilege escalation paths.",
+      icon: Gauge,
+      title: "Find Misconfigs + Attack Paths",
+      description: "Detect posture issues and map exploitable relationships that lead to privilege escalation.",
     },
     {
-      icon: Shield,
-      title: "Instant Remediation",
-      description: "Provides clear, actionable steps to close security gaps before they can be exploited.",
+      icon: ClipboardList,
+      title: "Prioritize Fixes",
+      description: "Turn findings into a remediation plan with impact-based prioritization and concrete fix suggestions.",
     },
     {
       icon: CheckCircle,
-      title: "Compliance & Board Reporting",
-      description: "Transforms inevitable human mistakes into continuous, automated security improvements.",
+      title: "Deliver Client-Ready Output",
+      description: "Generate report-ready findings, evidence, and explanations tailored for both engineers and stakeholders.",
     },
   ];
 
@@ -31,11 +31,10 @@ export const HowItWorks = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            How <span className="text-gradient">NeoDynamics</span> Works
+            How <span className="text-gradient">NeoDynamics</span> Fits Your Audit Workflow
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            No manual analysis required. NeoDynamics continuously monitors, simulates attacks, 
-            and guides your team to secure configurations, automatically.
+            Less spreadsheet work. More billable output. NeoDynamics automates the analysis so your team can focus on the parts that require human judgment.
           </p>
         </div>
 
@@ -70,9 +69,8 @@ export const HowItWorks = () => {
         {/* Bottom Message */}
         <div className="mt-16 text-center">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Identity misconfigurations now outpace human capacity to manage them. 
-            <span className="text-foreground font-semibold"> NeoDynamics scales with your enterprise</span>, 
-            continuously protecting your most critical assets.
+            Identity audits are repeatable, and so is your process.
+            <span className="text-foreground font-semibold"> NeoDynamics helps small teams deliver more engagements</span> without sacrificing depth or quality.
           </p>
         </div>
       </div>

@@ -35,19 +35,19 @@ export const EnterprisePerimeter = () => {
               </h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
                   Continuous red teaming of every relationship.
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
                   No more sampling. 100% coverage of employees, bots, and AI.
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
                   Fix vulnerabilities before a red team, or attacker, finds them.
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
                   Board-ready reports that prove you're secure.
                 </li>
               </ul>

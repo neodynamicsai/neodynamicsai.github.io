@@ -1,13 +1,13 @@
 import { AttackLifecycle } from "@/components/AttackLifecycle";
-import { EnterprisePerimeter } from "@/components/EnterprisePerimeter";
+import { AuditDeliverables } from "@/components/AuditDeliverables";
+import { Comparison } from "@/components/Comparison";
 import { Features } from "@/components/Features";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
-import { Integrations } from "@/components/Integrations";
-import { MarketContext } from "@/components/MarketContext";
 import { Navigation } from "@/components/Navigation";
+import { Pricing } from "@/components/Pricing";
 
 const Index = () => {
   return (
@@ -15,12 +15,12 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <EnterprisePerimeter />
-        <AttackLifecycle />
+        <AuditDeliverables />
+        <Comparison />
         <HowItWorks />
+        <AttackLifecycle />
         <Features />
-        <MarketContext />
-        <Integrations />
+        <Pricing />
         <FinalCTA />
       </main>
       <Footer />
