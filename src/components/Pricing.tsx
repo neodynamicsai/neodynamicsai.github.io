@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 const neoTiers = [
   {
     name: "One-Shot Report",
-    price: "$1,900",
+    price: "€1,900",
     priceNote: "per domain",
     description: "Single engagement report for one domain.",
     bullets: [
@@ -16,7 +16,7 @@ const neoTiers = [
   },
   {
     name: "Continuous Monitoring",
-    price: "$299",
+    price: "€299",
     priceNote: "per domain / month",
     description: "Always-on analysis with a 12-month minimum commitment.",
     bullets: [
@@ -38,6 +38,9 @@ export const Pricing = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Two simple options: a one-shot report for a single engagement or continuous monitoring for ongoing discovery, retests, and repeatable delivery.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            European company with GDPR-first practices and privacy standards.
           </p>
         </div>
 
