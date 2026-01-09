@@ -31,7 +31,7 @@ export const Situation = () => {
             Where Audits <span className="text-gradient">Slow Down</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The assessment is the easy part. The bottleneck is turning results into a clear, prioritized plan and a report stakeholders can act on.
+            Assessments are hard. The bottleneck is turning results into a clear, prioritized plan and a report stakeholders can act on.
           </p>
         </div>
 

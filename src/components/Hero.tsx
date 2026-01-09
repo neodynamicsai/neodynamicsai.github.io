@@ -1,7 +1,7 @@
 import heroNetwork from "@/assets/hero-network.jpg";
 import { ScheduleDemoButton } from "@/components/ScheduleDemoButton";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { AlarmClock, ArrowRight, Lock, ShieldCheck, Timer } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -25,27 +25,54 @@ export const Hero = () => {
             <span className="text-gradient">Actionable Reports</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            NeoDynamics turns identity assessment data into prioritized findings, evidence, and a report pack you can ship fast.
-            Built for security teams: consultants, MSSPs, and internal teams.
-          </p>
+          <div className="max-w-4xl mx-auto space-y-5">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+              NeoDynamics turns AD and Entra assessment data into prioritized findings, evidence, and a report pack you can ship fast.
+            </p>
 
-          <div className="hidden sm:flex flex-wrap justify-center gap-4 text-sm font-medium text-muted-foreground pt-2">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Report-ready findings & evidence
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Hygiene + posture issues at scale
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Attack paths you can explain
-            </span>
+            <div className="mx-auto max-w-4xl rounded-3xl border border-primary/20 bg-primary/10 p-3 sm:p-4">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="flex items-center gap-3 rounded-2xl border border-primary/15 bg-background/20 px-4 py-3 text-left">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/15">
+                    <AlarmClock className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
+                    Faster reporting turnaround
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-2xl border border-primary/15 bg-background/20 px-4 py-3 text-left">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/15">
+                    <Timer className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
+                    Hours saved on triage and writeups
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-2xl border border-primary/15 bg-background/20 px-4 py-3 text-left">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/15">
+                    <ShieldCheck className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
+                    Fewer missed issues via consistent checks
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-2xl border border-primary/15 bg-background/20 px-4 py-3 text-left">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/15">
+                    <Lock className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
+                    Privacy-preserving, data stays on your premises
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div className="sm:hidden text-sm text-muted-foreground">
-            Report-ready findings · Attack paths · Prioritized fixes
+            Faster reporting. Hours saved. Fewer missed issues.
           </div>
 
           {/* CTA Buttons */}

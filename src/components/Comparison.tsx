@@ -45,44 +45,44 @@ const cellText = (value: CellValue) => {
 const rows: ComparisonRow[] = [
   {
     capability: "Structured report pack (summary + findings + evidence)",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Stitched" },
+    manual: { kind: "partial", label: "Manual, time-intensive" },
+    pointTools: { kind: "partial", label: "Requires expert aggregation" },
     neo: { kind: "yes" },
   },
   {
     capability: "Prioritized remediation plan (what to fix first)",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Limited" },
+    manual: { kind: "partial", label: "Expert judgment" },
+    pointTools: { kind: "partial", label: "Heuristics only" },
     neo: { kind: "yes" },
   },
   {
     capability: "Attack-path evidence you can explain",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Tool output" },
+    manual: { kind: "partial", label: "Expert-led" },
+    pointTools: { kind: "partial", label: "Graphs, needs narrative" },
     neo: { kind: "yes" },
   },
   {
     capability: "Consistency across engagements / teams",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Varies" },
+    manual: { kind: "no", label: "Varies by analyst" },
+    pointTools: { kind: "no", label: "Depends on process" },
     neo: { kind: "yes", label: "Context-aware" },
   },
   {
     capability: "Retests & progress tracking",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Ad hoc" },
+    manual: { kind: "no", label: "Ad hoc tracking" },
+    pointTools: { kind: "no", label: "Not built-in" },
     neo: { kind: "yes", label: "Built-in" },
   },
   {
     capability: "Multi-domain delivery",
-    manual: { kind: "no" },
-    pointTools: { kind: "partial", label: "Varies" },
+    manual: { kind: "no", label: "Not scalable" },
+    pointTools: { kind: "no", label: "No delivery layer" },
     neo: { kind: "yes" },
   },
 ];
 
 const mobileTabs = [
-  { id: "manual", label: "Manual", shortLabel: "Manual" },
+  { id: "manual", label: "Manual (Expert-Led)", shortLabel: "Manual" },
   { id: "tools", label: "Standalone Tools", shortLabel: "Tools" },
   { id: "neo", label: "NeoDynamics", shortLabel: "Neo" },
 ] as const;
@@ -96,10 +96,10 @@ export const Comparison = () => {
     switch (mobileTab) {
       case "manual":
         return {
-          bestFor: "Deep one-off analysis when you have time.",
+          bestFor: "Deep analysis when you have senior expertise and time.",
           gaps: [
-            "Slow to repeat across domains or customers",
-            "Report writing and evidence gathering eats hours",
+            "Hard to standardize across analysts and engagements",
+            "Packaging into deliverables consumes a lot of time",
           ],
           highlight: false,
         };
@@ -107,8 +107,8 @@ export const Comparison = () => {
         return {
           bestFor: "Standalone scanners/graphs to answer a specific question.",
           gaps: [
-            "Output still needs manual packaging into a deliverable",
-            "Prioritization and narrative often require analyst interpretation",
+            "No report pack by default; output needs packaging",
+            "You still stitch results into findings, evidence, and narrative",
           ],
           highlight: false,
         };
