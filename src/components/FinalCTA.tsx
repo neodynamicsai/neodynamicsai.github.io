@@ -5,7 +5,7 @@ export const FinalCTA = () => {
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto max-w-5xl">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-card border border-primary/30 p-12 md:p-16 text-center space-y-8">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-card border border-primary/30 p-8 md:p-16 text-left md:text-center space-y-8">
           {/* Glow Effect */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(var(--primary))/0.15,_transparent_70%)]" />
           
@@ -19,7 +19,7 @@ export const FinalCTA = () => {
               See how NeoDynamics turns identity data into prioritized findings, clear explanations, and actionable remediation guidance built for consulting teams.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-4 flex justify-start md:justify-center">
               <ScheduleDemoButton
                 variant="hero"
                 size="xl"
