@@ -21,26 +21,27 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
-            Ship AD & Entra Audits{" "}
-            <span className="text-gradient">Faster</span>
+            Turn AD & Entra Audits Into{" "}
+            <span className="text-gradient">Actionable Reports</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            NeoDynamics is built for cybersecurity consultants and auditors who assess Active Directory and Entra ID on repeat. Automate posture analysis, attack paths, and remediation prioritization so your team delivers clearer findings with less manual work.
+            NeoDynamics turns identity assessment data into prioritized findings, evidence, and a report pack you can ship fast.
+            Built for security teams: consultants, MSSPs, and internal teams.
           </p>
 
           <div className="hidden sm:flex flex-wrap justify-center gap-4 text-sm font-medium text-muted-foreground pt-2">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Consultant-ready findings & report packs
+              Report-ready findings & evidence
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              PingCastle-style misconfiguration coverage
+              Hygiene + posture issues at scale
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              Attack path management, explained for clients
+              Attack paths you can explain
             </span>
           </div>
           <div className="sm:hidden text-sm text-muted-foreground">
@@ -51,7 +52,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <ScheduleDemoButton variant="hero" size="xl" className="group w-full sm:w-auto px-4 sm:px-6 text-sm sm:text-base">
               <span className="sm:hidden">Schedule Demo</span>
-              <span className="hidden sm:inline">See It For Your Next Engagement</span>
+              <span className="hidden sm:inline">See It For Your Next Assessment</span>
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </ScheduleDemoButton>
             <Button variant="outline" size="xl" asChild className="w-full sm:w-auto">

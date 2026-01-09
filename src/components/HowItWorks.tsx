@@ -6,22 +6,22 @@ export const HowItWorks = () => {
     {
       icon: Link2,
       title: "Connect Once",
-      description: "Ingest identity data from Active Directory and Entra ID to establish a baseline for the engagement.",
+      description: "Ingest identity data from Active Directory and Entra ID.",
     },
     {
       icon: Gauge,
       title: "Find Misconfigs + Attack Paths",
-      description: "Detect posture issues and map exploitable relationships that lead to privilege escalation.",
+      description: "Surface posture issues and risky relationships that enable escalation.",
     },
     {
       icon: ClipboardList,
       title: "Prioritize Fixes",
-      description: "Turn findings into a remediation plan with impact-based prioritization and concrete fix suggestions.",
+      description: "Turn findings into a prioritized remediation plan with concrete fixes.",
     },
     {
       icon: CheckCircle,
       title: "Deliver Client-Ready Output",
-      description: "Generate report-ready findings, evidence, and explanations tailored for both engineers and stakeholders.",
+      description: "Export report-ready findings, evidence, and stakeholder-friendly explanations.",
     },
   ];
 
@@ -31,10 +31,10 @@ export const HowItWorks = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            How <span className="text-gradient">NeoDynamics</span> Fits Your Audit Workflow
+            How It Fits Your <span className="text-gradient">Workflow</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Less spreadsheet work. More billable output. NeoDynamics automates the analysis so your team can focus on the parts that require human judgment.
+            Spend less time triaging and writing reports. Spend more time validating risk and driving remediation.
           </p>
         </div>
 
@@ -69,8 +69,7 @@ export const HowItWorks = () => {
         {/* Bottom Message */}
         <div className="mt-16 text-center">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Identity audits are repeatable, and so is your process.
-            <span className="text-foreground font-semibold"> NeoDynamics helps small teams deliver more engagements</span> without sacrificing depth or quality.
+            Repeatable audits deserve a repeatable delivery workflow, without sacrificing depth or clarity.
           </p>
         </div>
       </div>

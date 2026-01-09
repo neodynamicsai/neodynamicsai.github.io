@@ -4,27 +4,49 @@ import { Check } from "lucide-react";
 
 const neoTiers = [
   {
-    name: "One-Shot Report",
+    name: "One-Off Report Pack",
     price: "€1,900",
     priceNote: "per domain",
-    description: "Single engagement report for one domain.",
+    description: "A report pack for a single assessment on one domain.",
     bullets: [
-      "Misconfiguration findings + report-ready output",
-      "Attack paths with evidence and explanations",
-      "Prioritized fix recommendations",
+      "Structured findings + evidence",
+      "Attack paths with explanations",
+      "Prioritized remediation guidance",
     ],
   },
   {
     name: "Continuous Monitoring",
-    price: "€299",
+    price: "€499",
     priceNote: "per domain / month",
     description: "Always-on analysis with a 12-month minimum commitment.",
     bullets: [
-      "Everything in One-Shot Report",
+      "Everything in One-Off Report Pack",
       "Continuous re-scans and progress tracking",
-      "Lower per-assessment cost over the full term",
+      "Built for retests and ongoing hardening",
     ],
     highlighted: true,
+  },
+  {
+    name: "Multi-Domain Pack",
+    price: "€1,299",
+    priceNote: "per month (up to 3 domains)",
+    description: "Discounted bundle for multi-domain environments and recurring delivery.",
+    bullets: [
+      "Everything in Continuous Monitoring",
+      "Designed for multi-domain reporting",
+      "Best value for MSPs and larger internal teams",
+    ],
+  },
+  {
+    name: "Enterprise / MSSP",
+    price: "Contact us",
+    priceNote: "volume pricing",
+    description: "For higher volumes, custom terms, and enterprise workflows.",
+    bullets: [
+      "Volume discounts for service providers and security teams",
+      "Custom packages for multi-domain portfolios",
+      "Tailored onboarding and rollout support",
+    ],
   },
 ];
 
@@ -34,10 +56,10 @@ export const Pricing = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Pricing for <span className="text-gradient">Consulting Teams</span>
+            Simple <span className="text-gradient">Pricing</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Two simple options: a one-shot report for a single engagement or continuous monitoring for ongoing discovery, retests, and repeatable delivery.
+            Start with a one-off report pack, move to continuous monitoring, and scale with multi-domain bundles or enterprise pricing.
           </p>
           <p className="text-sm text-muted-foreground">
             European company with GDPR-first practices and privacy standards.
@@ -76,7 +98,7 @@ export const Pricing = () => {
                   </ul>
                   <div className="mt-auto">
                     <ScheduleDemoButton className="w-full" variant={tier.highlighted ? "hero" : "outline"}>
-                      Talk Pricing + Demo
+                      {tier.price === "Contact us" ? "Contact Sales" : "Talk Pricing + Demo"}
                     </ScheduleDemoButton>
                   </div>
                 </CardContent>

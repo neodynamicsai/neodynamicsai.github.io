@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -19,8 +18,8 @@ type CellValue =
 
 type ComparisonRow = {
   capability: string;
-  bloodhound: CellValue;
-  pingcastle: CellValue;
+  manual: CellValue;
+  pointTools: CellValue;
   neo: CellValue;
 };
 
@@ -45,46 +44,46 @@ const cellText = (value: CellValue) => {
 
 const rows: ComparisonRow[] = [
   {
-    capability: "Reduces operational load (less manual triage & reporting)",
-    bloodhound: { kind: "no" },
-    pingcastle: { kind: "partial", label: "Partially" },
+    capability: "Structured report pack (summary + findings + evidence)",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Stitched" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Business-aware prioritization (what to fix first)",
-    bloodhound: { kind: "no" },
-    pingcastle: { kind: "no" },
+    capability: "Prioritized remediation plan (what to fix first)",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Limited" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Explains “why” a risk exists (client-friendly narrative)",
-    bloodhound: { kind: "no" },
-    pingcastle: { kind: "partial", label: "Partially" },
+    capability: "Attack-path evidence you can explain",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Tool output" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Concrete defenses / fix suggestions",
-    bloodhound: { kind: "no" },
-    pingcastle: { kind: "partial", label: "Static guidance" },
+    capability: "Consistency across engagements / teams",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Varies" },
     neo: { kind: "yes", label: "Context-aware" },
   },
   {
-    capability: "Automated structured reporting (organized & concise)",
-    bloodhound: { kind: "no" },
-    pingcastle: { kind: "yes", label: "Large report" },
-    neo: { kind: "yes", label: "Consultant-ready" },
+    capability: "Retests & progress tracking",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Ad hoc" },
+    neo: { kind: "yes", label: "Built-in" },
   },
   {
-    capability: "Attack paths / attack dynamics",
-    bloodhound: { kind: "yes" },
-    pingcastle: { kind: "no" },
+    capability: "Multi-domain delivery",
+    manual: { kind: "no" },
+    pointTools: { kind: "partial", label: "Varies" },
     neo: { kind: "yes" },
   },
 ];
 
 const mobileTabs = [
-  { id: "bloodhound", label: "BloodHound", shortLabel: "BH" },
-  { id: "pingcastle", label: "PingCastle", shortLabel: "Ping" },
+  { id: "manual", label: "Manual", shortLabel: "Manual" },
+  { id: "tools", label: "Standalone Tools", shortLabel: "Tools" },
   { id: "neo", label: "NeoDynamics", shortLabel: "Neo" },
 ] as const;
 
@@ -95,31 +94,32 @@ export const Comparison = () => {
 
   const mobileContent = useMemo(() => {
     switch (mobileTab) {
-      case "bloodhound":
+      case "manual":
         return {
-          bestFor: "Exploring attack paths with graph-based analysis.",
+          bestFor: "Deep one-off analysis when you have time.",
           gaps: [
-            "Less “what to fix first” prioritization for stakeholders",
-            "Not focused on structured, client-ready reporting",
+            "Slow to repeat across domains or customers",
+            "Report writing and evidence gathering eats hours",
           ],
           highlight: false,
         };
-      case "pingcastle":
+      case "tools":
         return {
-          bestFor: "Posture reporting and AD health checks with broad coverage.",
+          bestFor: "Standalone scanners/graphs to answer a specific question.",
           gaps: [
-            "Limited attack-path dynamics and client explainability",
-            "Guidance is often static and requires more consultant interpretation",
+            "Output still needs manual packaging into a deliverable",
+            "Prioritization and narrative often require analyst interpretation",
           ],
           highlight: false,
         };
       case "neo":
         return {
-          bestFor: "Consultants and auditors who need faster, repeatable AD/Entra audit delivery.",
+          bestFor: "Repeatable AD/Entra audit delivery for security teams.",
           gaps: [
-            "Business-aware prioritization + concrete, context-aware fixes",
-            "Attack paths packaged into client-ready findings with explanations",
-            "Structured reporting built for engagement delivery and retests",
+            "Structured findings + evidence, ready to export",
+            "Prioritized remediation with clear rationale",
+            "Attack paths packaged into stakeholder-friendly findings",
+            "Built for retests and progress tracking",
           ],
           highlight: true,
         };
@@ -131,13 +131,13 @@ export const Comparison = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why <span className="text-gradient">NeoDynamics</span> Wins for Consulting Teams
+            Why <span className="text-gradient">NeoDynamics</span>
           </h2>
           <p className="hidden md:block text-xl text-muted-foreground max-w-3xl mx-auto">
-            BloodHound excels at attack-path graphing. PingCastle excels at posture reporting. NeoDynamics combines both and adds the missing pieces: prioritization, explainability, and repeatable client-ready output.
+            Stop stitching together screenshots, spreadsheets, and point tools. NeoDynamics turns assessment data into prioritized findings and a structured report pack you can deliver and retest.
           </p>
           <p className="md:hidden text-sm text-muted-foreground max-w-3xl mx-auto">
-            NeoDynamics blends posture, attack paths, and client-ready reporting in one workflow.
+            NeoDynamics turns assessment data into prioritized, report-ready output.
           </p>
         </div>
 
@@ -180,7 +180,7 @@ export const Comparison = () => {
                 <p className="text-sm font-semibold text-foreground">Best for</p>
                 <p className="text-sm text-muted-foreground">{mobileContent.bestFor}</p>
                 <p className="text-sm font-semibold text-foreground">
-                  {mobileTab === "neo" ? "Why it wins" : "Gaps for consulting delivery"}
+                  {mobileTab === "neo" ? "Why it wins" : "Where time goes"}
                 </p>
                 <div className="grid gap-2 text-sm text-muted-foreground">
                     {mobileContent.gaps.map((item) => (
@@ -198,8 +198,8 @@ export const Comparison = () => {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-[46%]">Capability</TableHead>
-                    <TableHead className="w-[18%]">BloodHound</TableHead>
-                    <TableHead className="w-[18%]">PingCastle</TableHead>
+                    <TableHead className="w-[18%]">Manual</TableHead>
+                    <TableHead className="w-[18%]">Standalone Tools</TableHead>
                     <TableHead className="w-[18%] bg-primary/10 border-l border-primary/20">
                       <div className="flex items-center justify-between gap-3">
                         <span>NeoDynamics</span>
@@ -216,14 +216,14 @@ export const Comparison = () => {
                       <TableCell className="font-medium">{row.capability}</TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
-                          {cellIcon(row.bloodhound)}
-                          <span className="text-muted-foreground">{cellText(row.bloodhound)}</span>
+                          {cellIcon(row.manual)}
+                          <span className="text-muted-foreground">{cellText(row.manual)}</span>
                         </div>
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
-                          {cellIcon(row.pingcastle)}
-                          <span className="text-muted-foreground">{cellText(row.pingcastle)}</span>
+                          {cellIcon(row.pointTools)}
+                          <span className="text-muted-foreground">{cellText(row.pointTools)}</span>
                         </div>
                       </TableCell>
                       <TableCell className="bg-primary/10 border-l border-primary/20">
@@ -235,9 +235,6 @@ export const Comparison = () => {
                     </TableRow>
                   ))}
                 </TableBody>
-                <TableCaption>
-                  High-level, consultant-focused comparison for positioning (not an exhaustive checklist).
-                </TableCaption>
               </Table>
             </div>
           </CardContent>
@@ -250,9 +247,9 @@ export const Comparison = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground text-base">
               <div className="space-y-2">
-                <p className="font-semibold text-foreground">NeoDynamics is built for services delivery.</p>
+                <p className="font-semibold text-foreground">NeoDynamics is built for delivery.</p>
                 <p>
-                  It reduces non-billable work (collection, triage, report writing), improves consistency across consultants, and makes retests and iteration faster.
+                  It reduces hours spent on triage and report writing, improves consistency across analysts, and makes retests and iteration faster.
                 </p>
               </div>
               <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5">
@@ -270,22 +267,22 @@ export const Comparison = () => {
             <CardContent className="grid gap-3 text-base text-muted-foreground">
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Run AD/Entra audits routinely and want to ship faster.
+                Run recurring AD/Entra assessments (internally or for customers).
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Need consistent findings and report quality across a small team.
+                Need consistent findings and reporting across analysts or teams.
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Want to differentiate with clearer remediation and “why it matters”.
+                Want to shorten time from data to an actionable remediation plan.
               </div>
             </CardContent>
           </Card>
         </div>
 
         <div className="mt-8 md:hidden rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-muted-foreground">
-          NeoDynamics combines posture checks, attack paths, and client-ready reporting into one workflow for faster audit delivery.
+          NeoDynamics turns assessment data into prioritized, report-ready output for faster delivery.
         </div>
       </div>
     </section>

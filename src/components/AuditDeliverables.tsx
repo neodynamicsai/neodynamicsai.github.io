@@ -4,29 +4,29 @@ import { BadgeCheck, FileText, Network, Wrench } from "lucide-react";
 const screenshotCards = [
   {
     icon: FileText,
-    title: "Executive Summary Report",
-    description: "A stakeholder-friendly narrative with key risks, scope, and priorities.",
+    title: "Executive Summary",
+    description: "A clear snapshot of scope, top risks, and priorities.",
     image: "/screenshots/executive_summary.png",
     alt: "Executive summary report preview",
   },
   {
     icon: BadgeCheck,
-    title: "Findings + Evidence",
-    description: "Clear findings with supporting evidence and client-friendly explanations.",
+    title: "Findings & Evidence",
+    description: "Structured findings with evidence and plain-language impact.",
     image: "/screenshots/findings_evidence.png",
     alt: "Findings and evidence preview",
   },
   {
     icon: Wrench,
-    title: "Fix Suggestions + Prioritization",
-    description: "Actionable remediation guidance with impact-based ordering for quick wins.",
+    title: "Prioritized Fixes",
+    description: "Actionable remediation guidance ordered by impact.",
     image: "/screenshots/fix_suggestions.png",
     alt: "Fix suggestions and prioritization preview",
   },
   {
     icon: Network,
-    title: "Attack Path Management",
-    description: "Privilege escalation paths you can show, explain, and track to closure.",
+    title: "Attack Paths",
+    description: "Privilege escalation paths you can show, explain, and track.",
     image: "/screenshots/attack_path_management.png",
     alt: "Attack path management preview",
   },
@@ -41,7 +41,7 @@ export const AuditDeliverables = () => {
             What You <span className="text-gradient">Deliver</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            NeoDynamics helps your team turn AD and Entra assessments into consistent, client-ready output without rebuilding the same report from scratch every time.
+            A consistent report pack for AD and Entra assessments: findings, evidence, prioritized fixes, and stakeholder-ready narrative.
           </p>
         </div>
 
@@ -106,16 +106,16 @@ export const AuditDeliverables = () => {
         <div className="mt-10 grid lg:grid-cols-2 gap-6">
           <Card className="bg-gradient-card border-border hidden md:block">
             <CardHeader>
-              <CardTitle className="text-2xl">Engagement-Ready Report Pack</CardTitle>
+              <CardTitle className="text-2xl">Report Pack</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                For each engagement, NeoDynamics compiles findings with evidence, impact, and fix guidance, plus deeper explanations you can use to brief engineering teams and decision makers.
+                NeoDynamics compiles findings with evidence, impact, and fix guidance, ready for engineering teams and decision makers.
               </p>
               <div className="grid sm:grid-cols-2 gap-3 text-sm">
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Misconfiguration findings (PingCastle-style coverage)
+                  Hygiene and misconfiguration findings
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
@@ -123,11 +123,11 @@ export const AuditDeliverables = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Fix suggestions with prioritization and rationale
+                  Prioritized fix suggestions with rationale
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Client-friendly explanations for “why this matters”
+                  Stakeholder-friendly “why it matters” context
                 </div>
               </div>
             </CardContent>
@@ -149,15 +149,11 @@ export const AuditDeliverables = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Weak password/credential hygiene indicators
+                  Weak credential hygiene indicators
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
                   Privileged role sprawl in Entra
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Legacy configs that enable lateral movement
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
@@ -170,10 +166,10 @@ export const AuditDeliverables = () => {
 
         <div className="mt-8 md:hidden space-y-4 text-sm text-muted-foreground">
           <p>
-            Each engagement includes misconfiguration findings, attack paths, fix suggestions, and client-ready explanations.
+            Each engagement includes findings, attack paths, prioritized fixes, and stakeholder-ready explanations.
           </p>
           <p>
-            Common checks cover over-privileged groups, inactive users, stale credentials, and risky attack relationships.
+            Common checks cover privilege sprawl, stale accounts, credential hygiene, and risky relationships.
           </p>
         </div>
       </div>

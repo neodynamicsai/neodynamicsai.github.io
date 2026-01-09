@@ -5,32 +5,32 @@ export const Features = () => {
     {
       icon: FileText,
       title: "Report-Ready Findings",
-      description: "Generate structured findings with evidence, impact, and customer-friendly explanations, ready for delivery.",
+      description: "Structured findings with evidence and impact, ready to export.",
     },
     {
       icon: ShieldCheck,
-      title: "Misconfiguration Coverage",
-      description: "Surface common AD/Entra posture issues (inactive users, over-privilege, stale credentials, and more) at scale.",
+      title: "Posture & Hygiene Coverage",
+      description: "Surface common AD/Entra issues at scale (stale accounts, privilege sprawl, hygiene gaps).",
     },
     {
       icon: Network,
       title: "Attack Path Management",
-      description: "Map and explain privilege escalation paths so your team can prove risk, not just list settings.",
+      description: "Map and explain privilege escalation paths with evidence you can share.",
     },
     {
       icon: SlidersHorizontal,
       title: "Fix Prioritization",
-      description: "Prioritize remediation by risk and blast radius, with concrete fix suggestions to reduce back-and-forth.",
+      description: "Prioritize remediation by impact and blast radius, with concrete fix suggestions.",
     },
     {
       icon: Sparkles,
-      title: "Explainability On Demand",
-      description: "Go from “what’s wrong” to “why it matters” with deeper explanations for technical and non-technical stakeholders.",
+      title: "Stakeholder-Friendly Narrative",
+      description: "Clear “why it matters” explanations for technical and non-technical stakeholders.",
     },
     {
       icon: Zap,
-      title: "More Audits Per Team",
-      description: "Reduce manual effort so small teams can deliver more engagements with consistent quality.",
+      title: "Less Manual Work",
+      description: "Reduce time spent triaging and writing reports to move faster from data to remediation.",
     },
   ];
 
@@ -40,10 +40,10 @@ export const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Built for <span className="text-gradient">Consultants & Auditors</span>
+            Built for <span className="text-gradient">Security Teams</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to deliver repeatable AD and Entra assessments without drowning in manual analysis.
+            Repeatable AD and Entra assessments, without the reporting grind.
           </p>
         </div>
 

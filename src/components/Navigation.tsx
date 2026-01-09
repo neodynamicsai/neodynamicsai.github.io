@@ -21,14 +21,17 @@ export const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
+            <a href="#problem" className="text-sm font-medium hover:text-primary transition-colors">
+              Problem
+            </a>
             <a href="#deliverables" className="text-sm font-medium hover:text-primary transition-colors">
               Deliverables
             </a>
-            <a href="#comparison" className="text-sm font-medium hover:text-primary transition-colors">
-              Comparison
-            </a>
             <a href="#platform" className="text-sm font-medium hover:text-primary transition-colors">
               Workflow
+            </a>
+            <a href="#comparison" className="text-sm font-medium hover:text-primary transition-colors">
+              Why NeoDynamics
             </a>
             <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
               Pricing
