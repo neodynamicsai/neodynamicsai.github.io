@@ -26,7 +26,7 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="platform" className="py-20 px-6 bg-gradient-to-b from-background to-secondary/20">
+    <section id="platform" className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">

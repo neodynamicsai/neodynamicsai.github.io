@@ -18,8 +18,12 @@ const Index = () => {
         <AuditDeliverables />
         <Comparison />
         <HowItWorks />
-        <AttackLifecycle />
-        <Features />
+        <div className="hidden md:block">
+          <AttackLifecycle />
+        </div>
+        <div className="hidden md:block">
+          <Features />
+        </div>
         <Pricing />
         <FinalCTA />
       </main>

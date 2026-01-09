@@ -30,7 +30,7 @@ const neoTiers = [
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 px-6 bg-gradient-to-b from-background to-secondary/20">
+    <section id="pricing" className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">

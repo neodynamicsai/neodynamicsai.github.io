@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
                   <a
@@ -14,7 +14,7 @@ export const Navigation = () => {
       >
         <img
           src="/neod_logo.svg"
-          className="w-52 transition-opacity hover:opacity-50 focus:opacity-70"
+          className="w-32 md:w-52 transition-opacity hover:opacity-50 focus:opacity-70"
         />
       </a>
           </div>
@@ -36,7 +36,11 @@ export const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <ScheduleDemoButton variant="hero">Schedule Demo
+          <ScheduleDemoButton
+            variant="hero"
+            className="h-9 px-3 text-xs md:h-12 md:px-6 md:text-sm"
+          >
+            Schedule Demo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </ScheduleDemoButton>
         </div>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-secondary/20">
+    <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto max-w-5xl">
         <div className="relative overflow-hidden rounded-2xl bg-gradient-card border border-primary/30 p-12 md:p-16 text-center space-y-8">
           {/* Glow Effect */}
@@ -20,9 +20,13 @@ export const FinalCTA = () => {
             </p>
 
             <div className="pt-4">
-              <ScheduleDemoButton variant="hero" size="xl" className="min-w-[200px]">
+              <ScheduleDemoButton
+                variant="hero"
+                size="xl"
+                className="w-full sm:w-auto min-w-[200px] px-4 sm:px-6 text-sm sm:text-base"
+              >
                 Schedule Demo
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </ScheduleDemoButton>
             </div>
           </div>

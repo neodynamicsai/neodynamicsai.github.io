@@ -83,9 +83,9 @@ const rows: ComparisonRow[] = [
 ];
 
 const mobileTabs = [
-  { id: "bloodhound", label: "BloodHound" },
-  { id: "pingcastle", label: "PingCastle" },
-  { id: "neo", label: "NeoDynamics" },
+  { id: "bloodhound", label: "BloodHound", shortLabel: "BH" },
+  { id: "pingcastle", label: "PingCastle", shortLabel: "Ping" },
+  { id: "neo", label: "NeoDynamics", shortLabel: "Neo" },
 ] as const;
 
 type MobileTabId = (typeof mobileTabs)[number]["id"];
@@ -127,14 +127,17 @@ export const Comparison = () => {
   }, [mobileTab]);
 
   return (
-    <section id="comparison" className="py-20 px-6 bg-gradient-to-b from-secondary/10 to-background">
+    <section id="comparison" className="py-20 px-4 md:px-6 bg-gradient-to-b from-secondary/10 to-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Why <span className="text-gradient">NeoDynamics</span> Wins for Consulting Teams
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="hidden md:block text-xl text-muted-foreground max-w-3xl mx-auto">
             BloodHound excels at attack-path graphing. PingCastle excels at posture reporting. NeoDynamics combines both and adds the missing pieces: prioritization, explainability, and repeatable client-ready output.
+          </p>
+          <p className="md:hidden text-sm text-muted-foreground max-w-3xl mx-auto">
+            NeoDynamics blends posture, attack paths, and client-ready reporting in one workflow.
           </p>
         </div>
 
@@ -153,13 +156,14 @@ export const Comparison = () => {
                       type="button"
                       onClick={() => setMobileTab(tab.id)}
                       className={
-                        "h-10 rounded-lg text-sm font-medium transition-all " +
-                        (isActive
-                          ? "bg-background text-foreground shadow-sm"
-                          : "text-muted-foreground hover:text-foreground")
-                      }
+                          "h-9 rounded-lg text-[11px] font-semibold transition-all px-1 " +
+                          (isActive
+                            ? "bg-background text-foreground shadow-sm"
+                            : "text-muted-foreground hover:text-foreground")
+                        }
                     >
-                      {tab.label}
+                      <span className="sm:hidden">{tab.shortLabel}</span>
+                      <span className="hidden sm:inline">{tab.label}</span>
                     </button>
                   );
                 })}
@@ -239,7 +243,7 @@ export const Comparison = () => {
           </CardContent>
         </Card>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 hidden md:grid gap-6 lg:grid-cols-2">
           <Card className="bg-gradient-card border-primary/30">
             <CardHeader>
               <CardTitle className="text-2xl">The “Why We Win” Summary</CardTitle>
@@ -278,6 +282,10 @@ export const Comparison = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="mt-8 md:hidden rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-muted-foreground">
+          NeoDynamics combines posture checks, attack paths, and client-ready reporting into one workflow for faster audit delivery.
         </div>
       </div>
     </section>

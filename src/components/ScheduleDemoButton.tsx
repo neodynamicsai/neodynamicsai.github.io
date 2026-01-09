@@ -34,7 +34,7 @@ export const ScheduleDemoButton = ({
       data-cal-link="andrea-villa-k8ftoo/demo-30-min"
       data-cal-config='{"layout":"month_view"}'
     >
-      {showIcon && <Calendar className="mr-2 h-4 w-4" />}
+      {showIcon && <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
       {children}
     </Button>
   );

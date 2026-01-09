@@ -34,7 +34,7 @@ const screenshotCards = [
 
 export const AuditDeliverables = () => {
   return (
-    <section id="deliverables" className="py-20 px-6">
+    <section id="deliverables" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-[90rem]">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -45,7 +45,36 @@ export const AuditDeliverables = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 2xl:grid-cols-2">
+        <div className="md:hidden space-y-8">
+          {screenshotCards.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 border border-primary/25">
+                    <Icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-foreground">{item.title}</p>
+                    <p className="text-xs text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
+                <div className="-mx-4 rounded-2xl border border-border bg-secondary/40 overflow-hidden">
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      loading="lazy"
+                      className="h-full w-full object-contain p-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="hidden md:grid gap-8 2xl:grid-cols-2">
           {screenshotCards.map((item) => {
             const Icon = item.icon;
             return (
@@ -59,13 +88,13 @@ export const AuditDeliverables = () => {
                   </div>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <div className="aspect-[16/9] rounded-xl border border-border bg-secondary/40 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.alt}
                       loading="lazy"
-                      className="h-full w-full object-contain p-2"
+                      className="h-full w-full object-contain p-3"
                     />
                   </div>
                 </CardContent>
@@ -75,7 +104,7 @@ export const AuditDeliverables = () => {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-2 gap-6">
-          <Card className="bg-gradient-card border-border">
+          <Card className="bg-gradient-card border-border hidden md:block">
             <CardHeader>
               <CardTitle className="text-2xl">Engagement-Ready Report Pack</CardTitle>
             </CardHeader>
@@ -104,7 +133,7 @@ export const AuditDeliverables = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border">
+          <Card className="bg-card border-border hidden md:block">
             <CardHeader>
               <CardTitle className="text-2xl">Common Checks (Examples)</CardTitle>
             </CardHeader>
@@ -137,6 +166,15 @@ export const AuditDeliverables = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="mt-8 md:hidden space-y-4 text-sm text-muted-foreground">
+          <p>
+            Each engagement includes misconfiguration findings, attack paths, fix suggestions, and client-ready explanations.
+          </p>
+          <p>
+            Common checks cover over-privileged groups, inactive users, stale credentials, and risky attack relationships.
+          </p>
         </div>
       </div>
     </section>

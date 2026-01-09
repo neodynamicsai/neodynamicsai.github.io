@@ -35,7 +35,7 @@ export const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 px-6">
+    <section id="features" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
