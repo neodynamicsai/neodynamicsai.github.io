@@ -1,7 +1,7 @@
 import heroNetwork from "@/assets/hero-network.jpg";
 import { ScheduleDemoButton } from "@/components/ScheduleDemoButton";
 import { Button } from "@/components/ui/button";
-import { AlarmClock, ArrowRight, Lock, ShieldCheck, Timer } from "lucide-react";
+import { AlarmClock, ArrowRight, DollarSign, Lock, ShieldCheck } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -43,10 +43,10 @@ export const Hero = () => {
 
                 <div className="flex items-center gap-3 rounded-2xl border border-primary/15 bg-background/20 px-4 py-3 text-left">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/15">
-                    <Timer className="h-5 w-5 text-primary" />
+                    <DollarSign className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
-                    Hours saved on triage and writeups
+                    Save hours and budget on triage and writeups
                   </span>
                 </div>
 
