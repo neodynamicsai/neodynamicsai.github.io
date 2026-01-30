@@ -1,4 +1,5 @@
 import { Github, Linkedin, type LucideProps } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const XIcon = (props: LucideProps) => (
   <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" {...props}>
@@ -28,9 +29,9 @@ export const Footer = () => {
           <span className="text-center sm:text-left">© 2025 NeoDynamics</span>
           <nav className="flex items-center gap-6">
             {legalLinks.map((link) => (
-              <a key={link.label} href={link.href} className="hover:text-primary transition-colors">
+              <Link key={link.label} to={link.href} className="hover:text-primary transition-colors">
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-3">
