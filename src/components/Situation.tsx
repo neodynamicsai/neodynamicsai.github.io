@@ -7,19 +7,19 @@ export const Situation = () => {
       icon: Timer,
       title: "Situation",
       description:
-        "AD and Entra assessments generate a lot of signal. Turning that into a report is where most teams lose time.",
+        "Attackers will get in. What matters next is whether they can move through identity relationships to reach your crown jewels.",
     },
     {
       icon: ListChecks,
       title: "Complication",
       description:
-        "Manual triage, evidence gathering, and slide writing create inconsistency and make it easy to miss important issues.",
+        "Most orgs don’t have a complete, ground-truth map of permissions, groups, and admin rights — so the roads attackers use stay hidden.",
     },
     {
       icon: FileText,
       title: "Resolution",
       description:
-        "NeoDynamics packages findings, evidence, and prioritized fixes into a report pack you can deliver and retest quickly.",
+        "NeoDynamics builds your identity graph and maps paths to critical infrastructure, then recommends the smallest changes that create dead ends for attackers.",
     },
   ];
 
@@ -28,10 +28,11 @@ export const Situation = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-14 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Where Audits <span className="text-gradient">Slow Down</span>
+            Attackers Will Get In.<br className="hidden md:block" />{" "}
+            The Question Is: <span className="text-gradient">Can They Move?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Assessments are hard. The bottleneck is turning results into a clear, prioritized plan and a report stakeholders can act on.
+            Perimeter security isn’t enough. Once inside, identity relationships become highways for lateral movement — unless you map them and cut the roads.
           </p>
         </div>
 
@@ -55,7 +56,7 @@ export const Situation = () => {
 
         <div className="mt-10 text-center">
           <p className="text-sm text-muted-foreground">
-            Fewer hours spent on reporting · More consistent output · Less chance of missed issues
+            Total internal visibility · Paths to crown jewels · Minimal-change hardening
           </p>
         </div>
       </div>

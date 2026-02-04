@@ -1,36 +1,71 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BadgeCheck, FileText, Network, Wrench } from "lucide-react";
+import { ScheduleDemoButton } from "@/components/ScheduleDemoButton";
+import { BadgeCheck, FileText, Network, PlugZap, Search, Wrench } from "lucide-react";
 
 const screenshotCards = [
   {
     icon: FileText,
-    title: "Executive Summary",
-    description: "A clear snapshot of scope, top risks, and priorities.",
+    title: "Crown Jewel Exposure",
+    description: "See exactly how a low-privilege identity connects to critical infrastructure.",
     image: "/screenshots/executive_summary.png",
     alt: "Executive summary report preview",
   },
   {
     icon: BadgeCheck,
-    title: "Findings & Evidence",
-    description: "Structured findings with evidence and plain-language impact.",
+    title: "Path Evidence + Context",
+    description: "Attack paths explained in plain language with supporting evidence.",
     image: "/screenshots/findings_evidence.png",
     alt: "Findings and evidence preview",
   },
   {
     icon: Wrench,
-    title: "Prioritized Fixes",
-    description: "Actionable remediation guidance ordered by impact.",
+    title: "Surgical Fix Plan",
+    description: "Prioritized changes that create dead ends for attackers (with rationale).",
     image: "/screenshots/fix_suggestions.png",
     alt: "Fix suggestions and prioritization preview",
   },
   {
     icon: Network,
-    title: "Attack Paths",
-    description: "Privilege escalation paths you can show, explain, and track.",
+    title: "Attack Path Explorer",
+    description: "Visualize the roads attackers use and track progress as you harden.",
     image: "/screenshots/attack_path_management.png",
     alt: "Attack path management preview",
   },
 ];
+
+const timelineSteps = [
+  {
+    time: "T+00",
+    title: "Plug In",
+    icon: PlugZap,
+    bullets: [
+      "Connect NeoDynamics to your Identity Providers",
+      "Read-only access",
+      "No agents required",
+      "Minimal setup effort",
+    ],
+  },
+  {
+    time: "T+45",
+    title: "Map & Analyze",
+    icon: Search,
+    bullets: [
+      "Build the internal identity graph",
+      "Identify attack paths to critical assets",
+      "Analyze and summarize risk",
+    ],
+  },
+  {
+    time: "T+60",
+    title: "Your Report",
+    icon: FileText,
+    bullets: [
+      "Receive a clear, visual report",
+      "See paths from low-privileged users to crown jewels",
+      "Get prioritized remediation guidance",
+    ],
+  },
+] as const;
 
 export const AuditDeliverables = () => {
   return (
@@ -38,12 +73,70 @@ export const AuditDeliverables = () => {
       <div className="container mx-auto max-w-[90rem]">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            What You <span className="text-gradient">Deliver</span>
+            Total Internal Visibility.<br className="hidden md:block" />{" "}
+            <span className="text-gradient">Mapped. Visual.</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A consistent report pack for AD and Entra assessments: findings, evidence, prioritized fixes, and stakeholder-ready narrative.
+            A ground-truth identity graph, paths to crown jewels, and an impact-aware hardening plan you can execute quickly.
           </p>
         </div>
+
+        <Card className="mb-14 bg-gradient-card border-primary/25">
+          <CardHeader className="space-y-3">
+            <CardTitle className="text-2xl md:text-3xl">1-hour Assessment Timeline</CardTitle>
+            <p className="text-muted-foreground">
+              Book a 1-hour assessment. In one session, NeoDynamics maps your identity roads and shows the smallest changes that stop lateral movement.
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid gap-4 md:grid-cols-3">
+              {timelineSteps.map((step) => {
+                const Icon = step.icon;
+                return (
+                  <div
+                    key={step.time}
+                    className="rounded-2xl border border-border bg-background/30 p-6"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/25 bg-primary/10">
+                          <Icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <div className="space-y-0.5">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                            {step.time}
+                          </p>
+                          <p className="text-lg font-bold text-foreground">{step.title}</p>
+                        </div>
+                      </div>
+                      <span className="inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary">
+                        {step.time === "T+60" ? "Deliver" : "Run"}
+                      </span>
+                    </div>
+                    <div className="mt-5 grid gap-2 text-sm text-muted-foreground">
+                      {step.bullets.map((bullet) => (
+                        <div key={bullet} className="flex items-start gap-3">
+                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                          <span>{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="flex flex-col gap-3 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:flex-row md:items-center md:justify-between">
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-foreground">Book a 1-hour Assessment.</p>
+                <p className="text-sm text-muted-foreground">T+60: get a visual report and prioritized remediation guidance.</p>
+              </div>
+              <ScheduleDemoButton variant="hero" className="w-full md:w-auto">
+                Book a 1-hour Assessment
+              </ScheduleDemoButton>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="md:hidden space-y-8">
           {screenshotCards.map((item) => {
@@ -103,73 +196,12 @@ export const AuditDeliverables = () => {
           })}
         </div>
 
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
-          <Card className="bg-gradient-card border-border hidden md:block">
-            <CardHeader>
-              <CardTitle className="text-2xl">Report Pack</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                NeoDynamics compiles findings with evidence, impact, and fix guidance, ready for engineering teams and decision makers.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-3 text-sm">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Hygiene and misconfiguration findings
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Attack paths and privilege escalation narratives
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Prioritized fix suggestions with rationale
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Stakeholder-friendly “why it matters” context
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-card border-border hidden md:block">
-            <CardHeader>
-              <CardTitle className="text-2xl">Common Checks (Examples)</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              <div className="grid sm:grid-cols-2 gap-2 text-sm">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Too many admins / over-privileged groups
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Inactive users and stale accounts
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Weak credential hygiene indicators
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  Privileged role sprawl in Entra
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                  High-risk relationships that form attack paths
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         <div className="mt-8 md:hidden space-y-4 text-sm text-muted-foreground">
           <p>
-            Each engagement includes findings, attack paths, prioritized fixes, and stakeholder-ready explanations.
+            Each assessment includes the identity graph, paths to crown jewels, and a prioritized fix plan to dead-end attackers.
           </p>
           <p>
-            Common checks cover privilege sprawl, stale accounts, credential hygiene, and risky relationships.
+            We map the identity relationships (groups, permissions, roles, sessions) that create the roads attackers use.
           </p>
         </div>
       </div>

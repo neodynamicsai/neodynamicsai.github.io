@@ -25,16 +25,16 @@ export const Navigation = () => {
               Problem
             </a>
             <a href="#deliverables" className="text-sm font-medium hover:text-primary transition-colors">
-              Deliverables
+              Outcomes
             </a>
             <a href="#platform" className="text-sm font-medium hover:text-primary transition-colors">
-              Workflow
+              How It Works
             </a>
             <a href="#comparison" className="text-sm font-medium hover:text-primary transition-colors">
               Why NeoDynamics
             </a>
             <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
-              Pricing
+              Get Started
             </a>
           </div>
 
@@ -43,7 +43,7 @@ export const Navigation = () => {
             variant="hero"
             className="h-9 px-3 text-xs md:h-12 md:px-6 md:text-sm"
           >
-            Schedule Demo
+            Book Assessment
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </ScheduleDemoButton>
         </div>

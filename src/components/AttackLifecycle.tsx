@@ -3,10 +3,10 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Crown,
   Headset,
   Scale,
   Server,
-  ShieldCheck,
   Skull,
   UserRound,
   type LucideIcon,
@@ -49,7 +49,7 @@ const timelineEntries = [
   {
     step: 3,
     title: "Re-org connects the dots",
-    description: "A single change links Joel's directly to a Domain Admin.",
+    description: "A single change links Joel directly to a Domain Admin.",
   },
 ];
 
@@ -81,7 +81,7 @@ const diagramNodes: DiagramNode[] = [
   {
     id: "domain",
     title: "Domain Admin",
-    icon: ShieldCheck,
+    icon: Crown,
     activeFrom: 0,
   },
 ];
@@ -279,7 +279,7 @@ export const AttackLifecycle = () => {
     activeEntry ?? {
       step: 0,
       title: "Baseline posture",
-      description: "No risky relationships linked yet. Watch how identity changes enable an attack.",
+      description: "No risky relationships linked yet. Watch how identity changes create a route to crown jewels.",
     };
   const isBaselineCard = displayedEntry.step === 0;
   const carouselCardClasses = isBaselineCard
@@ -295,11 +295,11 @@ export const AttackLifecycle = () => {
               <span className="text-sm font-medium text-destructive">Attack Path Example</span>
             </div>
             <h2 className="text-4xl font-bold md:text-5xl">
-              Show the Attack Path.<br className="hidden md:block" />{" "}
-              <span className="text-gradient">Ship the Finding.</span>
+              Attackers Don&apos;t Teleport.<br className="hidden md:block" />{" "}
+              They <span className="text-gradient">Commute.</span>
             </h2>
             <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-              NeoDynamics links the path to evidence and turns it into a clear, stakeholder-friendly finding with remediation guidance.
+              NeoDynamics maps identity relationships into a ground-truth graph and reveals the stepping stones attackers use to reach critical infrastructure.
             </p>
           </div>
 
@@ -367,7 +367,7 @@ export const AttackLifecycle = () => {
 
               <div className="rounded-2xl border-2 border-primary/40 bg-primary/5 p-6">
                 <p className="font-semibold text-foreground text-center ">
-                  NeoDynamics helps you map relationships into audit-ready findings with prioritized fixes.
+                  NeoDynamics shows the roads attackers use — and the smallest changes that create dead ends.
                 </p>
               </div>
           </div>

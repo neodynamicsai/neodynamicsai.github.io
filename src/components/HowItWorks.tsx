@@ -5,23 +5,23 @@ export const HowItWorks = () => {
   const steps = [
     {
       icon: Link2,
-      title: "Connect Once",
-      description: "Ingest identity data from Active Directory and Entra ID.",
+      title: "Ingest (Read-only)",
+      description: "Query identity providers with no agents and no write access.",
     },
     {
       icon: Gauge,
-      title: "Find Misconfigs + Attack Paths",
-      description: "Surface posture issues and risky relationships that enable escalation.",
+      title: "Map (Ground truth)",
+      description: "Build the identity relationship graph in under an hour.",
     },
     {
       icon: ClipboardList,
-      title: "Prioritize Fixes",
-      description: "Turn findings into a prioritized remediation plan with concrete fixes.",
+      title: "Analyze (At scale)",
+      description: "Map paths to crown jewels and summarize risk with AI-assisted context.",
     },
     {
       icon: CheckCircle,
-      title: "Deliver Client-Ready Output",
-      description: "Export report-ready findings, evidence, and stakeholder-friendly explanations.",
+      title: "Dead-end Attackers",
+      description: "See which roads to close for maximum protection and validate impact before you cut.",
     },
   ];
 
@@ -31,10 +31,10 @@ export const HowItWorks = () => {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            How It Fits Your <span className="text-gradient">Workflow</span>
+            How Neo <span className="text-gradient">Works</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Spend less time triaging and writing reports. Spend more time validating risk and driving remediation.
+            Automated. Agentless. Fast. Turn identity relationships into a map of the roads attackers use — and the fastest way to cut them.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export const HowItWorks = () => {
         {/* Bottom Message */}
         <div className="mt-16 text-center">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Repeatable audits deserve a repeatable delivery workflow, without sacrificing depth or clarity.
+            Manual red teams take months to find one path. NeoDynamics maps millions of paths in under one hour.
           </p>
         </div>
       </div>

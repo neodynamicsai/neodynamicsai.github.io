@@ -44,46 +44,40 @@ const cellText = (value: CellValue) => {
 
 const rows: ComparisonRow[] = [
   {
-    capability: "Structured report pack (summary + findings + evidence)",
-    manual: { kind: "partial", label: "Manual, time-intensive" },
-    pointTools: { kind: "partial", label: "Requires expert aggregation" },
+    capability: "Ground-truth identity graph (AD + Entra)",
+    manual: { kind: "partial", label: "Expert-driven, limited scale" },
+    pointTools: { kind: "partial", label: "Partial coverage" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Prioritized remediation plan (what to fix first)",
-    manual: { kind: "partial", label: "Expert judgment" },
-    pointTools: { kind: "partial", label: "Heuristics only" },
+    capability: "Attack path discovery at scale (millions of paths)",
+    manual: { kind: "no", label: "One path at a time" },
+    pointTools: { kind: "partial", label: "Limited graphing" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Attack-path evidence you can explain",
-    manual: { kind: "partial", label: "Expert-led" },
-    pointTools: { kind: "partial", label: "Graphs, needs narrative" },
+    capability: "Assumed-breach view (any identity → crown jewels)",
+    manual: { kind: "partial", label: "Engagement-based" },
+    pointTools: { kind: "partial", label: "Needs correlation" },
     neo: { kind: "yes" },
   },
   {
-    capability: "Consistency across engagements / teams",
-    manual: { kind: "no", label: "Varies by analyst" },
-    pointTools: { kind: "no", label: "Depends on process" },
+    capability: "Impact-aware hardening (what to remove, what breaks)",
+    manual: { kind: "partial", label: "Tribal knowledge" },
+    pointTools: { kind: "no", label: "Not built-in" },
     neo: { kind: "yes", label: "Context-aware" },
   },
   {
-    capability: "Retests & progress tracking",
-    manual: { kind: "no", label: "Ad hoc tracking" },
-    pointTools: { kind: "no", label: "Not built-in" },
-    neo: { kind: "yes", label: "Built-in" },
-  },
-  {
-    capability: "Multi-domain delivery",
-    manual: { kind: "no", label: "Not scalable" },
-    pointTools: { kind: "no", label: "No delivery layer" },
-    neo: { kind: "yes" },
+    capability: "Continuous mapping (new roads as environments change)",
+    manual: { kind: "no", label: "Not continuous" },
+    pointTools: { kind: "partial", label: "Ad hoc" },
+    neo: { kind: "yes", label: "Continuous" },
   },
 ];
 
 const mobileTabs = [
-  { id: "manual", label: "Manual (Expert-Led)", shortLabel: "Manual" },
-  { id: "tools", label: "Standalone Tools", shortLabel: "Tools" },
+  { id: "manual", label: "Manual Red Team", shortLabel: "Manual" },
+  { id: "tools", label: "Point Tools", shortLabel: "Tools" },
   { id: "neo", label: "NeoDynamics", shortLabel: "Neo" },
 ] as const;
 
@@ -96,30 +90,30 @@ export const Comparison = () => {
     switch (mobileTab) {
       case "manual":
         return {
-          bestFor: "Deep analysis when you have senior expertise and time.",
+          bestFor: "Deep, bespoke engagements when you have time and senior expertise.",
           gaps: [
-            "Hard to standardize across analysts and engagements",
-            "Packaging into deliverables consumes a lot of time",
+            "Finds a small number of paths per engagement",
+            "Hard to retest and keep current as identity changes",
           ],
           highlight: false,
         };
       case "tools":
         return {
-          bestFor: "Standalone scanners/graphs to answer a specific question.",
+          bestFor: "Answering a specific question with partial scanners/graphs.",
           gaps: [
-            "No report pack by default; output needs packaging",
-            "You still stitch results into findings, evidence, and narrative",
+            "Limited context across AD + Entra relationships",
+            "You still need to correlate, interpret, and prioritize fixes",
           ],
           highlight: false,
         };
       case "neo":
         return {
-          bestFor: "Repeatable AD/Entra audit delivery for security teams.",
+          bestFor: "Assumed-breach path mapping and impact-aware hardening.",
           gaps: [
-            "Structured findings + evidence, ready to export",
-            "Prioritized remediation with clear rationale",
-            "Attack paths packaged into stakeholder-friendly findings",
-            "Built for retests and progress tracking",
+            "Ground-truth identity graph in under an hour",
+            "Paths from any identity to crown jewels, at scale",
+            "Impact-aware recommendations to create dead ends",
+            "Continuous visibility as environments change",
           ],
           highlight: true,
         };
@@ -134,10 +128,10 @@ export const Comparison = () => {
             Why <span className="text-gradient">NeoDynamics</span>
           </h2>
           <p className="hidden md:block text-xl text-muted-foreground max-w-3xl mx-auto">
-            Stop stitching together screenshots, spreadsheets, and point tools. NeoDynamics turns assessment data into prioritized findings and a structured report pack you can deliver and retest.
+            Compliance checklists don&apos;t stop attackers. Removing the paths they use does. NeoDynamics maps identity relationships and shows exactly which roads to close to dead-end lateral movement.
           </p>
           <p className="md:hidden text-sm text-muted-foreground max-w-3xl mx-auto">
-            NeoDynamics turns assessment data into prioritized, report-ready output.
+            NeoDynamics maps identity roads and shows how to close them.
           </p>
         </div>
 
@@ -196,15 +190,15 @@ export const Comparison = () => {
             <div className="hidden md:block">
               <Table className="table-fixed">
                 <TableHeader>
-                  <TableRow>
-                    <TableHead className="w-[46%]">Capability</TableHead>
-                    <TableHead className="w-[18%]">Manual</TableHead>
-                    <TableHead className="w-[18%]">Standalone Tools</TableHead>
+                <TableRow>
+                  <TableHead className="w-[46%]">Capability</TableHead>
+                  <TableHead className="w-[18%]">Manual</TableHead>
+                    <TableHead className="w-[18%]">Point Tools</TableHead>
                     <TableHead className="w-[18%] bg-primary/10 border-l border-primary/20">
                       <div className="flex items-center justify-between gap-3">
                         <span>NeoDynamics</span>
                         <span className="my-1.5 inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-primary">
-                          Best for delivery
+                          Assumed breach
                         </span>
                       </div>
                     </TableHead>
@@ -243,18 +237,18 @@ export const Comparison = () => {
         <div className="mt-10 hidden md:grid gap-6 lg:grid-cols-2">
           <Card className="bg-gradient-card border-primary/30">
             <CardHeader>
-              <CardTitle className="text-2xl">The “Why We Win” Summary</CardTitle>
+              <CardTitle className="text-2xl">Effective Security, Not Just Compliance</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground text-base">
               <div className="space-y-2">
-                <p className="font-semibold text-foreground">NeoDynamics is built for delivery.</p>
+                <p className="font-semibold text-foreground">Beyond checklists.</p>
                 <p>
-                  It reduces hours spent on triage and report writing, improves consistency across analysts, and makes retests and iteration faster.
+                  Compliance boxes don&apos;t stop hackers; removing the identity paths they use does. NeoDynamics provides automated red teaming insights continuously — without months of manual work.
                 </p>
               </div>
               <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5">
                 <p className="text-sm">
-                  <span className="font-semibold text-foreground">Positioning:</span> Attack paths + posture + prioritized fixes + explainability, packaged into client-ready deliverables.
+                  <span className="font-semibold text-foreground">Assumed-breach ready:</span> Designed specifically for the “what happens after they get in?” scenario.
                 </p>
               </div>
             </CardContent>
@@ -262,27 +256,27 @@ export const Comparison = () => {
 
           <Card className="bg-gradient-card border-primary/25">
             <CardHeader>
-              <CardTitle className="text-2xl">Great Fit If You…</CardTitle>
+              <CardTitle className="text-2xl">Built by Offenders. Engineered for Defense.</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-3 text-base text-muted-foreground">
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Run recurring AD/Entra assessments (internally or for customers).
+                15+ years adversary simulation for Fortune 500s and global financial institutions.
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Need consistent findings and reporting across analysts or teams.
+                Malware & evasion specialist — understands how attackers bypass EDRs and controls.
               </div>
               <div className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-                Want to shorten time from data to an actionable remediation plan.
+                Distributed-systems builder — enterprise-grade architecture designed for large environments.
               </div>
             </CardContent>
           </Card>
         </div>
 
         <div className="mt-8 md:hidden rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-muted-foreground">
-          NeoDynamics turns assessment data into prioritized, report-ready output for faster delivery.
+          NeoDynamics maps identity roads and shows the smallest changes that create dead ends for attackers.
         </div>
       </div>
     </section>

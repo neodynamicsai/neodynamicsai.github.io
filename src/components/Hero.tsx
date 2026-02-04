@@ -21,13 +21,13 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
-            Turn AD & Entra Audits Into{" "}
-            <span className="text-gradient">Actionable Reports</span>
+            Turn the inevitable breach into a{" "}
+            <span className="text-gradient">dead end</span>
           </h1>
 
           <div className="max-w-4xl mx-auto space-y-5">
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-              NeoDynamics turns AD and Entra assessment data into prioritized findings, evidence, and a report pack you can ship fast.
+              NeoDynamics maps identity relationships across Active Directory and Entra ID into a ground-truth graph, then reveals the paths attackers take to your crown jewels — and exactly which permissions to remove to stop lateral movement.
             </p>
 
             <div className="mx-auto max-w-4xl rounded-3xl border border-primary/20 bg-primary/10 p-3 sm:p-4">
@@ -37,7 +37,7 @@ export const Hero = () => {
                     <AlarmClock className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
-                    Faster reporting turnaround
+                    Ground-truth map in &lt;1 hour
                   </span>
                 </div>
 
@@ -46,7 +46,7 @@ export const Hero = () => {
                     <DollarSign className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
-                    Save hours and budget on triage and writeups
+                    Red-team insight, automated
                   </span>
                 </div>
 
@@ -55,7 +55,7 @@ export const Hero = () => {
                     <ShieldCheck className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
-                    Fewer missed issues via consistent checks
+                    Assumed-breach ready
                   </span>
                 </div>
 
@@ -64,7 +64,7 @@ export const Hero = () => {
                     <Lock className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">
-                    Privacy-preserving, data stays on your premises
+                    Read-only, agentless ingest
                   </span>
                 </div>
               </div>
@@ -72,18 +72,18 @@ export const Hero = () => {
           </div>
 
           <div className="sm:hidden text-sm text-muted-foreground">
-            Faster reporting. Hours saved. Fewer missed issues.
+            Map. Visualize. Dead-end attackers.
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <ScheduleDemoButton variant="hero" size="xl" className="group w-full sm:w-auto px-4 sm:px-6 text-sm sm:text-base">
-              <span className="sm:hidden">Schedule Demo</span>
-              <span className="hidden sm:inline">See It For Your Next Assessment</span>
+              <span className="sm:hidden">Book Assessment</span>
+              <span className="hidden sm:inline">Book Your 1-hour Assessment</span>
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </ScheduleDemoButton>
             <Button variant="outline" size="xl" asChild className="w-full sm:w-auto">
-              <a href="#deliverables">See What You Get</a>
+              <a href="#platform">See How Neo Works</a>
             </Button>
           </div>
         </div>
